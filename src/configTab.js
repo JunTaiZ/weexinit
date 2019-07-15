@@ -48,7 +48,7 @@ export default {
   tabIconFontTitles: [
     {
       // title: '首页',
-      codePoint: '\ue608'
+      codePoint: '\ue7f4'
     },
     {
       // title: '愿望清单',
