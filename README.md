@@ -1,6 +1,10 @@
+
 # Introduction
 
 This boilerplate is targeted towards large, serious projects and assumes you are somewhat familiar with Webpack and `weex-loader`. 
+
+## 使用weex-ui底部导航栏时wxc-tab-bar出错
+在切换导航页后weex自带list组件无法滚动  
 
 ## Quickstart
 
