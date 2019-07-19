@@ -1,54 +1,62 @@
 <template>
-  <wxc-tab-bar :tab-titles="tabTitles"
-               :tab-styles="tabStyles"
-               title-type="iconFont"
-               :title-use-slot="true"
-               wrap-bg-color="#f9f9f9"
-               @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
-    <div v-for="(tabTitle, i) in tabTitles" :ref="'tab_'+i" :slot="'tab-title-' + i" :key="i + '_tab'" class="tabCon">
-      <text class="iconfont"
-        :style="{
-          'color': index === i ? tabTitle.color : tabStyles.titleColor, 
-          'font-size': tabStyles.fontSize,
-          'width': tabStyles.width,
-          'height': tabStyles.height,
-          'fontSize': tabStyles.iconFontSize + 'px',
-        }"
-      >{{tabTitle.codePoint}}</text>
-      <text 
-        :style="{
-          'height': index === i ? '33px' : '0',
-          'color': index === i ? tabTitle.color : tabStyles.titleColor, 
-        }"
-        class="title"
-      >{{tabTitle.title}}</text>
-    </div>
-    
-    <!-- 第一个页面内容-->
-    <div class="item-container" :style="contentStyle">
-      <List :content-style="contentStyle" />
-    </div>
+    <wxc-tab-bar
+                :tab-titles="tabTitles"
+                :tab-styles="tabStyles"
+                title-type="iconFont"
+                :title-use-slot="true"
+                wrap-bg-color="#f9f9f9"
+                @wxcTabBarCurrentTabSelected="wxcTabBarCurrentTabSelected">
+      <div v-for="(tabTitle, i) in tabTitles" :ref="'tab_'+i" :slot="'tab-title-' + i" :key="i + '_tab'" class="tabCon">
+        <text class="iconfont"
+          :style="{
+            'color': index === i ? tabTitle.color : tabStyles.titleColor, 
+            'font-size': tabStyles.fontSize,
+            'width': tabStyles.width,
+            'height': tabStyles.height,
+            'fontSize': tabStyles.iconFontSize + 'px',
+          }"
+        >{{tabTitle.codePoint}}</text>
+        <text 
+          :style="{
+            'height': index === i ? '33px' : '0',
+            'color': index === i ? tabTitle.color : tabStyles.titleColor, 
+          }"
+          class="title"
+        >{{tabTitle.title}}</text>
+      </div>
+      
+      <!-- 第一个页面内容-->
+      <div class="item-container" :style="contentStyle">
+        <List />
+      </div>
 
-    <!-- 第二个页面内容-->
-    <div class="item-container" :style="contentStyle">
-      <List />
-    </div>
+      <!-- 第二个页面内容-->
+      <div class="item-container" :style="contentStyle">
+        <SwipeAction>
+          <template v-slot:con><text>45</text></template>
+          <template v-slot:button-1><text @click="consoleState">取消</text></template>
+        </SwipeAction>
+      </div>
 
-    <!-- 第三个页面内容-->
-    <div class="item-container" :style="contentStyle">
-      <text>我的主页kmdfklnsldkflk</text>
-    </div>
-  </wxc-tab-bar>
+      <!-- 第三个页面内容-->
+      <div class="item-container" :style="contentStyle">
+        <text class="iconfont">{{icon}}</text>
+      </div>
+    </wxc-tab-bar>
+  
 </template>
 
 <style scoped>
+  .index {
+    transition: opacity 0.1s ease;
+  }
   .iconfont {
     font-family: iconfont;
     color: red;
   }
   .item-container {
     width: 750px;
-    background-color: #f2f3f4;
+    /* background-color: #f2f3f4; */
     
     /* background-image: linear-gradient(to right, #FF9900, #CC0000); */
     /* align-items: center;
@@ -73,24 +81,29 @@
   }
 </style>
 <script>
-  import List from './components/List.vue';
+  import List from '@/components/List.vue';
+  import Test from '@/components/Test.vue'
+  import HelloWorld from '@/components/HelloWorld'
+  import SwipeAction from '@/components/SwipeAction'
   import { WxcTabBar, Utils } from 'weex-ui';
   import { mapState, mapMutations } from 'vuex'
   // https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
-  import Config from './configTab'
+  // import Config from './configTab'
   const modal = weex.requireModule('modal')
 
   export default {
-    components: { WxcTabBar, List },
+    components: { WxcTabBar, SwipeAction, List, Test, HelloWorld },
     data: () => ({
       index: 0,
       tabHeight: 50,
+      icon: '\ue7fc'
     }),
     computed: {
       ...mapState('tab', {
         count: (state) => state.count,
-        tabTitles: (state) => state.tabIconFontTitles,
+        tabTitles: 'tabIconFontTitles',
         tabStyles: (state) => state.tabIconFontStyles,
+        indexOpacity: 'indexOpacity',
       })
     },
     created () {
@@ -99,12 +112,13 @@
       // 如果页面没有导航栏，可以用下面这个计算高度的方法
       // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
       const { tabStyles } = this;
-      this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+      // this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+      this.contentStyle = { height: (tabPageHeight) + 'px' };
       // console.log(`index${this.contentStyle.height}`);
     },
     methods: {
       // ...mapMutations('tab', [
-      //   'showSelectedTitle',
+      //   'setOpacity',
       // ]),
       consoleState () {
         

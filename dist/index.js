@@ -62,7 +62,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1106,7 +1106,7 @@ var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbo
                                                                                                                                                                                                                                                                                 * Created by Tw93 on 17/11/01
                                                                                                                                                                                                                                                                                 */
 
-var _urlParse = __webpack_require__(10);
+var _urlParse = __webpack_require__(13);
 
 var _urlParse2 = _interopRequireDefault(_urlParse);
 
@@ -1448,27 +1448,92 @@ exports.default = Utils;
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
 
+/* styles */
+__vue_styles__.push(__webpack_require__(7)
+)
 
-var _vuex = __webpack_require__(0);
+/* script */
+__vue_exports__ = __webpack_require__(8)
 
-var _vuex2 = _interopRequireDefault(_vuex);
+/* template */
+var __vue_template__ = __webpack_require__(9)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\HelloWorld.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-656039f0"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+module.exports = __vue_exports__
 
-Vue.use(_vuex2.default); /*global Vue*/
-
-/* weex initialized here, please do not move this line */
-
-
-var store = __webpack_require__(3);
-var App = __webpack_require__(7);
-/* eslint-disable no-new */
-new Vue(Vue.util.extend({ el: '#root', store: store }, App));
 
 /***/ }),
 /* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(38)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(39)
+
+/* template */
+var __vue_template__ = __webpack_require__(40)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\SwipeAction.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-469f03a0"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1478,15 +1543,7294 @@ var _vuex = __webpack_require__(0);
 
 var _vuex2 = _interopRequireDefault(_vuex);
 
-var _vue = __webpack_require__(4);
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*global Vue*/
+
+weex.init(Vue);
+/* weex initialized here, please do not move this line */
+
+
+Vue.use(_vuex2.default);
+
+var _require = __webpack_require__(5),
+    router = _require.router;
+
+var store = __webpack_require__(52);
+var App = __webpack_require__(56);
+/* eslint-disable no-new */
+new Vue(Vue.util.extend({ el: '#root', store: store, router: router }, App));
+router.push('/');
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.router = undefined;
+
+var _vueRouter = __webpack_require__(6);
+
+var _vueRouter2 = _interopRequireDefault(_vueRouter);
+
+var _HelloWorld = __webpack_require__(2);
+
+var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
+
+var _Index = __webpack_require__(10);
+
+var _Index2 = _interopRequireDefault(_Index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+Vue.use(_vueRouter2.default);
+
+var router = exports.router = new _vueRouter2.default({
+  mode: 'abstract',
+  routes: [{
+    path: '/',
+    name: 'Index',
+    component: _Index2.default
+  }, {
+    path: '/hello',
+    name: 'HelloWorld',
+    component: _HelloWorld2.default
+  }]
+});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/*!
+  * vue-router v3.0.7
+  * (c) 2019 Evan You
+  * @license MIT
+  */
+/*  */
+
+function assert (condition, message) {
+  if (!condition) {
+    throw new Error(("[vue-router] " + message))
+  }
+}
+
+function warn (condition, message) {
+  if ("development" !== 'production' && !condition) {
+    typeof console !== 'undefined' && console.warn(("[vue-router] " + message));
+  }
+}
+
+function isError (err) {
+  return Object.prototype.toString.call(err).indexOf('Error') > -1
+}
+
+function extend (a, b) {
+  for (var key in b) {
+    a[key] = b[key];
+  }
+  return a
+}
+
+var View = {
+  name: 'RouterView',
+  functional: true,
+  props: {
+    name: {
+      type: String,
+      default: 'default'
+    }
+  },
+  render: function render (_, ref) {
+    var props = ref.props;
+    var children = ref.children;
+    var parent = ref.parent;
+    var data = ref.data;
+
+    // used by devtools to display a router-view badge
+    data.routerView = true;
+
+    // directly use parent context's createElement() function
+    // so that components rendered by router-view can resolve named slots
+    var h = parent.$createElement;
+    var name = props.name;
+    var route = parent.$route;
+    var cache = parent._routerViewCache || (parent._routerViewCache = {});
+
+    // determine current view depth, also check to see if the tree
+    // has been toggled inactive but kept-alive.
+    var depth = 0;
+    var inactive = false;
+    while (parent && parent._routerRoot !== parent) {
+      var vnodeData = parent.$vnode && parent.$vnode.data;
+      if (vnodeData) {
+        if (vnodeData.routerView) {
+          depth++;
+        }
+        if (vnodeData.keepAlive && parent._inactive) {
+          inactive = true;
+        }
+      }
+      parent = parent.$parent;
+    }
+    data.routerViewDepth = depth;
+
+    // render previous view if the tree is inactive and kept-alive
+    if (inactive) {
+      return h(cache[name], data, children)
+    }
+
+    var matched = route.matched[depth];
+    // render empty node if no matched route
+    if (!matched) {
+      cache[name] = null;
+      return h()
+    }
+
+    var component = cache[name] = matched.components[name];
+
+    // attach instance registration hook
+    // this will be called in the instance's injected lifecycle hooks
+    data.registerRouteInstance = function (vm, val) {
+      // val could be undefined for unregistration
+      var current = matched.instances[name];
+      if (
+        (val && current !== vm) ||
+        (!val && current === vm)
+      ) {
+        matched.instances[name] = val;
+      }
+    }
+
+    // also register instance in prepatch hook
+    // in case the same component instance is reused across different routes
+    ;(data.hook || (data.hook = {})).prepatch = function (_, vnode) {
+      matched.instances[name] = vnode.componentInstance;
+    };
+
+    // register instance in init hook
+    // in case kept-alive component be actived when routes changed
+    data.hook.init = function (vnode) {
+      if (vnode.data.keepAlive &&
+        vnode.componentInstance &&
+        vnode.componentInstance !== matched.instances[name]
+      ) {
+        matched.instances[name] = vnode.componentInstance;
+      }
+    };
+
+    // resolve props
+    var propsToPass = data.props = resolveProps(route, matched.props && matched.props[name]);
+    if (propsToPass) {
+      // clone to prevent mutation
+      propsToPass = data.props = extend({}, propsToPass);
+      // pass non-declared props as attrs
+      var attrs = data.attrs = data.attrs || {};
+      for (var key in propsToPass) {
+        if (!component.props || !(key in component.props)) {
+          attrs[key] = propsToPass[key];
+          delete propsToPass[key];
+        }
+      }
+    }
+
+    return h(component, data, children)
+  }
+}
+
+function resolveProps (route, config) {
+  switch (typeof config) {
+    case 'undefined':
+      return
+    case 'object':
+      return config
+    case 'function':
+      return config(route)
+    case 'boolean':
+      return config ? route.params : undefined
+    default:
+      if (true) {
+        warn(
+          false,
+          "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
+          "expecting an object, function or boolean."
+        );
+      }
+  }
+}
+
+/*  */
+
+var encodeReserveRE = /[!'()*]/g;
+var encodeReserveReplacer = function (c) { return '%' + c.charCodeAt(0).toString(16); };
+var commaRE = /%2C/g;
+
+// fixed encodeURIComponent which is more conformant to RFC3986:
+// - escapes [!'()*]
+// - preserve commas
+var encode = function (str) { return encodeURIComponent(str)
+  .replace(encodeReserveRE, encodeReserveReplacer)
+  .replace(commaRE, ','); };
+
+var decode = decodeURIComponent;
+
+function resolveQuery (
+  query,
+  extraQuery,
+  _parseQuery
+) {
+  if ( extraQuery === void 0 ) extraQuery = {};
+
+  var parse = _parseQuery || parseQuery;
+  var parsedQuery;
+  try {
+    parsedQuery = parse(query || '');
+  } catch (e) {
+    "development" !== 'production' && warn(false, e.message);
+    parsedQuery = {};
+  }
+  for (var key in extraQuery) {
+    parsedQuery[key] = extraQuery[key];
+  }
+  return parsedQuery
+}
+
+function parseQuery (query) {
+  var res = {};
+
+  query = query.trim().replace(/^(\?|#|&)/, '');
+
+  if (!query) {
+    return res
+  }
+
+  query.split('&').forEach(function (param) {
+    var parts = param.replace(/\+/g, ' ').split('=');
+    var key = decode(parts.shift());
+    var val = parts.length > 0
+      ? decode(parts.join('='))
+      : null;
+
+    if (res[key] === undefined) {
+      res[key] = val;
+    } else if (Array.isArray(res[key])) {
+      res[key].push(val);
+    } else {
+      res[key] = [res[key], val];
+    }
+  });
+
+  return res
+}
+
+function stringifyQuery (obj) {
+  var res = obj ? Object.keys(obj).map(function (key) {
+    var val = obj[key];
+
+    if (val === undefined) {
+      return ''
+    }
+
+    if (val === null) {
+      return encode(key)
+    }
+
+    if (Array.isArray(val)) {
+      var result = [];
+      val.forEach(function (val2) {
+        if (val2 === undefined) {
+          return
+        }
+        if (val2 === null) {
+          result.push(encode(key));
+        } else {
+          result.push(encode(key) + '=' + encode(val2));
+        }
+      });
+      return result.join('&')
+    }
+
+    return encode(key) + '=' + encode(val)
+  }).filter(function (x) { return x.length > 0; }).join('&') : null;
+  return res ? ("?" + res) : ''
+}
+
+/*  */
+
+var trailingSlashRE = /\/?$/;
+
+function createRoute (
+  record,
+  location,
+  redirectedFrom,
+  router
+) {
+  var stringifyQuery$$1 = router && router.options.stringifyQuery;
+
+  var query = location.query || {};
+  try {
+    query = clone(query);
+  } catch (e) {}
+
+  var route = {
+    name: location.name || (record && record.name),
+    meta: (record && record.meta) || {},
+    path: location.path || '/',
+    hash: location.hash || '',
+    query: query,
+    params: location.params || {},
+    fullPath: getFullPath(location, stringifyQuery$$1),
+    matched: record ? formatMatch(record) : []
+  };
+  if (redirectedFrom) {
+    route.redirectedFrom = getFullPath(redirectedFrom, stringifyQuery$$1);
+  }
+  return Object.freeze(route)
+}
+
+function clone (value) {
+  if (Array.isArray(value)) {
+    return value.map(clone)
+  } else if (value && typeof value === 'object') {
+    var res = {};
+    for (var key in value) {
+      res[key] = clone(value[key]);
+    }
+    return res
+  } else {
+    return value
+  }
+}
+
+// the starting route that represents the initial state
+var START = createRoute(null, {
+  path: '/'
+});
+
+function formatMatch (record) {
+  var res = [];
+  while (record) {
+    res.unshift(record);
+    record = record.parent;
+  }
+  return res
+}
+
+function getFullPath (
+  ref,
+  _stringifyQuery
+) {
+  var path = ref.path;
+  var query = ref.query; if ( query === void 0 ) query = {};
+  var hash = ref.hash; if ( hash === void 0 ) hash = '';
+
+  var stringify = _stringifyQuery || stringifyQuery;
+  return (path || '/') + stringify(query) + hash
+}
+
+function isSameRoute (a, b) {
+  if (b === START) {
+    return a === b
+  } else if (!b) {
+    return false
+  } else if (a.path && b.path) {
+    return (
+      a.path.replace(trailingSlashRE, '') === b.path.replace(trailingSlashRE, '') &&
+      a.hash === b.hash &&
+      isObjectEqual(a.query, b.query)
+    )
+  } else if (a.name && b.name) {
+    return (
+      a.name === b.name &&
+      a.hash === b.hash &&
+      isObjectEqual(a.query, b.query) &&
+      isObjectEqual(a.params, b.params)
+    )
+  } else {
+    return false
+  }
+}
+
+function isObjectEqual (a, b) {
+  if ( a === void 0 ) a = {};
+  if ( b === void 0 ) b = {};
+
+  // handle null value #1566
+  if (!a || !b) { return a === b }
+  var aKeys = Object.keys(a);
+  var bKeys = Object.keys(b);
+  if (aKeys.length !== bKeys.length) {
+    return false
+  }
+  return aKeys.every(function (key) {
+    var aVal = a[key];
+    var bVal = b[key];
+    // check nested equality
+    if (typeof aVal === 'object' && typeof bVal === 'object') {
+      return isObjectEqual(aVal, bVal)
+    }
+    return String(aVal) === String(bVal)
+  })
+}
+
+function isIncludedRoute (current, target) {
+  return (
+    current.path.replace(trailingSlashRE, '/').indexOf(
+      target.path.replace(trailingSlashRE, '/')
+    ) === 0 &&
+    (!target.hash || current.hash === target.hash) &&
+    queryIncludes(current.query, target.query)
+  )
+}
+
+function queryIncludes (current, target) {
+  for (var key in target) {
+    if (!(key in current)) {
+      return false
+    }
+  }
+  return true
+}
+
+/*  */
+
+// work around weird flow bug
+var toTypes = [String, Object];
+var eventTypes = [String, Array];
+
+var Link = {
+  name: 'RouterLink',
+  props: {
+    to: {
+      type: toTypes,
+      required: true
+    },
+    tag: {
+      type: String,
+      default: 'a'
+    },
+    exact: Boolean,
+    append: Boolean,
+    replace: Boolean,
+    activeClass: String,
+    exactActiveClass: String,
+    event: {
+      type: eventTypes,
+      default: 'click'
+    }
+  },
+  render: function render (h) {
+    var this$1 = this;
+
+    var router = this.$router;
+    var current = this.$route;
+    var ref = router.resolve(this.to, current, this.append);
+    var location = ref.location;
+    var route = ref.route;
+    var href = ref.href;
+
+    var classes = {};
+    var globalActiveClass = router.options.linkActiveClass;
+    var globalExactActiveClass = router.options.linkExactActiveClass;
+    // Support global empty active class
+    var activeClassFallback = globalActiveClass == null
+      ? 'router-link-active'
+      : globalActiveClass;
+    var exactActiveClassFallback = globalExactActiveClass == null
+      ? 'router-link-exact-active'
+      : globalExactActiveClass;
+    var activeClass = this.activeClass == null
+      ? activeClassFallback
+      : this.activeClass;
+    var exactActiveClass = this.exactActiveClass == null
+      ? exactActiveClassFallback
+      : this.exactActiveClass;
+    var compareTarget = location.path
+      ? createRoute(null, location, null, router)
+      : route;
+
+    classes[exactActiveClass] = isSameRoute(current, compareTarget);
+    classes[activeClass] = this.exact
+      ? classes[exactActiveClass]
+      : isIncludedRoute(current, compareTarget);
+
+    var handler = function (e) {
+      if (guardEvent(e)) {
+        if (this$1.replace) {
+          router.replace(location);
+        } else {
+          router.push(location);
+        }
+      }
+    };
+
+    var on = { click: guardEvent };
+    if (Array.isArray(this.event)) {
+      this.event.forEach(function (e) { on[e] = handler; });
+    } else {
+      on[this.event] = handler;
+    }
+
+    var data = {
+      class: classes
+    };
+
+    if (this.tag === 'a') {
+      data.on = on;
+      data.attrs = { href: href };
+    } else {
+      // find the first <a> child and apply listener and href
+      var a = findAnchor(this.$slots.default);
+      if (a) {
+        // in case the <a> is a static node
+        a.isStatic = false;
+        var aData = a.data = extend({}, a.data);
+        aData.on = on;
+        var aAttrs = a.data.attrs = extend({}, a.data.attrs);
+        aAttrs.href = href;
+      } else {
+        // doesn't have <a> child, apply listener to self
+        data.on = on;
+      }
+    }
+
+    return h(this.tag, data, this.$slots.default)
+  }
+}
+
+function guardEvent (e) {
+  // don't redirect with control keys
+  if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) { return }
+  // don't redirect when preventDefault called
+  if (e.defaultPrevented) { return }
+  // don't redirect on right click
+  if (e.button !== undefined && e.button !== 0) { return }
+  // don't redirect if `target="_blank"`
+  if (e.currentTarget && e.currentTarget.getAttribute) {
+    var target = e.currentTarget.getAttribute('target');
+    if (/\b_blank\b/i.test(target)) { return }
+  }
+  // this may be a Weex event which doesn't have this method
+  if (e.preventDefault) {
+    e.preventDefault();
+  }
+  return true
+}
+
+function findAnchor (children) {
+  if (children) {
+    var child;
+    for (var i = 0; i < children.length; i++) {
+      child = children[i];
+      if (child.tag === 'a') {
+        return child
+      }
+      if (child.children && (child = findAnchor(child.children))) {
+        return child
+      }
+    }
+  }
+}
+
+var _Vue;
+
+function install (Vue) {
+  if (install.installed && _Vue === Vue) { return }
+  install.installed = true;
+
+  _Vue = Vue;
+
+  var isDef = function (v) { return v !== undefined; };
+
+  var registerInstance = function (vm, callVal) {
+    var i = vm.$options._parentVnode;
+    if (isDef(i) && isDef(i = i.data) && isDef(i = i.registerRouteInstance)) {
+      i(vm, callVal);
+    }
+  };
+
+  Vue.mixin({
+    beforeCreate: function beforeCreate () {
+      if (isDef(this.$options.router)) {
+        this._routerRoot = this;
+        this._router = this.$options.router;
+        this._router.init(this);
+        Vue.util.defineReactive(this, '_route', this._router.history.current);
+      } else {
+        this._routerRoot = (this.$parent && this.$parent._routerRoot) || this;
+      }
+      registerInstance(this, this);
+    },
+    destroyed: function destroyed () {
+      registerInstance(this);
+    }
+  });
+
+  Object.defineProperty(Vue.prototype, '$router', {
+    get: function get () { return this._routerRoot._router }
+  });
+
+  Object.defineProperty(Vue.prototype, '$route', {
+    get: function get () { return this._routerRoot._route }
+  });
+
+  Vue.component('RouterView', View);
+  Vue.component('RouterLink', Link);
+
+  var strats = Vue.config.optionMergeStrategies;
+  // use the same hook merging strategy for route hooks
+  strats.beforeRouteEnter = strats.beforeRouteLeave = strats.beforeRouteUpdate = strats.created;
+}
+
+/*  */
+
+var inBrowser = typeof window !== 'undefined';
+
+/*  */
+
+function resolvePath (
+  relative,
+  base,
+  append
+) {
+  var firstChar = relative.charAt(0);
+  if (firstChar === '/') {
+    return relative
+  }
+
+  if (firstChar === '?' || firstChar === '#') {
+    return base + relative
+  }
+
+  var stack = base.split('/');
+
+  // remove trailing segment if:
+  // - not appending
+  // - appending to trailing slash (last segment is empty)
+  if (!append || !stack[stack.length - 1]) {
+    stack.pop();
+  }
+
+  // resolve relative path
+  var segments = relative.replace(/^\//, '').split('/');
+  for (var i = 0; i < segments.length; i++) {
+    var segment = segments[i];
+    if (segment === '..') {
+      stack.pop();
+    } else if (segment !== '.') {
+      stack.push(segment);
+    }
+  }
+
+  // ensure leading slash
+  if (stack[0] !== '') {
+    stack.unshift('');
+  }
+
+  return stack.join('/')
+}
+
+function parsePath (path) {
+  var hash = '';
+  var query = '';
+
+  var hashIndex = path.indexOf('#');
+  if (hashIndex >= 0) {
+    hash = path.slice(hashIndex);
+    path = path.slice(0, hashIndex);
+  }
+
+  var queryIndex = path.indexOf('?');
+  if (queryIndex >= 0) {
+    query = path.slice(queryIndex + 1);
+    path = path.slice(0, queryIndex);
+  }
+
+  return {
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+function cleanPath (path) {
+  return path.replace(/\/\//g, '/')
+}
+
+var isarray = Array.isArray || function (arr) {
+  return Object.prototype.toString.call(arr) == '[object Array]';
+};
+
+/**
+ * Expose `pathToRegexp`.
+ */
+var pathToRegexp_1 = pathToRegexp;
+var parse_1 = parse;
+var compile_1 = compile;
+var tokensToFunction_1 = tokensToFunction;
+var tokensToRegExp_1 = tokensToRegExp;
+
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+var PATH_REGEXP = new RegExp([
+  // Match escaped characters that would otherwise appear in future matches.
+  // This allows the user to escape special characters that won't transform.
+  '(\\\\.)',
+  // Match Express-style parameters and un-named parameters with a prefix
+  // and optional suffixes. Matches appear as:
+  //
+  // "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+  // "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+  // "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+  '([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'
+].join('|'), 'g');
+
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+function parse (str, options) {
+  var tokens = [];
+  var key = 0;
+  var index = 0;
+  var path = '';
+  var defaultDelimiter = options && options.delimiter || '/';
+  var res;
+
+  while ((res = PATH_REGEXP.exec(str)) != null) {
+    var m = res[0];
+    var escaped = res[1];
+    var offset = res.index;
+    path += str.slice(index, offset);
+    index = offset + m.length;
+
+    // Ignore already escaped sequences.
+    if (escaped) {
+      path += escaped[1];
+      continue
+    }
+
+    var next = str[index];
+    var prefix = res[2];
+    var name = res[3];
+    var capture = res[4];
+    var group = res[5];
+    var modifier = res[6];
+    var asterisk = res[7];
+
+    // Push the current path onto the tokens.
+    if (path) {
+      tokens.push(path);
+      path = '';
+    }
+
+    var partial = prefix != null && next != null && next !== prefix;
+    var repeat = modifier === '+' || modifier === '*';
+    var optional = modifier === '?' || modifier === '*';
+    var delimiter = res[2] || defaultDelimiter;
+    var pattern = capture || group;
+
+    tokens.push({
+      name: name || key++,
+      prefix: prefix || '',
+      delimiter: delimiter,
+      optional: optional,
+      repeat: repeat,
+      partial: partial,
+      asterisk: !!asterisk,
+      pattern: pattern ? escapeGroup(pattern) : (asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?')
+    });
+  }
+
+  // Match any characters still remaining.
+  if (index < str.length) {
+    path += str.substr(index);
+  }
+
+  // If the path exists, push it onto the end.
+  if (path) {
+    tokens.push(path);
+  }
+
+  return tokens
+}
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+function compile (str, options) {
+  return tokensToFunction(parse(str, options))
+}
+
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeURIComponentPretty (str) {
+  return encodeURI(str).replace(/[\/?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+function encodeAsterisk (str) {
+  return encodeURI(str).replace(/[?#]/g, function (c) {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase()
+  })
+}
+
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+function tokensToFunction (tokens) {
+  // Compile all the tokens into regexps.
+  var matches = new Array(tokens.length);
+
+  // Compile all the patterns before compilation.
+  for (var i = 0; i < tokens.length; i++) {
+    if (typeof tokens[i] === 'object') {
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$');
+    }
+  }
+
+  return function (obj, opts) {
+    var path = '';
+    var data = obj || {};
+    var options = opts || {};
+    var encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent;
+
+    for (var i = 0; i < tokens.length; i++) {
+      var token = tokens[i];
+
+      if (typeof token === 'string') {
+        path += token;
+
+        continue
+      }
+
+      var value = data[token.name];
+      var segment;
+
+      if (value == null) {
+        if (token.optional) {
+          // Prepend partial segment prefixes.
+          if (token.partial) {
+            path += token.prefix;
+          }
+
+          continue
+        } else {
+          throw new TypeError('Expected "' + token.name + '" to be defined')
+        }
+      }
+
+      if (isarray(value)) {
+        if (!token.repeat) {
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`')
+        }
+
+        if (value.length === 0) {
+          if (token.optional) {
+            continue
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to not be empty')
+          }
+        }
+
+        for (var j = 0; j < value.length; j++) {
+          segment = encode(value[j]);
+
+          if (!matches[i].test(segment)) {
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`')
+          }
+
+          path += (j === 0 ? token.prefix : token.delimiter) + segment;
+        }
+
+        continue
+      }
+
+      segment = token.asterisk ? encodeAsterisk(value) : encode(value);
+
+      if (!matches[i].test(segment)) {
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"')
+      }
+
+      path += token.prefix + segment;
+    }
+
+    return path
+  }
+}
+
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+function escapeString (str) {
+  return str.replace(/([.+*?=^!:${}()[\]|\/\\])/g, '\\$1')
+}
+
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+function escapeGroup (group) {
+  return group.replace(/([=!:$\/()])/g, '\\$1')
+}
+
+/**
+ * Attach the keys as a property of the regexp.
+ *
+ * @param  {!RegExp} re
+ * @param  {Array}   keys
+ * @return {!RegExp}
+ */
+function attachKeys (re, keys) {
+  re.keys = keys;
+  return re
+}
+
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+function flags (options) {
+  return options.sensitive ? '' : 'i'
+}
+
+/**
+ * Pull out keys from a regexp.
+ *
+ * @param  {!RegExp} path
+ * @param  {!Array}  keys
+ * @return {!RegExp}
+ */
+function regexpToRegexp (path, keys) {
+  // Use a negative lookahead to match only capturing groups.
+  var groups = path.source.match(/\((?!\?)/g);
+
+  if (groups) {
+    for (var i = 0; i < groups.length; i++) {
+      keys.push({
+        name: i,
+        prefix: null,
+        delimiter: null,
+        optional: false,
+        repeat: false,
+        partial: false,
+        asterisk: false,
+        pattern: null
+      });
+    }
+  }
+
+  return attachKeys(path, keys)
+}
+
+/**
+ * Transform an array into a regexp.
+ *
+ * @param  {!Array}  path
+ * @param  {Array}   keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function arrayToRegexp (path, keys, options) {
+  var parts = [];
+
+  for (var i = 0; i < path.length; i++) {
+    parts.push(pathToRegexp(path[i], keys, options).source);
+  }
+
+  var regexp = new RegExp('(?:' + parts.join('|') + ')', flags(options));
+
+  return attachKeys(regexp, keys)
+}
+
+/**
+ * Create a path regexp from string input.
+ *
+ * @param  {string}  path
+ * @param  {!Array}  keys
+ * @param  {!Object} options
+ * @return {!RegExp}
+ */
+function stringToRegexp (path, keys, options) {
+  return tokensToRegExp(parse(path, options), keys, options)
+}
+
+/**
+ * Expose a function for taking tokens and returning a RegExp.
+ *
+ * @param  {!Array}          tokens
+ * @param  {(Array|Object)=} keys
+ * @param  {Object=}         options
+ * @return {!RegExp}
+ */
+function tokensToRegExp (tokens, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  var strict = options.strict;
+  var end = options.end !== false;
+  var route = '';
+
+  // Iterate over the tokens and create our regexp string.
+  for (var i = 0; i < tokens.length; i++) {
+    var token = tokens[i];
+
+    if (typeof token === 'string') {
+      route += escapeString(token);
+    } else {
+      var prefix = escapeString(token.prefix);
+      var capture = '(?:' + token.pattern + ')';
+
+      keys.push(token);
+
+      if (token.repeat) {
+        capture += '(?:' + prefix + capture + ')*';
+      }
+
+      if (token.optional) {
+        if (!token.partial) {
+          capture = '(?:' + prefix + '(' + capture + '))?';
+        } else {
+          capture = prefix + '(' + capture + ')?';
+        }
+      } else {
+        capture = prefix + '(' + capture + ')';
+      }
+
+      route += capture;
+    }
+  }
+
+  var delimiter = escapeString(options.delimiter || '/');
+  var endsWithDelimiter = route.slice(-delimiter.length) === delimiter;
+
+  // In non-strict mode we allow a slash at the end of match. If the path to
+  // match already ends with a slash, we remove it for consistency. The slash
+  // is valid at the end of a path match, not in the middle. This is important
+  // in non-ending mode, where "/test/" shouldn't match "/test//route".
+  if (!strict) {
+    route = (endsWithDelimiter ? route.slice(0, -delimiter.length) : route) + '(?:' + delimiter + '(?=$))?';
+  }
+
+  if (end) {
+    route += '$';
+  } else {
+    // In non-ending mode, we need the capturing groups to match as much as
+    // possible by using a positive lookahead to the end or next path segment.
+    route += strict && endsWithDelimiter ? '' : '(?=' + delimiter + '|$)';
+  }
+
+  return attachKeys(new RegExp('^' + route, flags(options)), keys)
+}
+
+/**
+ * Normalize the given path string, returning a regular expression.
+ *
+ * An empty array can be passed in for the keys, which will hold the
+ * placeholder key descriptions. For example, using `/user/:id`, `keys` will
+ * contain `[{ name: 'id', delimiter: '/', optional: false, repeat: false }]`.
+ *
+ * @param  {(string|RegExp|Array)} path
+ * @param  {(Array|Object)=}       keys
+ * @param  {Object=}               options
+ * @return {!RegExp}
+ */
+function pathToRegexp (path, keys, options) {
+  if (!isarray(keys)) {
+    options = /** @type {!Object} */ (keys || options);
+    keys = [];
+  }
+
+  options = options || {};
+
+  if (path instanceof RegExp) {
+    return regexpToRegexp(path, /** @type {!Array} */ (keys))
+  }
+
+  if (isarray(path)) {
+    return arrayToRegexp(/** @type {!Array} */ (path), /** @type {!Array} */ (keys), options)
+  }
+
+  return stringToRegexp(/** @type {string} */ (path), /** @type {!Array} */ (keys), options)
+}
+pathToRegexp_1.parse = parse_1;
+pathToRegexp_1.compile = compile_1;
+pathToRegexp_1.tokensToFunction = tokensToFunction_1;
+pathToRegexp_1.tokensToRegExp = tokensToRegExp_1;
+
+/*  */
+
+// $flow-disable-line
+var regexpCompileCache = Object.create(null);
+
+function fillParams (
+  path,
+  params,
+  routeMsg
+) {
+  params = params || {};
+  try {
+    var filler =
+      regexpCompileCache[path] ||
+      (regexpCompileCache[path] = pathToRegexp_1.compile(path));
+
+    // Fix #2505 resolving asterisk routes { name: 'not-found', params: { pathMatch: '/not-found' }}
+    if (params.pathMatch) { params[0] = params.pathMatch; }
+
+    return filler(params, { pretty: true })
+  } catch (e) {
+    if (true) {
+      warn(false, ("missing param for " + routeMsg + ": " + (e.message)));
+    }
+    return ''
+  } finally {
+    // delete the 0 if it was added
+    delete params[0];
+  }
+}
+
+/*  */
+
+function createRouteMap (
+  routes,
+  oldPathList,
+  oldPathMap,
+  oldNameMap
+) {
+  // the path list is used to control path matching priority
+  var pathList = oldPathList || [];
+  // $flow-disable-line
+  var pathMap = oldPathMap || Object.create(null);
+  // $flow-disable-line
+  var nameMap = oldNameMap || Object.create(null);
+
+  routes.forEach(function (route) {
+    addRouteRecord(pathList, pathMap, nameMap, route);
+  });
+
+  // ensure wildcard routes are always at the end
+  for (var i = 0, l = pathList.length; i < l; i++) {
+    if (pathList[i] === '*') {
+      pathList.push(pathList.splice(i, 1)[0]);
+      l--;
+      i--;
+    }
+  }
+
+  return {
+    pathList: pathList,
+    pathMap: pathMap,
+    nameMap: nameMap
+  }
+}
+
+function addRouteRecord (
+  pathList,
+  pathMap,
+  nameMap,
+  route,
+  parent,
+  matchAs
+) {
+  var path = route.path;
+  var name = route.name;
+  if (true) {
+    assert(path != null, "\"path\" is required in a route configuration.");
+    assert(
+      typeof route.component !== 'string',
+      "route config \"component\" for path: " + (String(path || name)) + " cannot be a " +
+      "string id. Use an actual component instead."
+    );
+  }
+
+  var pathToRegexpOptions = route.pathToRegexpOptions || {};
+  var normalizedPath = normalizePath(
+    path,
+    parent,
+    pathToRegexpOptions.strict
+  );
+
+  if (typeof route.caseSensitive === 'boolean') {
+    pathToRegexpOptions.sensitive = route.caseSensitive;
+  }
+
+  var record = {
+    path: normalizedPath,
+    regex: compileRouteRegex(normalizedPath, pathToRegexpOptions),
+    components: route.components || { default: route.component },
+    instances: {},
+    name: name,
+    parent: parent,
+    matchAs: matchAs,
+    redirect: route.redirect,
+    beforeEnter: route.beforeEnter,
+    meta: route.meta || {},
+    props: route.props == null
+      ? {}
+      : route.components
+        ? route.props
+        : { default: route.props }
+  };
+
+  if (route.children) {
+    // Warn if route is named, does not redirect and has a default child route.
+    // If users navigate to this route by name, the default child will
+    // not be rendered (GH Issue #629)
+    if (true) {
+      if (route.name && !route.redirect && route.children.some(function (child) { return /^\/?$/.test(child.path); })) {
+        warn(
+          false,
+          "Named Route '" + (route.name) + "' has a default child route. " +
+          "When navigating to this named route (:to=\"{name: '" + (route.name) + "'\"), " +
+          "the default child route will not be rendered. Remove the name from " +
+          "this route and use the name of the default child route for named " +
+          "links instead."
+        );
+      }
+    }
+    route.children.forEach(function (child) {
+      var childMatchAs = matchAs
+        ? cleanPath((matchAs + "/" + (child.path)))
+        : undefined;
+      addRouteRecord(pathList, pathMap, nameMap, child, record, childMatchAs);
+    });
+  }
+
+  if (route.alias !== undefined) {
+    var aliases = Array.isArray(route.alias)
+      ? route.alias
+      : [route.alias];
+
+    aliases.forEach(function (alias) {
+      var aliasRoute = {
+        path: alias,
+        children: route.children
+      };
+      addRouteRecord(
+        pathList,
+        pathMap,
+        nameMap,
+        aliasRoute,
+        parent,
+        record.path || '/' // matchAs
+      );
+    });
+  }
+
+  if (!pathMap[record.path]) {
+    pathList.push(record.path);
+    pathMap[record.path] = record;
+  }
+
+  if (name) {
+    if (!nameMap[name]) {
+      nameMap[name] = record;
+    } else if ("development" !== 'production' && !matchAs) {
+      warn(
+        false,
+        "Duplicate named routes definition: " +
+        "{ name: \"" + name + "\", path: \"" + (record.path) + "\" }"
+      );
+    }
+  }
+}
+
+function compileRouteRegex (path, pathToRegexpOptions) {
+  var regex = pathToRegexp_1(path, [], pathToRegexpOptions);
+  if (true) {
+    var keys = Object.create(null);
+    regex.keys.forEach(function (key) {
+      warn(!keys[key.name], ("Duplicate param keys in route with path: \"" + path + "\""));
+      keys[key.name] = true;
+    });
+  }
+  return regex
+}
+
+function normalizePath (path, parent, strict) {
+  if (!strict) { path = path.replace(/\/$/, ''); }
+  if (path[0] === '/') { return path }
+  if (parent == null) { return path }
+  return cleanPath(((parent.path) + "/" + path))
+}
+
+/*  */
+
+function normalizeLocation (
+  raw,
+  current,
+  append,
+  router
+) {
+  var next = typeof raw === 'string' ? { path: raw } : raw;
+  // named target
+  if (next._normalized) {
+    return next
+  } else if (next.name) {
+    return extend({}, raw)
+  }
+
+  // relative params
+  if (!next.path && next.params && current) {
+    next = extend({}, next);
+    next._normalized = true;
+    var params = extend(extend({}, current.params), next.params);
+    if (current.name) {
+      next.name = current.name;
+      next.params = params;
+    } else if (current.matched.length) {
+      var rawPath = current.matched[current.matched.length - 1].path;
+      next.path = fillParams(rawPath, params, ("path " + (current.path)));
+    } else if (true) {
+      warn(false, "relative params navigation requires a current route.");
+    }
+    return next
+  }
+
+  var parsedPath = parsePath(next.path || '');
+  var basePath = (current && current.path) || '/';
+  var path = parsedPath.path
+    ? resolvePath(parsedPath.path, basePath, append || next.append)
+    : basePath;
+
+  var query = resolveQuery(
+    parsedPath.query,
+    next.query,
+    router && router.options.parseQuery
+  );
+
+  var hash = next.hash || parsedPath.hash;
+  if (hash && hash.charAt(0) !== '#') {
+    hash = "#" + hash;
+  }
+
+  return {
+    _normalized: true,
+    path: path,
+    query: query,
+    hash: hash
+  }
+}
+
+/*  */
+
+
+
+function createMatcher (
+  routes,
+  router
+) {
+  var ref = createRouteMap(routes);
+  var pathList = ref.pathList;
+  var pathMap = ref.pathMap;
+  var nameMap = ref.nameMap;
+
+  function addRoutes (routes) {
+    createRouteMap(routes, pathList, pathMap, nameMap);
+  }
+
+  function match (
+    raw,
+    currentRoute,
+    redirectedFrom
+  ) {
+    var location = normalizeLocation(raw, currentRoute, false, router);
+    var name = location.name;
+
+    if (name) {
+      var record = nameMap[name];
+      if (true) {
+        warn(record, ("Route with name '" + name + "' does not exist"));
+      }
+      if (!record) { return _createRoute(null, location) }
+      var paramNames = record.regex.keys
+        .filter(function (key) { return !key.optional; })
+        .map(function (key) { return key.name; });
+
+      if (typeof location.params !== 'object') {
+        location.params = {};
+      }
+
+      if (currentRoute && typeof currentRoute.params === 'object') {
+        for (var key in currentRoute.params) {
+          if (!(key in location.params) && paramNames.indexOf(key) > -1) {
+            location.params[key] = currentRoute.params[key];
+          }
+        }
+      }
+
+      location.path = fillParams(record.path, location.params, ("named route \"" + name + "\""));
+      return _createRoute(record, location, redirectedFrom)
+    } else if (location.path) {
+      location.params = {};
+      for (var i = 0; i < pathList.length; i++) {
+        var path = pathList[i];
+        var record$1 = pathMap[path];
+        if (matchRoute(record$1.regex, location.path, location.params)) {
+          return _createRoute(record$1, location, redirectedFrom)
+        }
+      }
+    }
+    // no match
+    return _createRoute(null, location)
+  }
+
+  function redirect (
+    record,
+    location
+  ) {
+    var originalRedirect = record.redirect;
+    var redirect = typeof originalRedirect === 'function'
+      ? originalRedirect(createRoute(record, location, null, router))
+      : originalRedirect;
+
+    if (typeof redirect === 'string') {
+      redirect = { path: redirect };
+    }
+
+    if (!redirect || typeof redirect !== 'object') {
+      if (true) {
+        warn(
+          false, ("invalid redirect option: " + (JSON.stringify(redirect)))
+        );
+      }
+      return _createRoute(null, location)
+    }
+
+    var re = redirect;
+    var name = re.name;
+    var path = re.path;
+    var query = location.query;
+    var hash = location.hash;
+    var params = location.params;
+    query = re.hasOwnProperty('query') ? re.query : query;
+    hash = re.hasOwnProperty('hash') ? re.hash : hash;
+    params = re.hasOwnProperty('params') ? re.params : params;
+
+    if (name) {
+      // resolved named direct
+      var targetRecord = nameMap[name];
+      if (true) {
+        assert(targetRecord, ("redirect failed: named route \"" + name + "\" not found."));
+      }
+      return match({
+        _normalized: true,
+        name: name,
+        query: query,
+        hash: hash,
+        params: params
+      }, undefined, location)
+    } else if (path) {
+      // 1. resolve relative redirect
+      var rawPath = resolveRecordPath(path, record);
+      // 2. resolve params
+      var resolvedPath = fillParams(rawPath, params, ("redirect route with path \"" + rawPath + "\""));
+      // 3. rematch with existing query and hash
+      return match({
+        _normalized: true,
+        path: resolvedPath,
+        query: query,
+        hash: hash
+      }, undefined, location)
+    } else {
+      if (true) {
+        warn(false, ("invalid redirect option: " + (JSON.stringify(redirect))));
+      }
+      return _createRoute(null, location)
+    }
+  }
+
+  function alias (
+    record,
+    location,
+    matchAs
+  ) {
+    var aliasedPath = fillParams(matchAs, location.params, ("aliased route with path \"" + matchAs + "\""));
+    var aliasedMatch = match({
+      _normalized: true,
+      path: aliasedPath
+    });
+    if (aliasedMatch) {
+      var matched = aliasedMatch.matched;
+      var aliasedRecord = matched[matched.length - 1];
+      location.params = aliasedMatch.params;
+      return _createRoute(aliasedRecord, location)
+    }
+    return _createRoute(null, location)
+  }
+
+  function _createRoute (
+    record,
+    location,
+    redirectedFrom
+  ) {
+    if (record && record.redirect) {
+      return redirect(record, redirectedFrom || location)
+    }
+    if (record && record.matchAs) {
+      return alias(record, location, record.matchAs)
+    }
+    return createRoute(record, location, redirectedFrom, router)
+  }
+
+  return {
+    match: match,
+    addRoutes: addRoutes
+  }
+}
+
+function matchRoute (
+  regex,
+  path,
+  params
+) {
+  var m = path.match(regex);
+
+  if (!m) {
+    return false
+  } else if (!params) {
+    return true
+  }
+
+  for (var i = 1, len = m.length; i < len; ++i) {
+    var key = regex.keys[i - 1];
+    var val = typeof m[i] === 'string' ? decodeURIComponent(m[i]) : m[i];
+    if (key) {
+      // Fix #1994: using * with props: true generates a param named 0
+      params[key.name || 'pathMatch'] = val;
+    }
+  }
+
+  return true
+}
+
+function resolveRecordPath (path, record) {
+  return resolvePath(path, record.parent ? record.parent.path : '/', true)
+}
+
+/*  */
+
+var positionStore = Object.create(null);
+
+function setupScroll () {
+  // Fix for #1585 for Firefox
+  // Fix for #2195 Add optional third attribute to workaround a bug in safari https://bugs.webkit.org/show_bug.cgi?id=182678
+  // Fix for #2774 Support for apps loaded from Windows file shares not mapped to network drives: replaced location.origin with
+  // window.location.protocol + '//' + window.location.host
+  // location.host contains the port and location.hostname doesn't
+  var protocolAndPath = window.location.protocol + '//' + window.location.host;
+  var absolutePath = window.location.href.replace(protocolAndPath, '');
+  window.history.replaceState({ key: getStateKey() }, '', absolutePath);
+  window.addEventListener('popstate', function (e) {
+    saveScrollPosition();
+    if (e.state && e.state.key) {
+      setStateKey(e.state.key);
+    }
+  });
+}
+
+function handleScroll (
+  router,
+  to,
+  from,
+  isPop
+) {
+  if (!router.app) {
+    return
+  }
+
+  var behavior = router.options.scrollBehavior;
+  if (!behavior) {
+    return
+  }
+
+  if (true) {
+    assert(typeof behavior === 'function', "scrollBehavior must be a function");
+  }
+
+  // wait until re-render finishes before scrolling
+  router.app.$nextTick(function () {
+    var position = getScrollPosition();
+    var shouldScroll = behavior.call(router, to, from, isPop ? position : null);
+
+    if (!shouldScroll) {
+      return
+    }
+
+    if (typeof shouldScroll.then === 'function') {
+      shouldScroll.then(function (shouldScroll) {
+        scrollToPosition((shouldScroll), position);
+      }).catch(function (err) {
+        if (true) {
+          assert(false, err.toString());
+        }
+      });
+    } else {
+      scrollToPosition(shouldScroll, position);
+    }
+  });
+}
+
+function saveScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    positionStore[key] = {
+      x: window.pageXOffset,
+      y: window.pageYOffset
+    };
+  }
+}
+
+function getScrollPosition () {
+  var key = getStateKey();
+  if (key) {
+    return positionStore[key]
+  }
+}
+
+function getElementPosition (el, offset) {
+  var docEl = document.documentElement;
+  var docRect = docEl.getBoundingClientRect();
+  var elRect = el.getBoundingClientRect();
+  return {
+    x: elRect.left - docRect.left - offset.x,
+    y: elRect.top - docRect.top - offset.y
+  }
+}
+
+function isValidPosition (obj) {
+  return isNumber(obj.x) || isNumber(obj.y)
+}
+
+function normalizePosition (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : window.pageXOffset,
+    y: isNumber(obj.y) ? obj.y : window.pageYOffset
+  }
+}
+
+function normalizeOffset (obj) {
+  return {
+    x: isNumber(obj.x) ? obj.x : 0,
+    y: isNumber(obj.y) ? obj.y : 0
+  }
+}
+
+function isNumber (v) {
+  return typeof v === 'number'
+}
+
+function scrollToPosition (shouldScroll, position) {
+  var isObject = typeof shouldScroll === 'object';
+  if (isObject && typeof shouldScroll.selector === 'string') {
+    var el = document.querySelector(shouldScroll.selector);
+    if (el) {
+      var offset = shouldScroll.offset && typeof shouldScroll.offset === 'object' ? shouldScroll.offset : {};
+      offset = normalizeOffset(offset);
+      position = getElementPosition(el, offset);
+    } else if (isValidPosition(shouldScroll)) {
+      position = normalizePosition(shouldScroll);
+    }
+  } else if (isObject && isValidPosition(shouldScroll)) {
+    position = normalizePosition(shouldScroll);
+  }
+
+  if (position) {
+    window.scrollTo(position.x, position.y);
+  }
+}
+
+/*  */
+
+var supportsPushState = inBrowser && (function () {
+  var ua = window.navigator.userAgent;
+
+  if (
+    (ua.indexOf('Android 2.') !== -1 || ua.indexOf('Android 4.0') !== -1) &&
+    ua.indexOf('Mobile Safari') !== -1 &&
+    ua.indexOf('Chrome') === -1 &&
+    ua.indexOf('Windows Phone') === -1
+  ) {
+    return false
+  }
+
+  return window.history && 'pushState' in window.history
+})();
+
+// use User Timing api (if present) for more accurate key precision
+var Time = inBrowser && window.performance && window.performance.now
+  ? window.performance
+  : Date;
+
+var _key = genKey();
+
+function genKey () {
+  return Time.now().toFixed(3)
+}
+
+function getStateKey () {
+  return _key
+}
+
+function setStateKey (key) {
+  _key = key;
+}
+
+function pushState (url, replace) {
+  saveScrollPosition();
+  // try...catch the pushState call to get around Safari
+  // DOM Exception 18 where it limits to 100 pushState calls
+  var history = window.history;
+  try {
+    if (replace) {
+      history.replaceState({ key: _key }, '', url);
+    } else {
+      _key = genKey();
+      history.pushState({ key: _key }, '', url);
+    }
+  } catch (e) {
+    window.location[replace ? 'replace' : 'assign'](url);
+  }
+}
+
+function replaceState (url) {
+  pushState(url, true);
+}
+
+/*  */
+
+function runQueue (queue, fn, cb) {
+  var step = function (index) {
+    if (index >= queue.length) {
+      cb();
+    } else {
+      if (queue[index]) {
+        fn(queue[index], function () {
+          step(index + 1);
+        });
+      } else {
+        step(index + 1);
+      }
+    }
+  };
+  step(0);
+}
+
+/*  */
+
+function resolveAsyncComponents (matched) {
+  return function (to, from, next) {
+    var hasAsync = false;
+    var pending = 0;
+    var error = null;
+
+    flatMapComponents(matched, function (def, _, match, key) {
+      // if it's a function and doesn't have cid attached,
+      // assume it's an async component resolve function.
+      // we are not using Vue's default async resolving mechanism because
+      // we want to halt the navigation until the incoming component has been
+      // resolved.
+      if (typeof def === 'function' && def.cid === undefined) {
+        hasAsync = true;
+        pending++;
+
+        var resolve = once(function (resolvedDef) {
+          if (isESModule(resolvedDef)) {
+            resolvedDef = resolvedDef.default;
+          }
+          // save resolved on async factory in case it's used elsewhere
+          def.resolved = typeof resolvedDef === 'function'
+            ? resolvedDef
+            : _Vue.extend(resolvedDef);
+          match.components[key] = resolvedDef;
+          pending--;
+          if (pending <= 0) {
+            next();
+          }
+        });
+
+        var reject = once(function (reason) {
+          var msg = "Failed to resolve async component " + key + ": " + reason;
+          "development" !== 'production' && warn(false, msg);
+          if (!error) {
+            error = isError(reason)
+              ? reason
+              : new Error(msg);
+            next(error);
+          }
+        });
+
+        var res;
+        try {
+          res = def(resolve, reject);
+        } catch (e) {
+          reject(e);
+        }
+        if (res) {
+          if (typeof res.then === 'function') {
+            res.then(resolve, reject);
+          } else {
+            // new syntax in Vue 2.3
+            var comp = res.component;
+            if (comp && typeof comp.then === 'function') {
+              comp.then(resolve, reject);
+            }
+          }
+        }
+      }
+    });
+
+    if (!hasAsync) { next(); }
+  }
+}
+
+function flatMapComponents (
+  matched,
+  fn
+) {
+  return flatten(matched.map(function (m) {
+    return Object.keys(m.components).map(function (key) { return fn(
+      m.components[key],
+      m.instances[key],
+      m, key
+    ); })
+  }))
+}
+
+function flatten (arr) {
+  return Array.prototype.concat.apply([], arr)
+}
+
+var hasSymbol =
+  typeof Symbol === 'function' &&
+  typeof Symbol.toStringTag === 'symbol';
+
+function isESModule (obj) {
+  return obj.__esModule || (hasSymbol && obj[Symbol.toStringTag] === 'Module')
+}
+
+// in Webpack 2, require.ensure now also returns a Promise
+// so the resolve/reject functions may get called an extra time
+// if the user uses an arrow function shorthand that happens to
+// return that Promise.
+function once (fn) {
+  var called = false;
+  return function () {
+    var args = [], len = arguments.length;
+    while ( len-- ) args[ len ] = arguments[ len ];
+
+    if (called) { return }
+    called = true;
+    return fn.apply(this, args)
+  }
+}
+
+/*  */
+
+var History = function History (router, base) {
+  this.router = router;
+  this.base = normalizeBase(base);
+  // start with a route object that stands for "nowhere"
+  this.current = START;
+  this.pending = null;
+  this.ready = false;
+  this.readyCbs = [];
+  this.readyErrorCbs = [];
+  this.errorCbs = [];
+};
+
+History.prototype.listen = function listen (cb) {
+  this.cb = cb;
+};
+
+History.prototype.onReady = function onReady (cb, errorCb) {
+  if (this.ready) {
+    cb();
+  } else {
+    this.readyCbs.push(cb);
+    if (errorCb) {
+      this.readyErrorCbs.push(errorCb);
+    }
+  }
+};
+
+History.prototype.onError = function onError (errorCb) {
+  this.errorCbs.push(errorCb);
+};
+
+History.prototype.transitionTo = function transitionTo (location, onComplete, onAbort) {
+    var this$1 = this;
+
+  var route = this.router.match(location, this.current);
+  this.confirmTransition(route, function () {
+    this$1.updateRoute(route);
+    onComplete && onComplete(route);
+    this$1.ensureURL();
+
+    // fire ready cbs once
+    if (!this$1.ready) {
+      this$1.ready = true;
+      this$1.readyCbs.forEach(function (cb) { cb(route); });
+    }
+  }, function (err) {
+    if (onAbort) {
+      onAbort(err);
+    }
+    if (err && !this$1.ready) {
+      this$1.ready = true;
+      this$1.readyErrorCbs.forEach(function (cb) { cb(err); });
+    }
+  });
+};
+
+History.prototype.confirmTransition = function confirmTransition (route, onComplete, onAbort) {
+    var this$1 = this;
+
+  var current = this.current;
+  var abort = function (err) {
+    if (isError(err)) {
+      if (this$1.errorCbs.length) {
+        this$1.errorCbs.forEach(function (cb) { cb(err); });
+      } else {
+        warn(false, 'uncaught error during route navigation:');
+        console.error(err);
+      }
+    }
+    onAbort && onAbort(err);
+  };
+  if (
+    isSameRoute(route, current) &&
+    // in the case the route map has been dynamically appended to
+    route.matched.length === current.matched.length
+  ) {
+    this.ensureURL();
+    return abort()
+  }
+
+  var ref = resolveQueue(this.current.matched, route.matched);
+    var updated = ref.updated;
+    var deactivated = ref.deactivated;
+    var activated = ref.activated;
+
+  var queue = [].concat(
+    // in-component leave guards
+    extractLeaveGuards(deactivated),
+    // global before hooks
+    this.router.beforeHooks,
+    // in-component update hooks
+    extractUpdateHooks(updated),
+    // in-config enter guards
+    activated.map(function (m) { return m.beforeEnter; }),
+    // async components
+    resolveAsyncComponents(activated)
+  );
+
+  this.pending = route;
+  var iterator = function (hook, next) {
+    if (this$1.pending !== route) {
+      return abort()
+    }
+    try {
+      hook(route, current, function (to) {
+        if (to === false || isError(to)) {
+          // next(false) -> abort navigation, ensure current URL
+          this$1.ensureURL(true);
+          abort(to);
+        } else if (
+          typeof to === 'string' ||
+          (typeof to === 'object' && (
+            typeof to.path === 'string' ||
+            typeof to.name === 'string'
+          ))
+        ) {
+          // next('/') or next({ path: '/' }) -> redirect
+          abort();
+          if (typeof to === 'object' && to.replace) {
+            this$1.replace(to);
+          } else {
+            this$1.push(to);
+          }
+        } else {
+          // confirm transition and pass on the value
+          next(to);
+        }
+      });
+    } catch (e) {
+      abort(e);
+    }
+  };
+
+  runQueue(queue, iterator, function () {
+    var postEnterCbs = [];
+    var isValid = function () { return this$1.current === route; };
+    // wait until async components are resolved before
+    // extracting in-component enter guards
+    var enterGuards = extractEnterGuards(activated, postEnterCbs, isValid);
+    var queue = enterGuards.concat(this$1.router.resolveHooks);
+    runQueue(queue, iterator, function () {
+      if (this$1.pending !== route) {
+        return abort()
+      }
+      this$1.pending = null;
+      onComplete(route);
+      if (this$1.router.app) {
+        this$1.router.app.$nextTick(function () {
+          postEnterCbs.forEach(function (cb) { cb(); });
+        });
+      }
+    });
+  });
+};
+
+History.prototype.updateRoute = function updateRoute (route) {
+  var prev = this.current;
+  this.current = route;
+  this.cb && this.cb(route);
+  this.router.afterHooks.forEach(function (hook) {
+    hook && hook(route, prev);
+  });
+};
+
+function normalizeBase (base) {
+  if (!base) {
+    if (inBrowser) {
+      // respect <base> tag
+      var baseEl = document.querySelector('base');
+      base = (baseEl && baseEl.getAttribute('href')) || '/';
+      // strip full URL origin
+      base = base.replace(/^https?:\/\/[^\/]+/, '');
+    } else {
+      base = '/';
+    }
+  }
+  // make sure there's the starting slash
+  if (base.charAt(0) !== '/') {
+    base = '/' + base;
+  }
+  // remove trailing slash
+  return base.replace(/\/$/, '')
+}
+
+function resolveQueue (
+  current,
+  next
+) {
+  var i;
+  var max = Math.max(current.length, next.length);
+  for (i = 0; i < max; i++) {
+    if (current[i] !== next[i]) {
+      break
+    }
+  }
+  return {
+    updated: next.slice(0, i),
+    activated: next.slice(i),
+    deactivated: current.slice(i)
+  }
+}
+
+function extractGuards (
+  records,
+  name,
+  bind,
+  reverse
+) {
+  var guards = flatMapComponents(records, function (def, instance, match, key) {
+    var guard = extractGuard(def, name);
+    if (guard) {
+      return Array.isArray(guard)
+        ? guard.map(function (guard) { return bind(guard, instance, match, key); })
+        : bind(guard, instance, match, key)
+    }
+  });
+  return flatten(reverse ? guards.reverse() : guards)
+}
+
+function extractGuard (
+  def,
+  key
+) {
+  if (typeof def !== 'function') {
+    // extend now so that global mixins are applied.
+    def = _Vue.extend(def);
+  }
+  return def.options[key]
+}
+
+function extractLeaveGuards (deactivated) {
+  return extractGuards(deactivated, 'beforeRouteLeave', bindGuard, true)
+}
+
+function extractUpdateHooks (updated) {
+  return extractGuards(updated, 'beforeRouteUpdate', bindGuard)
+}
+
+function bindGuard (guard, instance) {
+  if (instance) {
+    return function boundRouteGuard () {
+      return guard.apply(instance, arguments)
+    }
+  }
+}
+
+function extractEnterGuards (
+  activated,
+  cbs,
+  isValid
+) {
+  return extractGuards(activated, 'beforeRouteEnter', function (guard, _, match, key) {
+    return bindEnterGuard(guard, match, key, cbs, isValid)
+  })
+}
+
+function bindEnterGuard (
+  guard,
+  match,
+  key,
+  cbs,
+  isValid
+) {
+  return function routeEnterGuard (to, from, next) {
+    return guard(to, from, function (cb) {
+      if (typeof cb === 'function') {
+        cbs.push(function () {
+          // #750
+          // if a router-view is wrapped with an out-in transition,
+          // the instance may not have been registered at this time.
+          // we will need to poll for registration until current route
+          // is no longer valid.
+          poll(cb, match.instances, key, isValid);
+        });
+      }
+      next(cb);
+    })
+  }
+}
+
+function poll (
+  cb, // somehow flow cannot infer this is a function
+  instances,
+  key,
+  isValid
+) {
+  if (
+    instances[key] &&
+    !instances[key]._isBeingDestroyed // do not reuse being destroyed instance
+  ) {
+    cb(instances[key]);
+  } else if (isValid()) {
+    setTimeout(function () {
+      poll(cb, instances, key, isValid);
+    }, 16);
+  }
+}
+
+/*  */
+
+var HTML5History = /*@__PURE__*/(function (History$$1) {
+  function HTML5History (router, base) {
+    var this$1 = this;
+
+    History$$1.call(this, router, base);
+
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      setupScroll();
+    }
+
+    var initLocation = getLocation(this.base);
+    window.addEventListener('popstate', function (e) {
+      var current = this$1.current;
+
+      // Avoiding first `popstate` event dispatched in some browsers but first
+      // history route not updated since async guard at the same time.
+      var location = getLocation(this$1.base);
+      if (this$1.current === START && location === initLocation) {
+        return
+      }
+
+      this$1.transitionTo(location, function (route) {
+        if (supportsScroll) {
+          handleScroll(router, route, current, true);
+        }
+      });
+    });
+  }
+
+  if ( History$$1 ) HTML5History.__proto__ = History$$1;
+  HTML5History.prototype = Object.create( History$$1 && History$$1.prototype );
+  HTML5History.prototype.constructor = HTML5History;
+
+  HTML5History.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HTML5History.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      pushState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      replaceState(cleanPath(this$1.base + route.fullPath));
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HTML5History.prototype.ensureURL = function ensureURL (push) {
+    if (getLocation(this.base) !== this.current.fullPath) {
+      var current = cleanPath(this.base + this.current.fullPath);
+      push ? pushState(current) : replaceState(current);
+    }
+  };
+
+  HTML5History.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getLocation(this.base)
+  };
+
+  return HTML5History;
+}(History));
+
+function getLocation (base) {
+  var path = decodeURI(window.location.pathname);
+  if (base && path.indexOf(base) === 0) {
+    path = path.slice(base.length);
+  }
+  return (path || '/') + window.location.search + window.location.hash
+}
+
+/*  */
+
+var HashHistory = /*@__PURE__*/(function (History$$1) {
+  function HashHistory (router, base, fallback) {
+    History$$1.call(this, router, base);
+    // check history fallback deeplinking
+    if (fallback && checkFallback(this.base)) {
+      return
+    }
+    ensureSlash();
+  }
+
+  if ( History$$1 ) HashHistory.__proto__ = History$$1;
+  HashHistory.prototype = Object.create( History$$1 && History$$1.prototype );
+  HashHistory.prototype.constructor = HashHistory;
+
+  // this is delayed until the app mounts
+  // to avoid the hashchange listener being fired too early
+  HashHistory.prototype.setupListeners = function setupListeners () {
+    var this$1 = this;
+
+    var router = this.router;
+    var expectScroll = router.options.scrollBehavior;
+    var supportsScroll = supportsPushState && expectScroll;
+
+    if (supportsScroll) {
+      setupScroll();
+    }
+
+    window.addEventListener(supportsPushState ? 'popstate' : 'hashchange', function () {
+      var current = this$1.current;
+      if (!ensureSlash()) {
+        return
+      }
+      this$1.transitionTo(getHash(), function (route) {
+        if (supportsScroll) {
+          handleScroll(this$1.router, route, current, true);
+        }
+        if (!supportsPushState) {
+          replaceHash(route.fullPath);
+        }
+      });
+    });
+  };
+
+  HashHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      pushHash(route.fullPath);
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HashHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    var ref = this;
+    var fromRoute = ref.current;
+    this.transitionTo(location, function (route) {
+      replaceHash(route.fullPath);
+      handleScroll(this$1.router, route, fromRoute, false);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  HashHistory.prototype.go = function go (n) {
+    window.history.go(n);
+  };
+
+  HashHistory.prototype.ensureURL = function ensureURL (push) {
+    var current = this.current.fullPath;
+    if (getHash() !== current) {
+      push ? pushHash(current) : replaceHash(current);
+    }
+  };
+
+  HashHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    return getHash()
+  };
+
+  return HashHistory;
+}(History));
+
+function checkFallback (base) {
+  var location = getLocation(base);
+  if (!/^\/#/.test(location)) {
+    window.location.replace(
+      cleanPath(base + '/#' + location)
+    );
+    return true
+  }
+}
+
+function ensureSlash () {
+  var path = getHash();
+  if (path.charAt(0) === '/') {
+    return true
+  }
+  replaceHash('/' + path);
+  return false
+}
+
+function getHash () {
+  // We can't use window.location.hash here because it's not
+  // consistent across browsers - Firefox will pre-decode it!
+  var href = window.location.href;
+  var index = href.indexOf('#');
+  // empty path
+  if (index < 0) { return '' }
+
+  href = href.slice(index + 1);
+  // decode the hash but not the search or hash
+  // as search(query) is already decoded
+  // https://github.com/vuejs/vue-router/issues/2708
+  var searchIndex = href.indexOf('?');
+  if (searchIndex < 0) {
+    var hashIndex = href.indexOf('#');
+    if (hashIndex > -1) { href = decodeURI(href.slice(0, hashIndex)) + href.slice(hashIndex); }
+    else { href = decodeURI(href); }
+  } else {
+    if (searchIndex > -1) { href = decodeURI(href.slice(0, searchIndex)) + href.slice(searchIndex); }
+  }
+
+  return href
+}
+
+function getUrl (path) {
+  var href = window.location.href;
+  var i = href.indexOf('#');
+  var base = i >= 0 ? href.slice(0, i) : href;
+  return (base + "#" + path)
+}
+
+function pushHash (path) {
+  if (supportsPushState) {
+    pushState(getUrl(path));
+  } else {
+    window.location.hash = path;
+  }
+}
+
+function replaceHash (path) {
+  if (supportsPushState) {
+    replaceState(getUrl(path));
+  } else {
+    window.location.replace(getUrl(path));
+  }
+}
+
+/*  */
+
+var AbstractHistory = /*@__PURE__*/(function (History$$1) {
+  function AbstractHistory (router, base) {
+    History$$1.call(this, router, base);
+    this.stack = [];
+    this.index = -1;
+  }
+
+  if ( History$$1 ) AbstractHistory.__proto__ = History$$1;
+  AbstractHistory.prototype = Object.create( History$$1 && History$$1.prototype );
+  AbstractHistory.prototype.constructor = AbstractHistory;
+
+  AbstractHistory.prototype.push = function push (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(location, function (route) {
+      this$1.stack = this$1.stack.slice(0, this$1.index + 1).concat(route);
+      this$1.index++;
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  AbstractHistory.prototype.replace = function replace (location, onComplete, onAbort) {
+    var this$1 = this;
+
+    this.transitionTo(location, function (route) {
+      this$1.stack = this$1.stack.slice(0, this$1.index).concat(route);
+      onComplete && onComplete(route);
+    }, onAbort);
+  };
+
+  AbstractHistory.prototype.go = function go (n) {
+    var this$1 = this;
+
+    var targetIndex = this.index + n;
+    if (targetIndex < 0 || targetIndex >= this.stack.length) {
+      return
+    }
+    var route = this.stack[targetIndex];
+    this.confirmTransition(route, function () {
+      this$1.index = targetIndex;
+      this$1.updateRoute(route);
+    });
+  };
+
+  AbstractHistory.prototype.getCurrentLocation = function getCurrentLocation () {
+    var current = this.stack[this.stack.length - 1];
+    return current ? current.fullPath : '/'
+  };
+
+  AbstractHistory.prototype.ensureURL = function ensureURL () {
+    // noop
+  };
+
+  return AbstractHistory;
+}(History));
+
+/*  */
+
+
+
+var VueRouter = function VueRouter (options) {
+  if ( options === void 0 ) options = {};
+
+  this.app = null;
+  this.apps = [];
+  this.options = options;
+  this.beforeHooks = [];
+  this.resolveHooks = [];
+  this.afterHooks = [];
+  this.matcher = createMatcher(options.routes || [], this);
+
+  var mode = options.mode || 'hash';
+  this.fallback = mode === 'history' && !supportsPushState && options.fallback !== false;
+  if (this.fallback) {
+    mode = 'hash';
+  }
+  if (!inBrowser) {
+    mode = 'abstract';
+  }
+  this.mode = mode;
+
+  switch (mode) {
+    case 'history':
+      this.history = new HTML5History(this, options.base);
+      break
+    case 'hash':
+      this.history = new HashHistory(this, options.base, this.fallback);
+      break
+    case 'abstract':
+      this.history = new AbstractHistory(this, options.base);
+      break
+    default:
+      if (true) {
+        assert(false, ("invalid mode: " + mode));
+      }
+  }
+};
+
+var prototypeAccessors = { currentRoute: { configurable: true } };
+
+VueRouter.prototype.match = function match (
+  raw,
+  current,
+  redirectedFrom
+) {
+  return this.matcher.match(raw, current, redirectedFrom)
+};
+
+prototypeAccessors.currentRoute.get = function () {
+  return this.history && this.history.current
+};
+
+VueRouter.prototype.init = function init (app /* Vue component instance */) {
+    var this$1 = this;
+
+  "development" !== 'production' && assert(
+    install.installed,
+    "not installed. Make sure to call `Vue.use(VueRouter)` " +
+    "before creating root instance."
+  );
+
+  this.apps.push(app);
+
+  // set up app destroyed handler
+  // https://github.com/vuejs/vue-router/issues/2639
+  app.$once('hook:destroyed', function () {
+    // clean out app from this.apps array once destroyed
+    var index = this$1.apps.indexOf(app);
+    if (index > -1) { this$1.apps.splice(index, 1); }
+    // ensure we still have a main app or null if no apps
+    // we do not release the router so it can be reused
+    if (this$1.app === app) { this$1.app = this$1.apps[0] || null; }
+  });
+
+  // main app previously initialized
+  // return as we don't need to set up new history listener
+  if (this.app) {
+    return
+  }
+
+  this.app = app;
+
+  var history = this.history;
+
+  if (history instanceof HTML5History) {
+    history.transitionTo(history.getCurrentLocation());
+  } else if (history instanceof HashHistory) {
+    var setupHashListener = function () {
+      history.setupListeners();
+    };
+    history.transitionTo(
+      history.getCurrentLocation(),
+      setupHashListener,
+      setupHashListener
+    );
+  }
+
+  history.listen(function (route) {
+    this$1.apps.forEach(function (app) {
+      app._route = route;
+    });
+  });
+};
+
+VueRouter.prototype.beforeEach = function beforeEach (fn) {
+  return registerHook(this.beforeHooks, fn)
+};
+
+VueRouter.prototype.beforeResolve = function beforeResolve (fn) {
+  return registerHook(this.resolveHooks, fn)
+};
+
+VueRouter.prototype.afterEach = function afterEach (fn) {
+  return registerHook(this.afterHooks, fn)
+};
+
+VueRouter.prototype.onReady = function onReady (cb, errorCb) {
+  this.history.onReady(cb, errorCb);
+};
+
+VueRouter.prototype.onError = function onError (errorCb) {
+  this.history.onError(errorCb);
+};
+
+VueRouter.prototype.push = function push (location, onComplete, onAbort) {
+  this.history.push(location, onComplete, onAbort);
+};
+
+VueRouter.prototype.replace = function replace (location, onComplete, onAbort) {
+  this.history.replace(location, onComplete, onAbort);
+};
+
+VueRouter.prototype.go = function go (n) {
+  this.history.go(n);
+};
+
+VueRouter.prototype.back = function back () {
+  this.go(-1);
+};
+
+VueRouter.prototype.forward = function forward () {
+  this.go(1);
+};
+
+VueRouter.prototype.getMatchedComponents = function getMatchedComponents (to) {
+  var route = to
+    ? to.matched
+      ? to
+      : this.resolve(to).route
+    : this.currentRoute;
+  if (!route) {
+    return []
+  }
+  return [].concat.apply([], route.matched.map(function (m) {
+    return Object.keys(m.components).map(function (key) {
+      return m.components[key]
+    })
+  }))
+};
+
+VueRouter.prototype.resolve = function resolve (
+  to,
+  current,
+  append
+) {
+  current = current || this.history.current;
+  var location = normalizeLocation(
+    to,
+    current,
+    append,
+    this
+  );
+  var route = this.match(location, current);
+  var fullPath = route.redirectedFrom || route.fullPath;
+  var base = this.history.base;
+  var href = createHref(base, fullPath, this.mode);
+  return {
+    location: location,
+    route: route,
+    href: href,
+    // for backwards compat
+    normalizedTo: location,
+    resolved: route
+  }
+};
+
+VueRouter.prototype.addRoutes = function addRoutes (routes) {
+  this.matcher.addRoutes(routes);
+  if (this.history.current !== START) {
+    this.history.transitionTo(this.history.getCurrentLocation());
+  }
+};
+
+Object.defineProperties( VueRouter.prototype, prototypeAccessors );
+
+function registerHook (list, fn) {
+  list.push(fn);
+  return function () {
+    var i = list.indexOf(fn);
+    if (i > -1) { list.splice(i, 1); }
+  }
+}
+
+function createHref (base, fullPath, mode) {
+  var path = mode === 'hash' ? '#' + fullPath : fullPath;
+  return base ? cleanPath(base + '/' + path) : path
+}
+
+VueRouter.install = install;
+VueRouter.version = '3.0.7';
+
+if (inBrowser && window.Vue) {
+  window.Vue.use(VueRouter);
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (VueRouter);
+
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "message": {
+    "backgroundColor": "#00FF00",
+    "top": 0,
+    "left": "700"
+  }
+}
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+//
+//
+//
+
+var animation = weex.requireModule('animation');
+var modal = weex.requireModule('modal');
+exports.default = {
+  data: function data() {
+    return {};
+  },
+  computed: {},
+  created: function created() {},
+
+  methods: {},
+  mounted: function mounted() {
+    var ref1 = this.$refs.ref1;
+    console.log(ref1);
+    setTimeout(function () {
+      animation.transition(ref1, {
+        styles: {
+          backgroundColor: '#FF0000',
+          transform: 'translateX(-700px)'
+        },
+        duration: 200, //ms
+        timingFunction: 'ease-out',
+        needLayout: false,
+        delay: 0 //ms
+      }, function () {
+        modal.toast({ message: 'animation finished.' });
+      });
+    }, 5);
+  }
+};
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('text', {
+    ref: "ref1",
+    staticClass: ["message"]
+  }, [_vm._v("Now, let's use Vue.js to build your Weex app.")])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(11)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(12)
+
+/* template */
+var __vue_template__ = __webpack_require__(51)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\Index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-dc80a3c8"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "@TRANSITION": {
+    "index": {
+      "property": "opacity",
+      "duration": 100,
+      "timingFunction": "ease"
+    },
+    "title": {
+      "duration": 300
+    }
+  },
+  "index": {
+    "transitionProperty": "opacity",
+    "transitionDuration": 100,
+    "transitionTimingFunction": "ease"
+  },
+  "iconfont": {
+    "fontFamily": "iconfont",
+    "color": "#FF0000"
+  },
+  "item-container": {
+    "width": "750"
+  },
+  "tabCon": {
+    "alignItems": "center",
+    "justifyContent": "center"
+  },
+  "title": {
+    "transitionDuration": 300,
+    "fontSize": "27",
+    "fontWeight": "600"
+  }
+}
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _utils = __webpack_require__(1);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _wxcTabBar = __webpack_require__(16);
+
+var _wxcTabBar2 = _interopRequireDefault(_wxcTabBar);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var _List = __webpack_require__(21);
+
+var _List2 = _interopRequireDefault(_List);
+
+var _Test = __webpack_require__(42);
+
+var _Test2 = _interopRequireDefault(_Test);
+
+var _HelloWorld = __webpack_require__(2);
+
+var _HelloWorld2 = _interopRequireDefault(_HelloWorld);
+
+var _SwipeAction = __webpack_require__(3);
+
+var _SwipeAction2 = _interopRequireDefault(_SwipeAction);
+
+var _vuex = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
+// import Config from './configTab'
+var modal = weex.requireModule('modal');
+
+exports.default = {
+  components: { WxcTabBar: _wxcTabBar2.default, SwipeAction: _SwipeAction2.default, List: _List2.default, Test: _Test2.default, HelloWorld: _HelloWorld2.default },
+  data: function data() {
+    return {
+      index: 0,
+      tabHeight: 50,
+      icon: '\uE7FC'
+    };
+  },
+  computed: _extends({}, (0, _vuex.mapState)('tab', {
+    count: function count(state) {
+      return state.count;
+    },
+    tabTitles: 'tabIconFontTitles',
+    tabStyles: function tabStyles(state) {
+      return state.tabIconFontStyles;
+    },
+    indexOpacity: 'indexOpacity'
+  })),
+  created: function created() {
+    this.initIconFont();
+    var tabPageHeight = _utils2.default.env.getPageHeight();
+    // 如果页面没有导航栏，可以用下面这个计算高度的方法
+    // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
+    var tabStyles = this.tabStyles;
+    // this.contentStyle = { height: (tabPageHeight - tabStyles.height) + 'px' };
+
+    this.contentStyle = { height: tabPageHeight + 'px' };
+    // console.log(`index${this.contentStyle.height}`);
+  },
+
+  methods: {
+    // ...mapMutations('tab', [
+    //   'setOpacity',
+    // ]),
+    consoleState: function consoleState() {
+
+      var count = this;
+      console.log(count);
+      modal.toast({
+        message: 'count',
+        duration: 1
+      });
+      // modal.toast({
+      // message: count,
+      // duration: 0.3
+      // })
+    },
+    initIconFont: function initIconFont() {
+      // eslint-disable-next-line no-undef
+      var domModule = weex.requireModule('dom');
+      domModule.addRule('fontFace', {
+        'fontFamily': 'iconfont',
+        'src': 'url(' + this.tabStyles.iconFontUrl + ')'
+      });
+    },
+    wxcTabBarCurrentTabSelected: function wxcTabBarCurrentTabSelected(e) {
+      var index = e.page;
+      this.index = index;
+      // this.$store.commit('tab/increment')
+      // 选中的标签展示title没选中的不展示
+      // let title = ['首页', '愿望清单', '我的']
+
+
+      // for (let i = 0; i < this.tabTitles.length; i++) {
+      //   if (index === i) {
+      //     this.showSelectedTitle({ id: i, title: title[i]})
+      //   } else {
+      //     this.showSelectedTitle({ id: i, title: ''})
+      //   }
+      // }
+
+
+      // alert(index)
+      // console.log(index);
+    }
+  }
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var required = __webpack_require__(14)
+  , qs = __webpack_require__(15)
+  , slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//
+  , protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\S\s]*)/i
+  , whitespace = '[\\x09\\x0A\\x0B\\x0C\\x0D\\x20\\xA0\\u1680\\u180E\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\\u205F\\u3000\\u2028\\u2029\\uFEFF]'
+  , left = new RegExp('^'+ whitespace +'+');
+
+/**
+ * Trim a given string.
+ *
+ * @param {String} str String to trim.
+ * @public
+ */
+function trimLeft(str) {
+  return (str ? str : '').toString().replace(left, '');
+}
+
+/**
+ * These are the parse rules for the URL parser, it informs the parser
+ * about:
+ *
+ * 0. The char it Needs to parse, if it's a string it should be done using
+ *    indexOf, RegExp using exec and NaN means set as current value.
+ * 1. The property we should set when parsing this value.
+ * 2. Indication if it's backwards or forward parsing, when set as number it's
+ *    the value of extra chars that should be split off.
+ * 3. Inherit from location if non existing in the parser.
+ * 4. `toLowerCase` the resulting value.
+ */
+var rules = [
+  ['#', 'hash'],                        // Extract from the back.
+  ['?', 'query'],                       // Extract from the back.
+  function sanitize(address) {          // Sanitize what is left of the address
+    return address.replace('\\', '/');
+  },
+  ['/', 'pathname'],                    // Extract from the back.
+  ['@', 'auth', 1],                     // Extract from the front.
+  [NaN, 'host', undefined, 1, 1],       // Set left over value.
+  [/:(\d+)$/, 'port', undefined, 1],    // RegExp the back.
+  [NaN, 'hostname', undefined, 1, 1]    // Set left over.
+];
+
+/**
+ * These properties should not be copied or inherited from. This is only needed
+ * for all non blob URL's as a blob URL does not include a hash, only the
+ * origin.
+ *
+ * @type {Object}
+ * @private
+ */
+var ignore = { hash: 1, query: 1 };
+
+/**
+ * The location object differs when your code is loaded through a normal page,
+ * Worker or through a worker using a blob. And with the blobble begins the
+ * trouble as the location object will contain the URL of the blob, not the
+ * location of the page where our code is loaded in. The actual origin is
+ * encoded in the `pathname` so we can thankfully generate a good "default"
+ * location from it so we can generate proper relative URL's again.
+ *
+ * @param {Object|String} loc Optional default location object.
+ * @returns {Object} lolcation object.
+ * @public
+ */
+function lolcation(loc) {
+  var globalVar;
+
+  if (typeof window !== 'undefined') globalVar = window;
+  else if (typeof global !== 'undefined') globalVar = global;
+  else if (typeof self !== 'undefined') globalVar = self;
+  else globalVar = {};
+
+  var location = globalVar.location || {};
+  loc = loc || location;
+
+  var finaldestination = {}
+    , type = typeof loc
+    , key;
+
+  if ('blob:' === loc.protocol) {
+    finaldestination = new Url(unescape(loc.pathname), {});
+  } else if ('string' === type) {
+    finaldestination = new Url(loc, {});
+    for (key in ignore) delete finaldestination[key];
+  } else if ('object' === type) {
+    for (key in loc) {
+      if (key in ignore) continue;
+      finaldestination[key] = loc[key];
+    }
+
+    if (finaldestination.slashes === undefined) {
+      finaldestination.slashes = slashes.test(loc.href);
+    }
+  }
+
+  return finaldestination;
+}
+
+/**
+ * @typedef ProtocolExtract
+ * @type Object
+ * @property {String} protocol Protocol matched in the URL, in lowercase.
+ * @property {Boolean} slashes `true` if protocol is followed by "//", else `false`.
+ * @property {String} rest Rest of the URL that is not part of the protocol.
+ */
+
+/**
+ * Extract protocol information from a URL with/without double slash ("//").
+ *
+ * @param {String} address URL we want to extract from.
+ * @return {ProtocolExtract} Extracted information.
+ * @private
+ */
+function extractProtocol(address) {
+  address = trimLeft(address);
+  var match = protocolre.exec(address);
+
+  return {
+    protocol: match[1] ? match[1].toLowerCase() : '',
+    slashes: !!match[2],
+    rest: match[3]
+  };
+}
+
+/**
+ * Resolve a relative URL pathname against a base URL pathname.
+ *
+ * @param {String} relative Pathname of the relative URL.
+ * @param {String} base Pathname of the base URL.
+ * @return {String} Resolved pathname.
+ * @private
+ */
+function resolve(relative, base) {
+  if (relative === '') return base;
+
+  var path = (base || '/').split('/').slice(0, -1).concat(relative.split('/'))
+    , i = path.length
+    , last = path[i - 1]
+    , unshift = false
+    , up = 0;
+
+  while (i--) {
+    if (path[i] === '.') {
+      path.splice(i, 1);
+    } else if (path[i] === '..') {
+      path.splice(i, 1);
+      up++;
+    } else if (up) {
+      if (i === 0) unshift = true;
+      path.splice(i, 1);
+      up--;
+    }
+  }
+
+  if (unshift) path.unshift('');
+  if (last === '.' || last === '..') path.push('');
+
+  return path.join('/');
+}
+
+/**
+ * The actual URL instance. Instead of returning an object we've opted-in to
+ * create an actual constructor as it's much more memory efficient and
+ * faster and it pleases my OCD.
+ *
+ * It is worth noting that we should not use `URL` as class name to prevent
+ * clashes with the global URL instance that got introduced in browsers.
+ *
+ * @constructor
+ * @param {String} address URL we want to parse.
+ * @param {Object|String} [location] Location defaults for relative paths.
+ * @param {Boolean|Function} [parser] Parser for the query string.
+ * @private
+ */
+function Url(address, location, parser) {
+  address = trimLeft(address);
+
+  if (!(this instanceof Url)) {
+    return new Url(address, location, parser);
+  }
+
+  var relative, extracted, parse, instruction, index, key
+    , instructions = rules.slice()
+    , type = typeof location
+    , url = this
+    , i = 0;
+
+  //
+  // The following if statements allows this module two have compatibility with
+  // 2 different API:
+  //
+  // 1. Node.js's `url.parse` api which accepts a URL, boolean as arguments
+  //    where the boolean indicates that the query string should also be parsed.
+  //
+  // 2. The `URL` interface of the browser which accepts a URL, object as
+  //    arguments. The supplied object will be used as default values / fall-back
+  //    for relative paths.
+  //
+  if ('object' !== type && 'string' !== type) {
+    parser = location;
+    location = null;
+  }
+
+  if (parser && 'function' !== typeof parser) parser = qs.parse;
+
+  location = lolcation(location);
+
+  //
+  // Extract protocol information before running the instructions.
+  //
+  extracted = extractProtocol(address || '');
+  relative = !extracted.protocol && !extracted.slashes;
+  url.slashes = extracted.slashes || relative && location.slashes;
+  url.protocol = extracted.protocol || location.protocol || '';
+  address = extracted.rest;
+
+  //
+  // When the authority component is absent the URL starts with a path
+  // component.
+  //
+  if (!extracted.slashes) instructions[3] = [/(.*)/, 'pathname'];
+
+  for (; i < instructions.length; i++) {
+    instruction = instructions[i];
+
+    if (typeof instruction === 'function') {
+      address = instruction(address);
+      continue;
+    }
+
+    parse = instruction[0];
+    key = instruction[1];
+
+    if (parse !== parse) {
+      url[key] = address;
+    } else if ('string' === typeof parse) {
+      if (~(index = address.indexOf(parse))) {
+        if ('number' === typeof instruction[2]) {
+          url[key] = address.slice(0, index);
+          address = address.slice(index + instruction[2]);
+        } else {
+          url[key] = address.slice(index);
+          address = address.slice(0, index);
+        }
+      }
+    } else if ((index = parse.exec(address))) {
+      url[key] = index[1];
+      address = address.slice(0, index.index);
+    }
+
+    url[key] = url[key] || (
+      relative && instruction[3] ? location[key] || '' : ''
+    );
+
+    //
+    // Hostname, host and protocol should be lowercased so they can be used to
+    // create a proper `origin`.
+    //
+    if (instruction[4]) url[key] = url[key].toLowerCase();
+  }
+
+  //
+  // Also parse the supplied query string in to an object. If we're supplied
+  // with a custom parser as function use that instead of the default build-in
+  // parser.
+  //
+  if (parser) url.query = parser(url.query);
+
+  //
+  // If the URL is relative, resolve the pathname against the base URL.
+  //
+  if (
+      relative
+    && location.slashes
+    && url.pathname.charAt(0) !== '/'
+    && (url.pathname !== '' || location.pathname !== '')
+  ) {
+    url.pathname = resolve(url.pathname, location.pathname);
+  }
+
+  //
+  // We should not add port numbers if they are already the default port number
+  // for a given protocol. As the host also contains the port number we're going
+  // override it with the hostname which contains no port number.
+  //
+  if (!required(url.port, url.protocol)) {
+    url.host = url.hostname;
+    url.port = '';
+  }
+
+  //
+  // Parse down the `auth` for the username and password.
+  //
+  url.username = url.password = '';
+  if (url.auth) {
+    instruction = url.auth.split(':');
+    url.username = instruction[0] || '';
+    url.password = instruction[1] || '';
+  }
+
+  url.origin = url.protocol && url.host && url.protocol !== 'file:'
+    ? url.protocol +'//'+ url.host
+    : 'null';
+
+  //
+  // The href is just the compiled result.
+  //
+  url.href = url.toString();
+}
+
+/**
+ * This is convenience method for changing properties in the URL instance to
+ * insure that they all propagate correctly.
+ *
+ * @param {String} part          Property we need to adjust.
+ * @param {Mixed} value          The newly assigned value.
+ * @param {Boolean|Function} fn  When setting the query, it will be the function
+ *                               used to parse the query.
+ *                               When setting the protocol, double slash will be
+ *                               removed from the final url if it is true.
+ * @returns {URL} URL instance for chaining.
+ * @public
+ */
+function set(part, value, fn) {
+  var url = this;
+
+  switch (part) {
+    case 'query':
+      if ('string' === typeof value && value.length) {
+        value = (fn || qs.parse)(value);
+      }
+
+      url[part] = value;
+      break;
+
+    case 'port':
+      url[part] = value;
+
+      if (!required(value, url.protocol)) {
+        url.host = url.hostname;
+        url[part] = '';
+      } else if (value) {
+        url.host = url.hostname +':'+ value;
+      }
+
+      break;
+
+    case 'hostname':
+      url[part] = value;
+
+      if (url.port) value += ':'+ url.port;
+      url.host = value;
+      break;
+
+    case 'host':
+      url[part] = value;
+
+      if (/:\d+$/.test(value)) {
+        value = value.split(':');
+        url.port = value.pop();
+        url.hostname = value.join(':');
+      } else {
+        url.hostname = value;
+        url.port = '';
+      }
+
+      break;
+
+    case 'protocol':
+      url.protocol = value.toLowerCase();
+      url.slashes = !fn;
+      break;
+
+    case 'pathname':
+    case 'hash':
+      if (value) {
+        var char = part === 'pathname' ? '/' : '#';
+        url[part] = value.charAt(0) !== char ? char + value : value;
+      } else {
+        url[part] = value;
+      }
+      break;
+
+    default:
+      url[part] = value;
+  }
+
+  for (var i = 0; i < rules.length; i++) {
+    var ins = rules[i];
+
+    if (ins[4]) url[ins[1]] = url[ins[1]].toLowerCase();
+  }
+
+  url.origin = url.protocol && url.host && url.protocol !== 'file:'
+    ? url.protocol +'//'+ url.host
+    : 'null';
+
+  url.href = url.toString();
+
+  return url;
+}
+
+/**
+ * Transform the properties back in to a valid and full URL string.
+ *
+ * @param {Function} stringify Optional query stringify function.
+ * @returns {String} Compiled version of the URL.
+ * @public
+ */
+function toString(stringify) {
+  if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
+
+  var query
+    , url = this
+    , protocol = url.protocol;
+
+  if (protocol && protocol.charAt(protocol.length - 1) !== ':') protocol += ':';
+
+  var result = protocol + (url.slashes ? '//' : '');
+
+  if (url.username) {
+    result += url.username;
+    if (url.password) result += ':'+ url.password;
+    result += '@';
+  }
+
+  result += url.host + url.pathname;
+
+  query = 'object' === typeof url.query ? stringify(url.query) : url.query;
+  if (query) result += '?' !== query.charAt(0) ? '?'+ query : query;
+
+  if (url.hash) result += url.hash;
+
+  return result;
+}
+
+Url.prototype = { set: set, toString: toString };
+
+//
+// Expose the URL parser and some additional properties that might be useful for
+// others or testing.
+//
+Url.extractProtocol = extractProtocol;
+Url.location = lolcation;
+Url.trimLeft = trimLeft;
+Url.qs = qs;
+
+module.exports = Url;
+
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/**
+ * Check if we're required to add a port number.
+ *
+ * @see https://url.spec.whatwg.org/#default-port
+ * @param {Number|String} port Port number we need to check
+ * @param {String} protocol Protocol we need to check against.
+ * @returns {Boolean} Is it a default port for the given protocol
+ * @api private
+ */
+module.exports = function required(port, protocol) {
+  protocol = protocol.split(':')[0];
+  port = +port;
+
+  if (!port) return false;
+
+  switch (protocol) {
+    case 'http':
+    case 'ws':
+    return port !== 80;
+
+    case 'https':
+    case 'wss':
+    return port !== 443;
+
+    case 'ftp':
+    return port !== 21;
+
+    case 'gopher':
+    return port !== 70;
+
+    case 'file':
+    return false;
+  }
+
+  return port !== 0;
+};
+
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var has = Object.prototype.hasOwnProperty
+  , undef;
+
+/**
+ * Decode a URI encoded string.
+ *
+ * @param {String} input The URI encoded string.
+ * @returns {String|Null} The decoded string.
+ * @api private
+ */
+function decode(input) {
+  try {
+    return decodeURIComponent(input.replace(/\+/g, ' '));
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Attempts to encode a given input.
+ *
+ * @param {String} input The string that needs to be encoded.
+ * @returns {String|Null} The encoded string.
+ * @api private
+ */
+function encode(input) {
+  try {
+    return encodeURIComponent(input);
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Simple query string parser.
+ *
+ * @param {String} query The query string that needs to be parsed.
+ * @returns {Object}
+ * @api public
+ */
+function querystring(query) {
+  var parser = /([^=?&]+)=?([^&]*)/g
+    , result = {}
+    , part;
+
+  while (part = parser.exec(query)) {
+    var key = decode(part[1])
+      , value = decode(part[2]);
+
+    //
+    // Prevent overriding of existing properties. This ensures that build-in
+    // methods like `toString` or __proto__ are not overriden by malicious
+    // querystrings.
+    //
+    // In the case if failed decoding, we want to omit the key/value pairs
+    // from the result.
+    //
+    if (key === null || value === null || key in result) continue;
+    result[key] = value;
+  }
+
+  return result;
+}
+
+/**
+ * Transform a query string to an object.
+ *
+ * @param {Object} obj Object that should be transformed.
+ * @param {String} prefix Optional prefix.
+ * @returns {String}
+ * @api public
+ */
+function querystringify(obj, prefix) {
+  prefix = prefix || '';
+
+  var pairs = []
+    , value
+    , key;
+
+  //
+  // Optionally prefix with a '?' if needed
+  //
+  if ('string' !== typeof prefix) prefix = '?';
+
+  for (key in obj) {
+    if (has.call(obj, key)) {
+      value = obj[key];
+
+      //
+      // Edge cases where we actually want to encode the value to an empty
+      // string instead of the stringified value.
+      //
+      if (!value && (value === null || value === undef || isNaN(value))) {
+        value = '';
+      }
+
+      key = encodeURIComponent(key);
+      value = encodeURIComponent(value);
+
+      //
+      // If we failed to encode the strings, we should bail out as we don't
+      // want to add invalid strings to the query.
+      //
+      if (key === null || value === null) continue;
+      pairs.push(key +'='+ value);
+    }
+  }
+
+  return pairs.length ? prefix + pairs.join('&') : '';
+}
+
+//
+// Expose the module.
+//
+exports.stringify = querystringify;
+exports.parse = querystring;
+
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(17);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(18)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(19)
+
+/* template */
+var __vue_template__ = __webpack_require__(20)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\node_modules\\weex-ui\\packages\\wxc-tab-bar\\index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-dc8303b2"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "wxc-tab-page": {
+    "position": "absolute",
+    "top": 0,
+    "left": 0,
+    "right": 0,
+    "bottom": 0
+  },
+  "tab-title-list": {
+    "flexDirection": "row",
+    "justifyContent": "space-around"
+  },
+  "title-item": {
+    "justifyContent": "center",
+    "alignItems": "center",
+    "borderBottomStyle": "solid"
+  },
+  "tab-page-wrap": {
+    "width": "750",
+    "flex": 1
+  },
+  "tab-container": {
+    "flex": 1,
+    "flexDirection": "row",
+    "position": "absolute"
+  },
+  "tab-text": {
+    "lines": 1,
+    "textOverflow": "ellipsis"
+  },
+  "desc-tag": {
+    "position": "absolute",
+    "top": "10",
+    "right": "20",
+    "borderBottomRightRadius": "14",
+    "borderBottomLeftRadius": 0,
+    "borderTopLeftRadius": "14",
+    "borderTopRightRadius": "14",
+    "backgroundColor": "#FF5E00",
+    "height": "26",
+    "alignItems": "center",
+    "justifyContent": "center",
+    "paddingLeft": "6",
+    "paddingRight": "6"
+  },
+  "dot": {
+    "width": "12",
+    "height": "12",
+    "borderBottomRightRadius": "12",
+    "borderBottomLeftRadius": "12",
+    "borderTopLeftRadius": "12",
+    "borderTopRightRadius": "12",
+    "position": "absolute",
+    "top": "10",
+    "right": "40",
+    "backgroundColor": "#FF5E00"
+  },
+  "desc-text": {
+    "fontSize": "18",
+    "color": "#ffffff"
+  }
+}
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _utils = __webpack_require__(1);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var dom = weex.requireModule('dom');
+var animation = weex.requireModule('animation');
+exports.default = {
+  props: {
+    tabTitles: {
+      type: Array,
+      default: function _default() {
+        return [];
+      }
+    },
+    tabStyles: {
+      type: Object,
+      default: function _default() {
+        return {
+          bgColor: '#FFFFFF',
+          titleColor: '#666666',
+          activeTitleColor: '#3D3D3D',
+          activeBgColor: '#FFFFFF',
+          isActiveTitleBold: true,
+          iconWidth: 70,
+          iconHeight: 70,
+          width: 160,
+          height: 120,
+          fontSize: 24,
+          activeBottomColor: '#FFC900',
+          activeBottomWidth: 120,
+          activeBottomHeight: 6,
+          textPaddingLeft: 10,
+          textPaddingRight: 10
+        };
+      }
+    },
+    titleType: {
+      type: String,
+      default: 'icon'
+    },
+    titleUseSlot: {
+      type: Boolean,
+      default: false
+    },
+    isTabView: {
+      type: Boolean,
+      default: true
+    },
+    duration: {
+      type: [Number, String],
+      default: 300
+    },
+    timingFunction: {
+      type: String,
+      default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+    },
+    wrapBgColor: {
+      type: String,
+      default: '#f2f3f4'
+    }
+  },
+  data: function data() {
+    return {
+      currentPage: 0,
+      translateX: 0
+    };
+  },
+  created: function created() {
+    var titleType = this.titleType,
+        tabStyles = this.tabStyles;
+
+    if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
+      dom.addRule('fontFace', {
+        'fontFamily': "wxcIconFont",
+        'src': 'url(\'' + tabStyles.iconFontUrl + '\')'
+      });
+    }
+    this.isIPhoneX = _utils2.default.env.isIPhoneX();
+  },
+
+  methods: {
+    next: function next() {
+      var page = this.currentPage;
+      if (page < this.tabTitles.length - 1) {
+        page++;
+      }
+      this.setPage(page);
+    },
+    prev: function prev() {
+      var page = this.currentPage;
+      if (page > 0) {
+        page--;
+      }
+      this.setPage(page);
+    },
+    setPage: function setPage(page) {
+      var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+      var animated = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+      if (!this.isTabView) {
+        this.currentPage = page;
+        this._animateTransformX(page, animated);
+        this.$emit('wxcTabBarCurrentTabSelected', { page: page });
+        this.jumpOut(url);
+        return;
+      }
+      var previousPage = this.currentPage;
+      var currentTabEl = this.$refs['wxc-tab-title-' + page][0];
+      var width = this.tabStyles.width;
+
+      var appearNum = parseInt(750 / width);
+      var tabsNum = this.tabTitles.length;
+      var offset = page > appearNum ? -(750 - width) / 2 : -width * 2;
+
+      if (appearNum < tabsNum) {
+        (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
+          offset: offset, animated: animated
+        });
+
+        page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
+          offset: -width * page,
+          animated: animated
+        });
+      }
+
+      this.currentPage = page;
+      this._animateTransformX(page, animated);
+      this.$emit('wxcTabBarCurrentTabSelected', { page: page });
+    },
+    jumpOut: function jumpOut(url) {
+      url && _utils2.default.goToH5Page(url);
+    },
+    _animateTransformX: function _animateTransformX(page, animated) {
+      var duration = this.duration,
+          timingFunction = this.timingFunction;
+
+      var computedDur = animated ? duration : 0.00001;
+      var containerEl = this.$refs['tab-container'];
+      var dist = page * 750;
+      animation.transition(containerEl, {
+        styles: {
+          transform: 'translateX(' + -dist + 'px)'
+        },
+        duration: computedDur,
+        timingFunction: timingFunction,
+        delay: 0
+      }, function () {});
+    }
+  }
+};
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["wxc-tab-page"],
+    style: {
+      backgroundColor: _vm.wrapBgColor
+    }
+  }, [_c('div', {
+    ref: "tab-page-wrap",
+    staticClass: ["tab-page-wrap"]
+  }, [_c('div', {
+    ref: "tab-container",
+    staticClass: ["tab-container"]
+  }, [_vm._t("default")], 2)]), _c('div', {
+    staticClass: ["tab-title-list"],
+    style: {
+      backgroundColor: _vm.tabStyles.bgColor,
+      height: (_vm.tabStyles.height + (_vm.isIPhoneX ? 78 : 0)) + 'px',
+      paddingBottom: _vm.isIPhoneX ? '78px' : '0'
+    }
+  }, _vm._l((_vm.tabTitles), function(v, index) {
+    return _c('div', {
+      key: index,
+      ref: 'wxc-tab-title-' + index,
+      refInFor: true,
+      staticClass: ["title-item"],
+      style: {
+        width: _vm.tabStyles.width + 'px',
+        height: _vm.tabStyles.height + 'px',
+        backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBgColor : _vm.tabStyles.bgColor
+      },
+      attrs: {
+        "accessible": true,
+        "ariaLabel": ("" + (v.title?v.title:'标签'+index))
+      },
+      on: {
+        "click": function($event) {
+          _vm.setPage(index, v.url)
+        }
+      }
+    }, [(_vm.titleType === 'icon' && !_vm.titleUseSlot) ? _c('image', {
+      style: {
+        width: _vm.tabStyles.iconWidth + 'px',
+        height: _vm.tabStyles.iconHeight + 'px'
+      },
+      attrs: {
+        "src": _vm.currentPage == index ? v.activeIcon : v.icon
+      }
+    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint && !_vm.titleUseSlot) ? _c('text', {
+      style: {
+        fontFamily: 'wxcIconFont',
+        fontSize: _vm.tabStyles.iconFontSize + 'px',
+        marginBottom: _vm.tabStyles.iconFontMarginBottom ? (_vm.tabStyles.iconFontMarginBottom + 'px') : '8px',
+        color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
+      }
+    }, [_vm._v(_vm._s(v.codePoint))]) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
+      staticClass: ["tab-text"],
+      style: {
+        fontSize: _vm.tabStyles.fontSize + 'px',
+        fontWeight: (_vm.currentPage == index && _vm.tabStyles.isActiveTitleBold) ? 'bold' : 'normal',
+        color: _vm.currentPage == index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
+        paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
+        paddingRight: _vm.tabStyles.textPaddingRight + 'px'
+      }
+    }, [_vm._v(_vm._s(v.title))]) : _vm._e(), (v.badge && !_vm.titleUseSlot) ? _c('div', {
+      staticClass: ["desc-tag"]
+    }, [_c('text', {
+      staticClass: ["desc-text"]
+    }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge && !_vm.titleUseSlot) ? _c('div', {
+      staticClass: ["dot"]
+    }) : _vm._e(), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index)) : _vm._e()], 2)
+  }))])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(22)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(23)
+
+/* template */
+var __vue_template__ = __webpack_require__(41)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\List.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-2473e0a4"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "indicator-text": {
+    "color": "#888888",
+    "fontSize": "42",
+    "textAlign": "center"
+  },
+  "success": {
+    "color": "#22ff22"
+  },
+  "cancel": {
+    "color": "#555555"
+  },
+  "undone": {
+    "color": "#888888"
+  },
+  "going-on": {
+    "color": "#ff2222"
+  },
+  "all": {
+    "color": "#ff9900"
+  },
+  "more-icon": {
+    "fontSize": "30",
+    "fontWeight": "600",
+    "transitionProperty": "transform",
+    "transitionDuration": 500,
+    "transitionTimingFunction": "ease-out"
+  },
+  "@TRANSITION": {
+    "more-icon": {
+      "property": "transform",
+      "duration": 500,
+      "timingFunction": "ease-out"
+    },
+    "classify": {
+      "property": "color",
+      "duration": 300,
+      "timingFunction": "ease-in-out"
+    },
+    "classify-back": {
+      "duration": 300,
+      "timingFunction": "ease-in-out"
+    },
+    "select-txt": {
+      "property": "color",
+      "duration": 500,
+      "timingFunction": "ease"
+    }
+  },
+  "classify-con": {
+    "width": 40,
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "alignItems": "center"
+  },
+  "classify": {
+    "transitionProperty": "color",
+    "transitionDuration": 300,
+    "transitionTimingFunction": "ease-in-out",
+    "borderRadius": "10",
+    "paddingTop": "10",
+    "paddingRight": "10",
+    "paddingBottom": "10",
+    "paddingLeft": "10",
+    "fontSize": "32"
+  },
+  "active-c": {
+    "color": "#000000"
+  },
+  "active-unc": {
+    "color": "#000000"
+  },
+  "classify-s": {
+    "background": "#FF3000",
+    "right": "-197"
+  },
+  "classify-uns": {
+    "right": "-105",
+    "background": "#FF6000"
+  },
+  "classify-back": {
+    "transitionDuration": 300,
+    "transitionTimingFunction": "ease-in-out",
+    "width": "90",
+    "height": "100"
+  },
+  "popup-con": {
+    "height": "450",
+    "flexDirection": "column",
+    "alignItems": "center",
+    "justifyContent": "space-around"
+  },
+  "cheer": {
+    "color": "#000000",
+    "fontSize": "30"
+  },
+  "iconfont": {
+    "fontFamily": "iconfont"
+  },
+  "important": {
+    "flexDirection": "row",
+    "paddingTop": "10",
+    "justifyContent": "space-around",
+    "backgroundImage": "linear-gradient(to right, #ff9900, #cc0000)"
+  },
+  "input-txt": {
+    "outline": "none",
+    "color": "#333333",
+    "fontSize": "28",
+    "paddingLeft": "8",
+    "paddingRight": "8"
+  },
+  "header": {
+    "width": "750",
+    "position": "fixed",
+    "backgroundColor": "#FFFFFF",
+    "flexDirection": "row",
+    "justifyContent": "space-between",
+    "alignItems": "center",
+    "paddingLeft": "35",
+    "paddingRight": "35",
+    "borderBottomWidth": "0.5",
+    "borderColor": "#eeeeee"
+  },
+  "header-title": {
+    "fontSize": "36",
+    "color": "#FFFFFF"
+  },
+  "select-txt": {
+    "transitionProperty": "color",
+    "transitionDuration": 500,
+    "transitionTimingFunction": "ease",
+    "fontSize": "40",
+    "marginRight": "15"
+  },
+  "search": {
+    "fontSize": "40",
+    "color": "#333333"
+  },
+  "searchbar": {
+    "width": 95,
+    "background": "#eee",
+    "fontSize": "30",
+    "borderRadius": "50",
+    "paddingTop": "8",
+    "paddingRight": "20",
+    "paddingBottom": "8",
+    "paddingLeft": "20",
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "status": {
+    "width": 90,
+    "height": 20,
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "status-bar": {
+    "height": 25,
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "status-txt": {
+    "paddingTop": "20",
+    "paddingBottom": "20",
+    "paddingRight": "200",
+    "marginRight": "35",
+    "fontSize": "35",
+    "borderBottomWidth": "0.5",
+    "borderColor": "#eeeeee"
+  }
+}
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _utils = __webpack_require__(1);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+var _wxcPopup = __webpack_require__(24);
+
+var _wxcPopup2 = _interopRequireDefault(_wxcPopup);
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+// <text class="status-txt">{{status | statusFilter}}</text>
+
+// <cell class="important">
+//       <text class="cheer">给自己写一句加油打气的话</text>
+//       <!-- <text class="iconfont">&#xe642;</text> -->
+//     </cell>
+
+// <div class="searchbar">
+//         <text class="iconfont search">&#xe66f;</text>
+//         <input type="text" class="input-txt" placeholder="输入关键字" />
+//       </div>
+// https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js
+
+
+var _Item = __webpack_require__(34);
+
+var _Item2 = _interopRequireDefault(_Item);
+
+var _SwipeAction = __webpack_require__(3);
+
+var _SwipeAction2 = _interopRequireDefault(_SwipeAction);
+
+var _vuex = __webpack_require__(0);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  components: { Item: _Item2.default, WxcPopup: _wxcPopup2.default, SwipeAction: _SwipeAction2.default },
+  data: function data() {
+    return {
+      searchbarStyle: {
+        background: "red"
+      },
+      contentStyle: {
+        height: "",
+        paddingTop: '90px'
+      },
+      isBottomShow: false
+
+      // statusIcon: '\ue844',
+    };
+  },
+  filters: {},
+  computed: _extends({}, (0, _vuex.mapState)("tab", {
+    count: function count(state) {
+      return state.count;
+    },
+    tabTitles: function tabTitles(state) {
+      return state.tabIconFontTitles;
+    },
+    tabStyles: function tabStyles(state) {
+      return state.tabIconFontStyles;
+    }
+  }), (0, _vuex.mapState)("list", {
+    status: "status",
+    statusArr: "statusArr",
+    statusIcon: "statusIcon",
+    classify: "classify",
+    statusList: "statusList",
+    popupZindex: "popupZindex",
+    list: function list(state) {
+      return state.list;
+    }
+  }), (0, _vuex.mapGetters)("list", {
+    getListBySC: "getListByStatusClassify", // 通过status和classify过滤掉清单
+    gettersTest: "gettersTest"
+  })),
+  created: function created() {
+    var tabPageHeight = _utils2.default.env.getPageHeight();
+    // const tabPaageWidth = Utils.env.getPageWidth();
+    // console.log(Utils.env);
+    // this.contentStyle.width = tabPaageWidth + 'px';
+    // 如果页面没有导航栏，可以用下面这个计算高度的方法
+    // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
+    // console.log(this.contentStyle)
+    var tabStyles = this.tabStyles;
+
+    this.contentStyle.height = tabPageHeight - tabStyles.height + "px";
+    // this.contentStyle.height = (tabPageHeight) + 'px';
+    console.log(this.popupZindex);
+  },
+
+  methods: _extends({}, (0, _vuex.mapMutations)("list", {
+    setClassify: "setClassify",
+    setStatus: "setStatus",
+    setPopupZ: "setPopupZ"
+  }), {
+    changeStatus: function changeStatus(status) {
+      this.setStatus(status);
+      this.isBottomShow = false;
+    },
+    popupOverlayBottomClick: function popupOverlayBottomClick() {
+      this.isBottomShow = false;
+      this.setPopupZ();
+    },
+    listScroll: function listScroll(e) {
+      // console.log(e.contentOffset);
+    },
+    openBottomPopup: function openBottomPopup() {
+      this.isBottomShow = true;
+    },
+    changeClassify: function changeClassify(i) {
+      this.setClassify(i);
+    },
+    onTest: function onTest(node, i) {
+      modal.toast({
+        message: node.title,
+        duration: 0.3
+      });
+    }
+  })
+};
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(25);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(26)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(27)
+
+/* template */
+var __vue_template__ = __webpack_require__(33)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\node_modules\\weex-ui\\packages\\wxc-popup\\index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-ef24f190"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "wxc-popup": {
+    "position": "fixed",
+    "width": "750"
+  },
+  "top": {
+    "left": 0,
+    "right": 0
+  },
+  "bottom": {
+    "left": 0,
+    "right": 0
+  },
+  "left": {
+    "bottom": 0,
+    "top": 0
+  },
+  "right": {
+    "bottom": 0,
+    "top": 0
+  }
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _wxcOverlay = __webpack_require__(28);
+
+var _wxcOverlay2 = _interopRequireDefault(_wxcOverlay);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var animation = weex.requireModule('animation');
+exports.default = {
+  components: { WxcOverlay: _wxcOverlay2.default },
+  props: {
+    show: {
+      type: Boolean,
+      default: false
+    },
+    pos: {
+      type: String,
+      default: 'bottom'
+    },
+    popupColor: {
+      type: String,
+      default: '#FFFFFF'
+    },
+    overlayCfg: {
+      type: Object,
+      default: function _default() {
+        return {
+          hasAnimation: true,
+          timingFunction: ['ease-in', 'ease-out'],
+          duration: 300,
+          opacity: 0.6
+        };
+      }
+    },
+    height: {
+      type: [Number, String],
+      default: 840
+    },
+    standOut: {
+      type: [Number, String],
+      default: 0
+    },
+    width: {
+      type: [Number, String],
+      default: 750
+    },
+    animation: {
+      type: Object,
+      default: function _default() {
+        return {
+          timingFunction: 'ease-in'
+        };
+      }
+    }
+  },
+  data: function data() {
+    return {
+      haveOverlay: true,
+      isOverShow: true
+    };
+  },
+  computed: {
+    isNeedShow: function isNeedShow() {
+      var _this = this;
+
+      setTimeout(function () {
+        _this.appearPopup(_this.show);
+      }, 50);
+      return this.show;
+    },
+    _height: function _height() {
+      this.appearPopup(this.show, 150);
+      return this.height;
+    },
+    padStyle: function padStyle() {
+      var pos = this.pos,
+          width = this.width,
+          height = this.height,
+          popupColor = this.popupColor,
+          standOut = this.standOut;
+
+      var stand = parseInt(standOut, 10);
+      var style = {
+        width: width + 'px',
+        backgroundColor: popupColor
+      };
+      pos === 'top' && (style = _extends({}, style, {
+        top: -height + stand + 'px',
+        height: height + 'px'
+      }));
+      pos === 'bottom' && (style = _extends({}, style, {
+        bottom: -height + stand + 'px',
+        height: height + 'px'
+      }));
+      pos === 'left' && (style = _extends({}, style, {
+        left: -width + stand + 'px'
+      }));
+      pos === 'right' && (style = _extends({}, style, {
+        right: -width + stand + 'px'
+      }));
+      return style;
+    }
+  },
+  methods: {
+    handleTouchEnd: function handleTouchEnd(e) {
+      // 在支付宝上面有点击穿透问题
+      var platform = weex.config.env.platform;
+
+      platform === 'Web' && e.preventDefault && e.preventDefault();
+    },
+    hide: function hide() {
+      this.appearPopup(false);
+      this.$refs.overlay.appearOverlay(false);
+    },
+    wxcOverlayBodyClicking: function wxcOverlayBodyClicking() {
+      this.isShow && this.appearPopup(false);
+    },
+    appearPopup: function appearPopup(bool) {
+      var _this2 = this;
+
+      var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 300;
+
+      this.isShow = bool;
+      var popupEl = this.$refs['wxc-popup'];
+      if (!popupEl) {
+        return;
+      }
+      animation.transition(popupEl, _extends({
+        styles: {
+          transform: this.getTransform(this.pos, this.width, this.height, !bool)
+        },
+        duration: duration,
+        delay: 0
+      }, this.animation), function () {
+        if (!bool) {
+          _this2.$emit('wxcPopupOverlayClicked', { pos: _this2.pos });
+        }
+      });
+    },
+    getTransform: function getTransform(pos, width, height, bool) {
+      var _size = pos === 'top' || pos === 'bottom' ? height : width;
+      bool && (_size = 0);
+      var _transform = void 0;
+      switch (pos) {
+        case 'top':
+          _transform = 'translateY(' + _size + 'px)';
+          break;
+        case 'bottom':
+          _transform = 'translateY(-' + _size + 'px)';
+          break;
+        case 'left':
+          _transform = 'translateX(' + _size + 'px)';
+          break;
+        case 'right':
+          _transform = 'translateX(-' + _size + 'px)';
+          break;
+      }
+      return _transform;
+    }
+  }
+};
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(29);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(30)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(31)
+
+/* template */
+var __vue_template__ = __webpack_require__(32)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\node_modules\\weex-ui\\packages\\wxc-overlay\\index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-5dc5d348"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "wxc-overlay": {
+    "width": "750",
+    "position": "fixed",
+    "bottom": 0,
+    "right": 0
+  }
+}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _utils = __webpack_require__(1);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var animation = weex.requireModule('animation');
+exports.default = {
+  props: {
+    show: {
+      type: Boolean,
+      default: true
+    },
+    top: {
+      type: Number,
+      default: 0
+    },
+    left: _defineProperty({
+      default: Number
+    }, 'default', 0),
+    hasAnimation: {
+      type: Boolean,
+      default: true
+    },
+    duration: {
+      type: [Number, String],
+      default: 300
+    },
+    timingFunction: {
+      type: Array,
+      default: function _default() {
+        return ['ease-in', 'ease-out'];
+      }
+    },
+    opacity: {
+      type: [Number, String],
+      default: 0.6
+    },
+    canAutoClose: {
+      type: Boolean,
+      default: true
+    }
+  },
+  computed: {
+    overlayStyle: function overlayStyle() {
+      return {
+        opacity: this.hasAnimation ? 0 : 1,
+        backgroundColor: 'rgba(0, 0, 0,' + this.opacity + ')',
+        left: _utils2.default.env.isWeb() ? this.left + 'px' : 0,
+        top: this.top
+      };
+    },
+    shouldShow: function shouldShow() {
+      var _this = this;
+
+      var show = this.show,
+          hasAnimation = this.hasAnimation;
+
+      hasAnimation && setTimeout(function () {
+        _this.appearOverlay(show);
+      }, 50);
+      return show;
+    }
+  },
+  methods: {
+    overlayClicked: function overlayClicked(e) {
+      this.canAutoClose ? this.appearOverlay(false) : this.$emit('wxcOverlayBodyClicked', {});
+    },
+    appearOverlay: function appearOverlay(bool) {
+      var _this2 = this;
+
+      var duration = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : this.duration;
+      var hasAnimation = this.hasAnimation,
+          timingFunction = this.timingFunction,
+          canAutoClose = this.canAutoClose;
+
+      var needEmit = !bool && canAutoClose;
+      needEmit && this.$emit('wxcOverlayBodyClicking', {});
+      var overlayEl = this.$refs['wxc-overlay'];
+      if (hasAnimation && overlayEl) {
+        animation.transition(overlayEl, {
+          styles: {
+            opacity: bool ? 1 : 0
+          },
+          duration: duration,
+          timingFunction: timingFunction[bool ? 0 : 1],
+          delay: 0
+        }, function () {
+          needEmit && _this2.$emit('wxcOverlayBodyClicked', {});
+        });
+      } else {
+        needEmit && this.$emit('wxcOverlayBodyClicked', {});
+      }
+    }
+  }
+};
+
+/***/ }),
+/* 32 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [(_vm.show) ? _c('div', {
+    ref: "wxc-overlay",
+    staticClass: ["wxc-overlay"],
+    style: _vm.overlayStyle,
+    attrs: {
+      "hack": _vm.shouldShow
+    },
+    on: {
+      "click": _vm.overlayClicked
+    }
+  }) : _vm._e()])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('div', {
+    on: {
+      "touchend": _vm.handleTouchEnd
+    }
+  }, [(_vm.show) ? _c('wxc-overlay', _vm._b({
+    ref: "overlay",
+    attrs: {
+      "show": _vm.haveOverlay && _vm.isOverShow
+    },
+    on: {
+      "wxcOverlayBodyClicking": _vm.wxcOverlayBodyClicking
+    }
+  }, 'wxc-overlay', _vm.overlayCfg, false)) : _vm._e()], 1), (_vm.show) ? _c('div', {
+    ref: "wxc-popup",
+    class: ['wxc-popup', _vm.pos],
+    style: _vm.padStyle,
+    attrs: {
+      "height": _vm._height,
+      "hack": _vm.isNeedShow
+    },
+    on: {
+      "click": function () {}
+    }
+  }, [_vm._t("default")], 2) : _vm._e()])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(35)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(36)
+
+/* template */
+var __vue_template__ = __webpack_require__(37)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\list\\Item.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-fa42351e"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "iconfont": {
+    "fontFamily": "iconfont",
+    "fontSize": "35"
+  },
+  "card": {
+    "flexDirection": "row",
+    "justifyContent": "center",
+    "alignItems": "center",
+    "backgroundColor": "#FFFFFF"
+  },
+  "status-con": {
+    "width": 5
+  },
+  "txt-con": {
+    "width": 83,
+    "paddingTop": "20",
+    "paddingRight": 0,
+    "paddingBottom": "20",
+    "paddingLeft": 0,
+    "marginLeft": "20",
+    "borderBottomWidth": "0.5",
+    "borderColor": "#EEEEEE"
+  },
+  "title": {
+    "paddingTop": "10",
+    "paddingRight": 0,
+    "paddingBottom": "10",
+    "paddingLeft": 0,
+    "fontSize": "30",
+    "alignItems": "center",
+    "fontWeight": "600"
+  },
+  "describe": {
+    "color": "#555555",
+    "fontSize": "28",
+    "paddingTop": "10",
+    "paddingRight": 0,
+    "paddingBottom": "10",
+    "paddingLeft": 0
+  }
+}
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _vuex = __webpack_require__(0);
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var navigator = weex.requireModule('navigator');
+exports.default = {
+  props: ['item', 'itemStyle'],
+  data: function data() {
+    return {};
+  },
+  computed: _extends({}, (0, _vuex.mapState)('list', {
+    statusIcon: 'statusIcon',
+    statusList: 'statusList'
+  })),
+  created: function created() {
+    // console.log(this.itemStyle)
+  },
+
+  methods: _extends({}, (0, _vuex.mapMutations)('tab', ['setOpacity']), {
+    showDetail: function showDetail() {
+      var _this = this;
+
+      // console.log('item')
+      // navigator.push({
+      //   url: '/#/hello',
+      //   animated: "true"
+      // }, event => {
+      //   console.log('callback: ', event)
+      // })
+      this.setOpacity();
+      setTimeout(function () {
+        _this.$router.push('/hello');
+      }, 100);
+    }
+  })
+};
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["card"],
+    on: {
+      "click": _vm.showDetail
+    }
+  }, [_c('div', {
+    staticClass: ["status-con"]
+  }, [_c('text', {
+    staticClass: ["iconfont"],
+    style: {
+      'color': _vm.statusList[_vm.item.status].color
+    }
+  }, [_vm._v(_vm._s(_vm.statusIcon[_vm.item.status]))])]), _c('div', {
+    staticClass: ["txt-con"]
+  }, [_c('text', {
+    staticClass: ["title"],
+    style: {
+      'color': _vm.item.bgColor
+    }
+  }, [_vm._v(_vm._s(_vm.item.dream))]), _c('text', {
+    staticClass: ["iconfont"]
+  }), _c('text', {
+    staticClass: ["describe"]
+  }, [_vm._v(_vm._s(_vm.item.describe))])])])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "block": {
+    "flexDirection": "row"
+  },
+  "all-width": {
+    "width": 100
+  },
+  "button-con": {
+    "width": "100",
+    "alignItems": "center",
+    "justifyContent": "center"
+  }
+}
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _vuex = __webpack_require__(0);
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+var defaultInfo = 'please touch inside the block';
+exports.default = {
+  data: function data() {
+    return {
+      gesToken: '',
+      info: defaultInfo,
+      startX: 0,
+      swipeWidth: 0,
+      swipeTransition: {},
+      buttonShow: false
+    };
+  },
+  computed: _extends({}, (0, _vuex.mapState)('list', {
+    statusIcon: 'statusIcon',
+    statusList: 'statusList'
+  })),
+  created: function created() {},
+
+  methods: {
+    handleClick: function handleClick() {
+      console.log('click');
+    },
+    handleStart: function handleStart(e) {
+      if (e.changedTouches.length >= 0) {
+        this.startX = e.changedTouches[0].pageX;
+      }
+      this.swipeTransition = {};
+      this.buttonShow = true;
+    },
+    handleEnd: function handleEnd(e) {
+      var _this = this;
+
+      if (this.swipeWidth > 100) {
+        this.swipeWidth = 100;
+      } else {
+        this.swipeWidth = 0;
+        setTimeout(function () {
+          _this.buttonShow = false;
+        }, 500);
+      }
+      this.swipeTransition = {
+        transition: 'transform 0.5s ease-in-out'
+        // console.log(this.swipeTransition)
+
+      };
+    },
+    handleMove: function handleMove(e) {
+      console.log('move');
+      this.showButton(e);
+    },
+    showButton: function showButton(e) {
+      // console.log(e.changedTouches[0]);
+      if (e.changedTouches.length >= 0) {
+        var pageX = e.changedTouches[0].pageX;
+
+        var tran = pageX - this.startX;
+        if (tran < 0) {
+          this.swipeWidth = Math.abs(tran);
+          console.log(-this.swipeWidth);
+        }
+      }
+    }
+  }
+};
+
+/***/ }),
+/* 40 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["block"],
+    on: {
+      "click": _vm.handleClick,
+      "touchstart": _vm.handleStart,
+      "touchend": _vm.handleEnd,
+      "touchmove": _vm.handleMove
+    }
+  }, [_c('div', {
+    staticClass: ["all-width"],
+    style: [{
+      'transform': ("translateX(" + (-_vm.swipeWidth) + "px)")
+    }, _vm.swipeTransition]
+  }, [_vm._t("con")], 2), (_vm.buttonShow) ? _c('div', {
+    staticClass: ["button-con"],
+    style: [{
+      'transform': ("translateX(" + (-_vm.swipeWidth) + "px)")
+    }, _vm.swipeTransition]
+  }, [_vm._t("button-1")], 2) : _vm._e()])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 41 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["vertical"]
+  }, [_c('list', {
+    style: _vm.contentStyle,
+    on: {
+      "scroll": _vm.listScroll
+    }
+  }, _vm._l((_vm.getListBySC), function(item, i) {
+    return _c('cell', {
+      key: i + 'list',
+      appendAsTree: true,
+      attrs: {
+        "append": "tree"
+      }
+    }, [_c('Item', {
+      attrs: {
+        "item": item
+      }
+    })], 1)
+  })), _c('div', {
+    staticClass: ["header"]
+  }, [_c('div', {
+    staticClass: ["status-bar"],
+    on: {
+      "click": _vm.openBottomPopup
+    }
+  }, [_c('text', {
+    staticClass: ["select-txt", "iconfont"],
+    style: {
+      'color': _vm.statusList[_vm.status].color
+    }
+  }, [_vm._v(_vm._s(_vm.statusIcon[_vm.status]))]), _c('text', {
+    staticClass: ["more-icon", "iconfont"],
+    style: {
+      'transform': _vm.isBottomShow ? 'rotateX(180deg)' : 'rotateX(0deg)'
+    }
+  }, [_vm._v("")])]), _c('div', {
+    staticClass: ["classify-con"]
+  }, [_c('text', {
+    class: ['classify-back', _vm.classify === 1 ? 'classify-s' : 'classify-uns']
+  }), _c('text', {
+    class: ['classify', _vm.classify === 0 ? 'active-c' : 'active-unc'],
+    on: {
+      "click": function($event) {
+        _vm.changeClassify(0)
+      }
+    }
+  }, [_vm._v("hello")]), _c('text', {
+    class: ['classify', _vm.classify === 1 ? 'active-c' : 'active-unc'],
+    on: {
+      "click": function($event) {
+        _vm.changeClassify(1)
+      }
+    }
+  }, [_vm._v("hel")])])]), _c('wxc-popup', {
+    attrs: {
+      "popupColor": "white",
+      "show": _vm.isBottomShow,
+      "pos": "top",
+      "height": "450",
+      "animation": {
+        timingFunction: 'ease-out'
+      }
+    },
+    on: {
+      "wxcPopupOverlayClicked": _vm.popupOverlayBottomClick
+    }
+  }, [_c('div', {
+    staticClass: ["popup-con"]
+  }, _vm._l((_vm.statusList), function(status) {
+    return _c('div', {
+      key: status.status + '_status',
+      staticClass: ["status"],
+      on: {
+        "click": function($event) {
+          _vm.changeStatus(status.status)
+        }
+      }
+    }, [_c('text', {
+      staticClass: ["select-txt", "iconfont"],
+      style: {
+        'color': status.color
+      }
+    }, [_vm._v(_vm._s(status.statusIcon))]), _c('text', {
+      staticClass: ["status-txt"]
+    }, [_vm._v(_vm._s(status.statusName))])])
+  }))])], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* script */
+__vue_exports__ = __webpack_require__(43)
+
+/* template */
+var __vue_template__ = __webpack_require__(50)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\Test.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 43 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _wxcSwipeAction = __webpack_require__(44);
+
+var _wxcSwipeAction2 = _interopRequireDefault(_wxcSwipeAction);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var modal = weex.requireModule("modal"); //
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  components: {
+    WxcSwipeAction: _wxcSwipeAction2.default
+  },
+  data: function data() {
+    return {
+      data: [{
+        title: "标题1",
+        right: [{
+          text: "置顶",
+          onPress: function onPress() {
+            modal.toast({
+              message: "置顶",
+              duration: 0.3
+            });
+          }
+        }, {
+          text: "删除",
+          onPress: function onPress() {
+            modal.toast({
+              message: "删除",
+              duration: 0.3
+            });
+          },
+          style: { backgroundColor: "#F4333C", color: "white" }
+        }]
+      }, {
+        title: "标题2",
+        right: [{
+          text: "删除",
+          onPress: function onPress() {
+            modal.toast({
+              message: "删除",
+              duration: 0.3
+            });
+          },
+          style: { backgroundColor: "#F4333C", color: "white" }
+        }]
+      }, {
+        title: "标题3",
+        right: [{
+          text: "删除",
+          onPress: function onPress() {
+            modal.toast({
+              message: "删除",
+              duration: 0.3
+            });
+          },
+          style: { backgroundColor: "#F4333C", color: "white" }
+        }]
+      }]
+    };
+  },
+
+
+  methods: {
+    onTest: function onTest(node, i) {
+      modal.toast({
+        message: node.title,
+        duration: 0.3
+      });
+    }
+  }
+};
+
+/***/ }),
+/* 44 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__(45);
+
+Object.defineProperty(exports, 'default', {
+  enumerable: true,
+  get: function get() {
+    return _interopRequireDefault(_index).default;
+  }
+});
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/***/ }),
+/* 45 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var __vue_exports__, __vue_options__
+var __vue_styles__ = []
+
+/* styles */
+__vue_styles__.push(__webpack_require__(46)
+)
+
+/* script */
+__vue_exports__ = __webpack_require__(47)
+
+/* template */
+var __vue_template__ = __webpack_require__(49)
+__vue_options__ = __vue_exports__ = __vue_exports__ || {}
+if (
+  typeof __vue_exports__.default === "object" ||
+  typeof __vue_exports__.default === "function"
+) {
+if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
+__vue_options__ = __vue_exports__ = __vue_exports__.default
+}
+if (typeof __vue_options__ === "function") {
+  __vue_options__ = __vue_options__.options
+}
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\node_modules\\weex-ui\\packages\\wxc-swipe-action\\index.vue"
+__vue_options__.render = __vue_template__.render
+__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
+__vue_options__._scopeId = "data-v-e7d35e8e"
+__vue_options__.style = __vue_options__.style || {}
+__vue_styles__.forEach(function (module) {
+  for (var name in module) {
+    __vue_options__.style[name] = module[name]
+  }
+})
+if (typeof __register_static_styles__ === "function") {
+  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
+}
+
+module.exports = __vue_exports__
+
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "container": {
+    "backgroundColor": "#dddddd",
+    "borderTopWidth": "1",
+    "borderTopColor": "#dddddd"
+  },
+  "border": {
+    "borderBottomWidth": "1",
+    "borderBottomColor": "#dddddd"
+  },
+  "wxc-skid": {
+    "flexDirection": "row",
+    "backgroundColor": "#FFFFFF"
+  },
+  "swipe-action-right": {
+    "flexDirection": "row",
+    "alignItems": "center"
+  },
+  "swipe-action-center": {
+    "width": "750"
+  },
+  "swipe-action-child": {
+    "width": "100",
+    "textAlign": "center",
+    "color": "#FFFFFF",
+    "backgroundColor": "#dddddd",
+    "lineHeight": "90"
+  },
+  "swipe-action-text": {
+    "fontSize": "30"
+  }
+}
+
+/***/ }),
+/* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _indexWeex = __webpack_require__(48);
+
+var _indexWeex2 = _interopRequireDefault(_indexWeex);
+
+var _utils = __webpack_require__(1);
+
+var _utils2 = _interopRequireDefault(_utils);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var animation = weex.requireModule("animation"); //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+  props: {
+    data: {
+      type: Array,
+      default: []
+    },
+    height: {
+      type: Number,
+      default: 90
+    },
+    styles: {
+      type: Object,
+      default: {}
+    }
+  },
+  data: function data() {
+    return {
+      mobileX: 0,
+      webStarX: 0,
+      saveIdx: null,
+      isAndroid: _utils2.default.env.isAndroid()
+    };
+  },
+
+  methods: {
+    special: function special(dom, styles) {
+      animation.transition(dom, {
+        styles: styles,
+        duration: 200, //ms
+        timingFunction: "ease",
+        delay: 100 //ms
+      });
+    },
+    onRightNode: function onRightNode(pNode, node, i) {
+      node.onPress();
+      if (pNode.autoClose) this.special(this.$refs.skid[i], {
+        transform: "translate(0, 0)"
+      });
+    },
+    onNodeClick: function onNodeClick(node, i) {
+      if (this.mobileX < 0) {
+        this.mobileX = 0;
+        this.special(this.$refs.skid[this.saveIdx], {
+          transform: "translate(0, 0)"
+        });
+        this.isAndroid && this.special(this.$refs.skid[i], {
+          transform: "translate(0, 0)"
+        });
+      } else {
+        this.$emit("onNodeClick", node, i);
+      }
+    },
+    onPanEnd: function onPanEnd(e, node, i) {
+      if (_utils2.default.env.isWeb()) {
+        var webEndX = e.changedTouches[0].pageX;
+        this.movingDistance(webEndX - this.webStarX, node, this.$refs.skid[i]);
+      }
+    },
+
+    onPanStart: function onPanStart(e, node, i) {
+      var saveIdx = this.saveIdx;
+
+      if (saveIdx !== i && saveIdx !== null && this.$refs.skid[saveIdx]) {
+        this.special(this.$refs.skid[saveIdx], {
+          transform: "translate(0, 0)"
+        });
+        this.mobileX = 0;
+      }
+      this.saveIdx = i;
+      !_utils2.default.env.isWeb() ? this.mobile(e, node, i) : this.web(e, node, i);
+      e.stopPropagation();
+    },
+    web: function web(e, node, i) {
+      this.webStarX = e.changedTouches[0].pageX;
+    },
+    mobile: function mobile(e, node, i) {
+      var _this = this;
+
+      var el = this.$refs["skid"][i];
+      _indexWeex2.default.bind({
+        anchor: el.ref,
+        eventType: "pan",
+        props: [{
+          element: el.ref,
+          property: "transform.translateX",
+          expression: "x+" + (this.isAndroid ? 0 : this.mobileX)
+        }]
+      }, function (e) {
+        var state = e.state,
+            deltaX = e.deltaX;
+
+        if (state === "end") {
+          _this.mobileX += deltaX;
+          _this.movingDistance(_this.mobileX, node, el);
+        }
+      });
+    },
+    movingDistance: function movingDistance(scope, node, el) {
+      var len = node.right ? node.right.length : 0;
+      var distance = len * -100;
+      if (scope < -30) {
+        this.special(el, {
+          transform: "translate(" + distance + "px, 0)"
+        });
+        this.mobileX = distance;
+      } else {
+        this.special(el, {
+          transform: "translate(0, 0)"
+        });
+        this.mobileX = 0;
+      }
+    }
+  }
+};
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+var __WEBPACK_AMD_DEFINE_RESULT__;
+
+var _typeof2 = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+;(function (fn) {
+  if (( false ? "undefined" : _typeof2(exports)) === "object" && typeof module !== "undefined") {
+    module.exports = fn();
+  } else if (true) {
+    !(__WEBPACK_AMD_DEFINE_RESULT__ = (function (require, exports, module) {
+      module.exports = fn();
+    }).call(exports, __webpack_require__, exports, module),
+				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+  } else {
+    var root;
+    if (typeof window !== "undefined") {
+      root = window;
+    } else if (typeof self !== "undefined") {
+      root = self;
+    } else if (typeof global !== "undefined") {
+      root = global;
+    } else {
+      // NOTICE: In JavaScript strict mode, this is null
+      root = this;
+    }
+    root["index"] = fn();
+  }
+})(function () {
+  return (/******/function (modules) {
+      // webpackBootstrap
+      /******/ // The module cache
+      /******/var installedModules = {};
+      /******/
+      /******/ // The require function
+      /******/function __webpack_require__(moduleId) {
+        /******/
+        /******/ // Check if module is in cache
+        /******/if (installedModules[moduleId]) {
+          /******/return installedModules[moduleId].exports;
+          /******/
+        }
+        /******/ // Create a new module (and put it into the cache)
+        /******/var module = installedModules[moduleId] = {
+          /******/i: moduleId,
+          /******/l: false,
+          /******/exports: {}
+          /******/ };
+        /******/
+        /******/ // Execute the module function
+        /******/modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+        /******/
+        /******/ // Flag the module as loaded
+        /******/module.l = true;
+        /******/
+        /******/ // Return the exports of the module
+        /******/return module.exports;
+        /******/
+      }
+      /******/
+      /******/
+      /******/ // expose the modules object (__webpack_modules__)
+      /******/__webpack_require__.m = modules;
+      /******/
+      /******/ // expose the module cache
+      /******/__webpack_require__.c = installedModules;
+      /******/
+      /******/ // define getter function for harmony exports
+      /******/__webpack_require__.d = function (exports, name, getter) {
+        /******/if (!__webpack_require__.o(exports, name)) {
+          /******/Object.defineProperty(exports, name, {
+            /******/configurable: false,
+            /******/enumerable: true,
+            /******/get: getter
+            /******/ });
+          /******/
+        }
+        /******/
+      };
+      /******/
+      /******/ // getDefaultExport function for compatibility with non-harmony modules
+      /******/__webpack_require__.n = function (module) {
+        /******/var getter = module && module.__esModule ?
+        /******/function getDefault() {
+          return module['default'];
+        } :
+        /******/function getModuleExports() {
+          return module;
+        };
+        /******/__webpack_require__.d(getter, 'a', getter);
+        /******/return getter;
+        /******/
+      };
+      /******/
+      /******/ // Object.prototype.hasOwnProperty.call
+      /******/__webpack_require__.o = function (object, property) {
+        return Object.prototype.hasOwnProperty.call(object, property);
+      };
+      /******/
+      /******/ // __webpack_public_path__
+      /******/__webpack_require__.p = "";
+      /******/
+      /******/ // Load entry module and return exports
+      /******/return __webpack_require__(__webpack_require__.s = 0);
+      /******/
+    }(
+    /************************************************************************/
+    /******/[
+    /* 0 */
+    /***/function (module, exports, __webpack_require__) {
+
+      "use strict";
+      /**
+       Copyright 2018 Alibaba Group
+      
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+      
+       http://www.apache.org/licenses/LICENSE-2.0
+      
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+       */
+
+      Object.defineProperty(exports, "__esModule", {
+        value: true
+      });
+
+      var _typeof = typeof Symbol === "function" && _typeof2(Symbol.iterator) === "symbol" ? function (obj) {
+        return typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+      } : function (obj) {
+        return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj === "undefined" ? "undefined" : _typeof2(obj);
+      };
+
+      var _bindingxParser = __webpack_require__(1);
+
+      var isWeb = false;
+      var isWeex = true;
+
+      function requireModule(moduleName) {
+        try {
+          if ((typeof weex === 'undefined' ? 'undefined' : _typeof(weex)) !== undefined && weex.requireModule) {
+            // eslint-disable-line
+            return weex.requireModule(moduleName); // eslint-disable-line
+          }
+        } catch (err) {}
+        return window.require('@weex-module/' + moduleName);
+      }
+
+      var isSupportNewBinding = true;
+      var isSupportBinding = true;
+      var WeexBinding = void 0;
+      var WebBinding = {};
+
+      try {
+        WeexBinding = requireModule('bindingx');
+        isSupportNewBinding = true;
+      } catch (e) {
+        isSupportNewBinding = false;
+      }
+      if (!WeexBinding || !WeexBinding.bind) {
+        try {
+          WeexBinding = requireModule('binding');
+          isSupportNewBinding = true;
+        } catch (e) {
+          isSupportNewBinding = false;
+        }
+      }
+      isSupportNewBinding = !!(WeexBinding && WeexBinding.bind && WeexBinding.unbind);
+      if (!isSupportNewBinding) {
+        try {
+          WeexBinding = requireModule('expressionBinding');
+          isSupportBinding = true;
+        } catch (err) {
+          isSupportBinding = false;
+        }
+      }
+      isSupportBinding = !!(WeexBinding && (WeexBinding.bind || WeexBinding.createBinding));
+
+      function formatExpression(expression) {
+        if (expression === undefined) return;
+        try {
+          expression = JSON.parse(expression);
+        } catch (err) {}
+        var resultExpression = {};
+        if (typeof expression === 'string') {
+          resultExpression.origin = expression;
+        } else if (expression) {
+          resultExpression.origin = expression.origin;
+          resultExpression.transformed = expression.transformed;
+        }
+        if (!resultExpression.transformed && !resultExpression.origin) return;
+        resultExpression.transformed = resultExpression.transformed || (0, _bindingxParser.parse)(resultExpression.origin);
+        return resultExpression;
+      }
+
+      // 统一回调参数
+      function fixCallback(callback) {
+        return function () {
+          var params = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
+
+          if (typeof callback === 'function') {
+            return callback({
+              state: params.state === 'end' ? 'exit' : params.state,
+              t: params.t !== undefined ? params.t : params.deltaT
+            });
+          }
+        };
+      }
+
+      exports.default = {
+        // 是否支持新版本的binding
+        isSupportNewBinding: isSupportNewBinding,
+        // 是否支持binding
+        isSupportBinding: isSupportBinding,
+        _bindingInstances: [],
+        /**
+         * 绑定
+         * @param options 参数
+         * @example
+         {
+           anchor:blockRef,
+           eventType:'pan',
+           props: [
+           {
+             element:blockRef,
+             property:'transform.translateX',
+             expression:{
+               origin:"x+1",
+               transformed:"{\"type\":\"+\",\"children\":[{\"type\":\"Identifier\",\"value\":\"x\"},{\"type\":\"NumericLiteral\",\"value\":1}]}"
+             }
+           }
+          ]
+         }
+         */
+        bind: function bind(options) {
+          var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+
+          if (!options) {
+            throw new Error('should pass options for binding');
+          }
+
+          options.exitExpression = formatExpression(options.exitExpression);
+
+          if (options.props) {
+            options.props.forEach(function (prop) {
+              prop.expression = formatExpression(prop.expression);
+            });
+          }
+
+          if (WeexBinding && isSupportBinding) {
+            if (isSupportNewBinding) {
+              return WeexBinding.bind(options, options && options.eventType === 'timing' ? fixCallback(callback) : callback);
+            } else {
+              WeexBinding.enableBinding(options.anchor, options.eventType);
+              // 处理expression的参数格式
+              var expressionArgs = options.props.map(function (prop) {
+                return {
+                  element: prop.element,
+                  property: prop.property,
+                  expression: prop.expression.transformed
+                };
+              });
+              WeexBinding.createBinding(options.anchor, options.eventType, '', expressionArgs, callback);
+            }
+          }
+        },
+
+        /**
+         *  @param {object} options
+         *  @example
+         *  {eventType:'pan',
+         *   token:self.gesToken}
+         */
+        unbind: function unbind(options) {
+          if (!options) {
+            throw new Error('should pass options for binding');
+          }
+
+          if (WeexBinding && isSupportBinding) {
+            if (isSupportNewBinding) {
+              return WeexBinding.unbind(options);
+            } else {
+              return WeexBinding.disableBinding(options.anchor, options.eventType);
+            }
+          }
+        },
+        unbindAll: function unbindAll() {
+          if (WeexBinding && isSupportBinding) {
+            if (isSupportNewBinding) {
+              return WeexBinding.unbindAll();
+            } else {
+              return WeexBinding.disableAll();
+            }
+          }
+        },
+        prepare: function prepare(options) {
+          if (WeexBinding && isSupportBinding) {
+            if (isSupportNewBinding) {
+              return WeexBinding.prepare(options);
+            } else {
+              return WeexBinding.enableBinding(options.anchor, options.eventType);
+            }
+          }
+        },
+        getComputedStyle: function getComputedStyle(el) {
+          if (isSupportNewBinding) {
+            return WeexBinding.getComputedStyle(el);
+          } else {
+            return {};
+          }
+        }
+      };
+      module.exports = exports['default'];
+
+      /***/
+    },
+    /* 1 */
+    /***/function (module, exports, __webpack_require__) {
+
+      "use strict";
+
+      module.exports = __webpack_require__(2);
+
+      /***/
+    },
+    /* 2 */
+    /***/function (module, exports, __webpack_require__) {
+
+      "use strict";
+
+      var lex = {
+        InputElementDiv: '<WhiteSpace>|<LineTerminator>|<ReservedWord>|<Identifier>|<NumericLiteral>|<Punctuator>|<StringLiteral>',
+        InputElementRegExp: '<WhiteSpace>|<LineTerminator>|<ReservedWord>|<Identifier>|<NumericLiteral>|<Punctuator>|<StringLiteral>',
+        ReservedWord: '<Keyword>|<NullLiteral>|<BooleanLiteral>',
+        WhiteSpace: /[\t\v\f\u0020\u00A0\u1680\u180E\u2000-\u200A\u202F\u205f\u3000\uFEFF]/,
+        LineTerminator: /[\n\r\u2028\u2029]/,
+        Keyword: /new(?![_$a-zA-Z0-9])|void(?![_$a-zA-Z0-9])|delete(?![_$a-zA-Z0-9])|in(?![_$a-zA-Z0-9])|instanceof(?![_$a-zA-Z0-9])|typeof(?![_$a-zA-Z0-9])/,
+        NullLiteral: /null(?![_$a-zA-Z0-9])/,
+        BooleanLiteral: /(?:true|false)(?![_$a-zA-Z0-9])/,
+        Identifier: /[_$a-zA-Z][_$a-zA-Z0-9]*/,
+        Punctuator: /\/|=>|\*\*|>>>=|>>=|<<=|===|!==|>>>|<<|%=|\*=|-=|\+=|<=|>=|==|!=|\^=|\|=|\|\||&&|&=|>>|\+\+|--|\:|}|\*|&|\||\^|!|~|-|\+|\?|%|=|>|<|,|;|\.(?![0-9])|\]|\[|\)|\(|{/,
+        DivPunctuator: /\/=|\//,
+        NumericLiteral: /(?:0[xX][0-9a-fA-F]*|\.[0-9]+|(?:[1-9]+[0-9]*|0)(?:\.[0-9]*|\.)?)(?:[eE][+-]{0,1}[0-9]+)?(?![_$a-zA-Z0-9])/,
+        StringLiteral: /"(?:[^"\n\\\r\u2028\u2029]|\\(?:['"\\bfnrtv\n\r\u2028\u2029]|\r\n)|\\x[0-9a-fA-F]{2}|\\u[0-9a-fA-F]{4}|\\[^0-9ux'"\\bfnrtv\n\\\r\u2028\u2029])*"|'(?:[^'\n\\\r\u2028\u2029]|\\(?:['"\\bfnrtv\n\r\u2028\u2029]|\r\n)|\\x[0-9a-fA-F]{2}|\\u[0-9a-fA-F]{4}|\\[^0-9ux'"\\bfnrtv\n\\\r\u2028\u2029])*'/,
+        RegularExpressionLiteral: /\/(?:\[(?:\\[\s\S]|[^\]])*\]|[^*\/\\\n\r\u2028\u2029]|\\[^\n\r\u2028\u2029])(?:\[(?:\\[\s\S]|[^\]])*\]|[^\/\\\n\r\u2028\u2029]|\\[^\n\r\u2028\u2029])*\/[0-9a-zA-Z]*/
+      };
+
+      function XRegExp(xregexps, rootname, flag) {
+        var expnames = [rootname];
+
+        function buildRegExp(source) {
+          var regexp = new RegExp();
+          regexp.compile(source.replace(/<([^>]+)>/g, function (all, expname) {
+            if (!xregexps[expname]) return '';
+            expnames.push(expname);
+            if (xregexps[expname] instanceof RegExp) return '(' + xregexps[expname].source + ')';
+            return '(' + buildRegExp(xregexps[expname]).source + ')';
+          }), flag);
+          return regexp;
+        }
+
+        var regexp = buildRegExp(xregexps[rootname]);
+        this.exec = function (string) {
+          var matches = regexp.exec(string);
+          if (matches == null) return null;
+          var result = new String(matches[0]);
+          for (var i = 0; i < expnames.length; i++) {
+            if (matches[i]) result[expnames[i]] = matches[i];
+          }return result;
+        };
+        Object.defineProperty(this, 'lastIndex', {
+          'get': function get() {
+            return regexp.lastIndex;
+          },
+          'set': function set(v) {
+            regexp.lastIndex = v;
+          }
+        });
+      }
+
+      function LexicalParser() {
+        var inputElementDiv = new XRegExp(lex, 'InputElementDiv', 'g');
+        var inputElementRegExp = new XRegExp(lex, 'InputElementRegExp', 'g');
+        var source;
+        Object.defineProperty(this, 'source', {
+          'get': function get() {
+            return source;
+          },
+          'set': function set(v) {
+            source = v;
+            inputElementDiv.lastIndex = 0;
+            inputElementRegExp.lastIndex = 0;
+          }
+        });
+        this.reset = function () {
+          inputElementDiv.lastIndex = 0;
+          inputElementRegExp.lastIndex = 0;
+        };
+        this.getNextToken = function (useDiv) {
+          var lastIndex = inputElementDiv.lastIndex;
+          var inputElement;
+          if (useDiv) inputElement = inputElementDiv;else inputElement = inputElementRegExp;
+          var token = inputElement.exec(source);
+          if (token && inputElement.lastIndex - lastIndex > token.length) {
+            throw new SyntaxError('Unexpected token ILLEGAL');
+          }
+          inputElementDiv.lastIndex = inputElement.lastIndex;
+          inputElementRegExp.lastIndex = inputElement.lastIndex;
+          return token;
+        };
+      }
+
+      var rules = {
+        'IdentifierName': [['Identifier']],
+        'Literal': [['NullLiteral'], ['BooleanLiteral'], ['NumericLiteral'], ['StringLiteral'], ['RegularExpressionLiteral']],
+        'PrimaryExpression': [['Identifier'], ['Literal'], ['(', 'Expression', ')']],
+        'CallExpression': [['PrimaryExpression', 'Arguments'], ['CallExpression', 'Arguments']],
+        'Arguments': [['(', ')'], ['(', 'ArgumentList', ')']],
+        'ArgumentList': [['ConditionalExpression'], ['ArgumentList', ',', 'ConditionalExpression']],
+        'LeftHandSideExpression': [['PrimaryExpression'], ['CallExpression']],
+        'UnaryExpression': [['LeftHandSideExpression'], ['void', 'UnaryExpression'], ['+', 'UnaryExpression'], ['-', 'UnaryExpression'], ['~', 'UnaryExpression'], ['!', 'UnaryExpression']],
+        'ExponentiationExpression': [['UnaryExpression'], ['ExponentiationExpression', '**', 'UnaryExpression']],
+        'MultiplicativeExpression': [['MultiplicativeExpression', '/', 'ExponentiationExpression'], ['ExponentiationExpression'], ['MultiplicativeExpression', '*', 'ExponentiationExpression'], ['MultiplicativeExpression', '%', 'ExponentiationExpression']],
+        'AdditiveExpression': [['MultiplicativeExpression'], ['AdditiveExpression', '+', 'MultiplicativeExpression'], ['AdditiveExpression', '-', 'MultiplicativeExpression']],
+        'ShiftExpression': [['AdditiveExpression'], ['ShiftExpression', '<<', 'AdditiveExpression'], ['ShiftExpression', '>>', 'AdditiveExpression'], ['ShiftExpression', '>>>', 'AdditiveExpression']],
+        'RelationalExpression': [['ShiftExpression'], ['RelationalExpression', '<', 'ShiftExpression'], ['RelationalExpression', '>', 'ShiftExpression'], ['RelationalExpression', '<=', 'ShiftExpression'], ['RelationalExpression', '>=', 'ShiftExpression'], ['RelationalExpression', 'instanceof', 'ShiftExpression'], ['RelationalExpression', 'in', 'ShiftExpression']],
+        'EqualityExpression': [['RelationalExpression'], ['EqualityExpression', '==', 'RelationalExpression'], ['EqualityExpression', '!=', 'RelationalExpression'], ['EqualityExpression', '===', 'RelationalExpression'], ['EqualityExpression', '!==', 'RelationalExpression']],
+        'BitwiseANDExpression': [['EqualityExpression'], ['BitwiseANDExpression', '&', 'EqualityExpression']],
+        'BitwiseXORExpression': [['BitwiseANDExpression'], ['BitwiseXORExpression', '^', 'BitwiseANDExpression']],
+        'BitwiseORExpression': [['BitwiseXORExpression'], ['BitwiseORExpression', '|', 'BitwiseXORExpression']],
+        'LogicalANDExpression': [['BitwiseORExpression'], ['LogicalANDExpression', '&&', 'BitwiseORExpression']],
+        'LogicalORExpression': [['LogicalANDExpression'], ['LogicalORExpression', '||', 'LogicalANDExpression']],
+        'ConditionalExpression': [['LogicalORExpression'], ['LogicalORExpression', '?', 'LogicalORExpression', ':', 'LogicalORExpression']],
+        'Expression': [['ConditionalExpression'], ['Expression', ',', 'ConditionalExpression']],
+        'Program': [['Expression']]
+
+      };
+
+      function _Symbol(symbolName, token) {
+        this.name = symbolName;
+        this.token = token;
+        this.childNodes = [];
+        this.toString = function (indent) {
+          if (!indent) indent = '';
+          if (this.childNodes.length == 1) return this.childNodes[0].toString(indent);
+          var str = indent + this.name + (this.token != undefined && this.name != this.token ? ':' + this.token : '') + '\n';
+          for (var i = 0; i < this.childNodes.length; i++) {
+            str += this.childNodes[i].toString(indent + '    ');
+          }return str;
+        };
+      }
+
+      function SyntacticalParser() {
+        var currentRule;
+        var root = {
+          Program: '$'
+        };
+        var hash = {};
+
+        function closureNode(node) {
+
+          hash[JSON.stringify(node)] = node;
+
+          var queue = Object.getOwnPropertyNames(node);
+          while (queue.length) {
+            var symbolName = queue.shift();
+            if (!rules[symbolName]) continue;
+            rules[symbolName].forEach(function (rule) {
+              if (!node[rule[0]]) queue.push(rule[0]);
+              var rulenode = node;
+              var lastnode = null;
+              rule.forEach(function (symbol) {
+                if (!rulenode[symbol]) rulenode[symbol] = {};
+                lastnode = rulenode;
+                rulenode = rulenode[symbol];
+              });
+              if (node[symbolName].$div) rulenode.$div = true;
+              rulenode.$reduce = symbolName;
+              rulenode.$count = rule.length;
+            });
+          }
+
+          for (var p in node) {
+            if (_typeof2(node[p]) != 'object' || p.charAt(0) == '$' || node[p].$closure) continue;
+            if (hash[JSON.stringify(node[p])]) node[p] = hash[JSON.stringify(node[p])];else {
+              closureNode(node[p]);
+            }
+          }
+          node.$closure = true;
+        }
+
+        closureNode(root);
+        var symbolStack = [];
+        var statusStack = [root];
+        var current = root;
+        this.insertSymbol = function insertSymbol(symbol, haveLineTerminator) {
+          while (!current[symbol.name] && current.$reduce) {
+            var count = current.$count;
+            var newsymbol = new _Symbol(current.$reduce);
+            while (count--) {
+              newsymbol.childNodes.push(symbolStack.pop()), statusStack.pop();
+            }current = statusStack[statusStack.length - 1];
+            this.insertSymbol(newsymbol);
+          }
+          current = current[symbol.name];
+          symbolStack.push(symbol), statusStack.push(current);
+          if (!current) throw new Error();
+          return current.$div;
+        };
+        this.reset = function () {
+          current = root;
+          symbolStack = [];
+          statusStack = [root];
+        };
+        Object.defineProperty(this, 'grammarTree', {
+          'get': function get() {
+            try {
+              while (current.$reduce) {
+                var count = current.$count;
+                var newsymbol = new _Symbol(current.$reduce);
+                while (count--) {
+                  newsymbol.childNodes.push(symbolStack.pop()), statusStack.pop();
+                }current = statusStack[statusStack.length - 1];
+                this.insertSymbol(newsymbol);
+              }
+              if (symbolStack.length > 0 && current[';']) {
+                this.insertSymbol(new _Symbol(';', ';'));
+                return this.grammarTree;
+              }
+              if (symbolStack.length != 1 || symbolStack[0].name != 'Program') throw new Error();
+            } catch (e) {
+              throw new SyntaxError('Unexpected end of input');
+            }
+            return symbolStack[0];
+          }
+        });
+      }
+
+      function Parser() {
+        this.lexicalParser = new LexicalParser();
+        this.syntacticalParser = new SyntacticalParser();
+        var terminalSymbols = ['NullLiteral', 'BooleanLiteral', 'NumericLiteral', 'StringLiteral', 'RegularExpressionLiteral', 'Identifier', '**', '=>', '{', '}', '(', ')', '[', ']', '.', ';', ',', '<', '>', '<=', '>=', '==', '!=', '===', '!==', '+', '-', '*', '%', '++', '--', '<<', '>>', '>>>', '&', '|', '^', '!', '~', '&&', '||', '?', ':', '=', '+=', '-=', '*=', '%=', '<<=', '>>=', '>>>=', '&=', '|=', '^=', '/', '/=', 'instanceof', 'typeof', 'new', 'void', 'debugger', 'this', 'delete', 'in'];
+        var terminalSymbolIndex = {};
+        terminalSymbols.forEach(function (e) {
+          Object.defineProperty(terminalSymbolIndex, e, {});
+        });
+        this.reset = function () {
+          this.lexicalParser.reset();
+          this.syntacticalParser.reset();
+        };
+        this.parse = function (source, onInputElement) {
+          var _this = this;
+
+          var token;
+          var haveLineTerminator = false;
+          this.lexicalParser.source = source;
+          var useDiv = false;
+          while (token = this.lexicalParser.getNextToken(useDiv)) {
+            if (onInputElement) onInputElement(token);
+            try {
+              if (Object.getOwnPropertyNames(token).some(function (e) {
+                if (terminalSymbolIndex.hasOwnProperty(e)) {
+                  useDiv = _this.syntacticalParser.insertSymbol(new _Symbol(e, token), haveLineTerminator);
+                  haveLineTerminator = false;
+                  return true;
+                } else return false;
+              })) continue;
+              if ((token.Keyword || token.Punctuator || token.DivPunctuator) && terminalSymbolIndex.hasOwnProperty(token.toString())) {
+                useDiv = this.syntacticalParser.insertSymbol(new _Symbol(token.toString(), token), haveLineTerminator);
+              }
+            } catch (e) {
+              throw new SyntaxError('Unexpected token ' + token);
+            }
+          }
+          return this.syntacticalParser.grammarTree;
+        };
+      }
+
+      var parser = new Parser();
+
+      function JavaScriptExpression(text) {
+        parser.reset();
+        this.tree = parser.parse(text);
+        this.paths = [];
+        var context = Object.create(null);
+        var me = this;
+        var pathIndex = Object.create(null);
+        this.isSimple;
+        this.isConst;
+        walk(this.tree);
+        checkSimple(this.tree);
+        if (this.paths.length === 0) {
+          this.isConst = true;
+        }
+        this.setter = function (path) {
+          var curr = context;
+          for (var i = 0; i < path.length - 1; i++) {
+            if (!curr[path[i]]) curr[path[i]] = Object.create(null);
+            curr = curr[path[i]];
+          }
+          return {
+            isCompleted: function isCompleted() {
+              for (var p in pathIndex) {
+                if (!pathIndex[p]) return false;
+              }return true;
+            },
+            set: function set(value) {
+              if (!pathIndex[path.join('.')]) {
+                pathIndex[path.join('.')] = true;
+              }
+              curr[path[i]] = value;
+              if (this.isCompleted()) {
+                return me.exec();
+              } else {
+                return undefined;
+              }
+            }
+          };
+        };
+
+        this.valueOf = this.exec = function () {
+          try {
+            return function () {
+              return eval(text);
+            }.call(context);
+          } catch (e) {}
+        };
+
+        function checkSimple(symbol) {
+
+          var curr = symbol;
+          while (curr.childNodes.length <= 1 && curr.name !== 'MemberExpression') {
+            curr = curr.childNodes[0];
+          }
+          // TODO: need to point out "[……]"
+          if (curr.name === 'MemberExpression') {
+            me.isSimple = true;
+          } else {
+            me.isSimple = false;
+          }
+        }
+
+        function walk(symbol) {
+          if (symbol.name === 'CallExpression' && symbol.childNodes[symbol.childNodes.length - 1].name !== 'CallExpression') {
+            var path = getPath(symbol.childNodes[1]);
+            walk(symbol.childNodes[0]);
+          } else if (symbol.name === 'NewExpression' && symbol.childNodes.length === 1) {
+            var path = getPath(symbol.childNodes[0]);
+          } else if (symbol.name === 'MemberExpression' && symbol.childNodes.length === 1) {
+            var path = getPath(symbol);
+          } else {
+            for (var i = 0; i < symbol.childNodes.length; i++) {
+              walk(symbol.childNodes[i]);
+            }
+          }
+        }
+
+        function getPath(symbol) {
+          // [["PrimaryExpression"], ["MemberExpression", "[", "Expression", "]"], ["MemberExpression", ".", "IdentifierName"], ["new", "MemberExpression", "Arguments"]],
+
+          if (symbol.childNodes[0].name === 'IdentifierName') {
+            // MemberExpression : MemberExpression "." IdentifierName
+            var path = getPath(symbol.childNodes[2]);
+            if (path) path = path.concat(symbol.childNodes[0].childNodes[0].token.toString());
+            createPath(path);
+            return path;
+          } else if (symbol.childNodes[0].name === 'PrimaryExpression') {
+            // MemberExpression : PrimaryExpression
+            if (symbol.childNodes[0].childNodes[0].name === 'Identifier') {
+              var path = [symbol.childNodes[0].childNodes[0].token.toString()];
+              createPath(path);
+              return path;
+            } else {
+              return null;
+            }
+          } else if (symbol.childNodes[0].name === ']') {
+            // MemberExpression : MemberExpression "[" Expression "]"
+            getPath(symbol.childNodes[3]);
+            walk(symbol.childNodes[1]);
+            return null;
+          } else if (symbol.childNodes[0].name === 'Arguments') {
+            // MemberExpression : "new" MemberExpression Arguments
+            walk(symbol.childNodes[0]);
+            walk(symbol.childNodes[1]);
+            return null;
+          } else {
+            for (var i = 0; i < symbol.childNodes.length; i++) {
+              walk(symbol.childNodes[i]);
+            }
+          }
+        }
+
+        function createPath(path) {
+          var curr = context;
+          for (var i = 0; i < path.length - 1; i++) {
+            if (!curr[path[i]]) curr[path[i]] = Object.create(null);
+            curr = curr[path[i]];
+          }
+          me.paths.push(path);
+          pathIndex[path.join('.')] = false;
+        }
+      }
+
+      function visit(tree) {
+        var childNodes = tree.childNodes.slice().reverse();
+        var children = childNodes.filter(function (e) {
+          return !e.token || !e.token.Punctuator;
+        });
+        if (tree.name === 'UnaryExpression') {
+          // negative number support
+          if (childNodes.length === 2 && childNodes[0].name === '-' && children.length === 1) {
+            var res = visit(children[0]);
+            res.value = -res.value;
+            return res;
+          }
+        }
+
+        if (tree.name === 'Arguments') {
+          var argumentList = [];
+          var listNode = children[0];
+          while (listNode) {
+            if (listNode.childNodes.length === 3) {
+              argumentList.unshift(listNode.childNodes[0]);
+              listNode = listNode.childNodes[2];
+            }
+            if (listNode.childNodes.length === 1) {
+              argumentList.unshift(listNode.childNodes[0]);
+              listNode = null;
+            }
+          }
+          return {
+            type: 'Arguments',
+            children: argumentList.map(function (e) {
+              return visit(e);
+            })
+          };
+        }
+
+        if (children && children.length === 1) {
+          var res = visit(children[0]);
+          return res;
+        }
+
+        if (tree.token && ['NullLiteral', 'BooleanLiteral', 'NumericLiteral', 'StringLiteral', 'Identifier'].some(function (e) {
+          return tree.token[e];
+        })) {
+          var type = Object.keys(tree.token).filter(function (e) {
+            return e.match(/Literal/) || e.match(/Identifier/);
+          })[0];
+          var value = {
+            'NullLiteral': null,
+            'BooleanLiteral': Boolean(tree.token),
+            'NumericLiteral': Number(tree.token),
+            'StringLiteral': tree.token,
+            'Identifier': tree.token
+          }[type];
+
+          return {
+            type: type,
+            value: value
+          };
+        }
+
+        if (tree.name === 'CallExpression') return {
+          type: 'CallExpression',
+          children: [visit(childNodes[0]), visit(childNodes[1])]
+        };
+
+        return {
+          type: childNodes.filter(function (e) {
+            return e.token && e.token.Punctuator;
+          })[0].name,
+          children: childNodes.filter(function (e) {
+            return !e.token || !e.token.Punctuator;
+          }).map(function (e) {
+            return visit(e);
+          })
+        };
+      }
+
+      function parse(originExp) {
+        var exp = new JavaScriptExpression(originExp);
+        return JSON.stringify(visit(exp.tree), null);
+      }
+
+      module.exports = {
+        parse: parse
+      };
+
+      /***/
+    }]
+    /******/)
+  );
+});;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: ["container"]
+  }, _vm._l((_vm.data), function(item, i) {
+    return _c('div', {
+      key: 'skid-' + i,
+      ref: "skid",
+      refInFor: true,
+      staticClass: ["wxc-skid"],
+      style: {
+        width: (750 + item.right.length * 100) + 'px',
+        height: _vm.height + 'px'
+      },
+      on: {
+        "click": function($event) {
+          _vm.onNodeClick(item, i)
+        },
+        "touchstart": function (e) { return !_vm.isAndroid && _vm.onPanStart(e, item, i); },
+        "horizontalpan": function (e) { return _vm.isAndroid && _vm.onPanStart(e, item, i); },
+        "touchend": function (e) { return _vm.onPanEnd(e, item, i); }
+      }
+    }, [_c('div', {
+      staticClass: ["swipe-action-center", "border"],
+      style: _vm.styles
+    }, [_vm._t("default", null, {
+      val: {
+        item: item,
+        index: i
+      }
+    })], 2), _c('div', {
+      staticClass: ["swipe-action-right"]
+    }, _vm._l((item.right), function(child, childIdx) {
+      return _c('text', {
+        key: 'child-' + childIdx,
+        staticClass: ["swipe-action-child", "swipe-action-text"],
+        style: Object.assign({
+          lineHeight: _vm.height + 'px'
+        }, child.style || {}),
+        on: {
+          "click": function($event) {
+            _vm.onRightNode(item, child, i)
+          }
+        }
+      }, [_vm._v(_vm._s(child.text))])
+    }))])
+  }))
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', [_c('WxcSwipeAction', {
+    attrs: {
+      "data": _vm.data
+    },
+    on: {
+      "onNodeClick": _vm.onTest
+    },
+    scopedSlots: _vm._u([{
+      key: "default",
+      fn: function(val) {
+        return _c('text', {
+          staticClass: ["text"]
+        }, [_vm._v(_vm._s(val.val.item.title) + ":" + _vm._s(val.val.index))])
+      }
+    }])
+  })], 1)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 51 */
+/***/ (function(module, exports) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('wxc-tab-bar', {
+    attrs: {
+      "tabTitles": _vm.tabTitles,
+      "tabStyles": _vm.tabStyles,
+      "titleType": "iconFont",
+      "titleUseSlot": true,
+      "wrapBgColor": "#f9f9f9"
+    },
+    on: {
+      "wxcTabBarCurrentTabSelected": _vm.wxcTabBarCurrentTabSelected
+    }
+  }, [_vm._l((_vm.tabTitles), function(tabTitle, i) {
+    return _c('div', {
+      key: i + '_tab',
+      ref: 'tab_' + i,
+      refInFor: true,
+      staticClass: ["tabCon"],
+      attrs: {
+        "slot": 'tab-title-' + i
+      },
+      slot: 'tab-title-' + i
+    }, [_c('text', {
+      staticClass: ["iconfont"],
+      style: {
+        'color': _vm.index === i ? tabTitle.color : _vm.tabStyles.titleColor,
+        'font-size': _vm.tabStyles.fontSize,
+        'width': _vm.tabStyles.width,
+        'height': _vm.tabStyles.height,
+        'fontSize': _vm.tabStyles.iconFontSize + 'px',
+      }
+    }, [_vm._v(_vm._s(tabTitle.codePoint))]), _c('text', {
+      staticClass: ["title"],
+      style: {
+        'height': _vm.index === i ? '33px' : '0',
+        'color': _vm.index === i ? tabTitle.color : _vm.tabStyles.titleColor,
+      }
+    }, [_vm._v(_vm._s(tabTitle.title))])])
+  }), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('List')]), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('SwipeAction', [
+    [_c('text', [_vm._v("45")])],
+    [_c('text', {
+      on: {
+        "click": _vm.consoleState
+      }
+    }, [_vm._v("取消")])]
+  ], 2)], 1), _c('div', {
+    staticClass: ["item-container"],
+    style: _vm.contentStyle
+  }, [_c('text', {
+    staticClass: ["iconfont"]
+  }, [_vm._v(_vm._s(_vm.icon))])])], 2)
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+
+/***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _vuex = __webpack_require__(0);
+
+var _vuex2 = _interopRequireDefault(_vuex);
+
+var _vue = __webpack_require__(53);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _tabConfig = __webpack_require__(5);
+var _tabConfig = __webpack_require__(54);
 
 var _tabConfig2 = _interopRequireDefault(_tabConfig);
 
-var _dreamList = __webpack_require__(6);
+var _dreamList = __webpack_require__(55);
 
 var _dreamList2 = _interopRequireDefault(_dreamList);
 
@@ -1503,7 +8847,7 @@ var store = new _vuex2.default.Store({
 module.exports = store;
 
 /***/ }),
-/* 4 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9953,7 +17297,7 @@ if (inBrowser) {
 
 
 /***/ }),
-/* 5 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9964,14 +17308,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var state = {
-  count: 0,
+  indexOpacity: 1,
   tabIconFontTitles: [{
-    title: '日程',
-    codePoint: '\uE7F4',
-    color: '#FF9900'
-  }, {
     title: '愿望清单',
     codePoint: '\uE7DF',
+    color: '#FF9900'
+  }, {
+    title: '日程',
+    codePoint: '\uE7F4',
     color: '#FF5000'
   }, {
     title: '我的',
@@ -9982,7 +17326,7 @@ var state = {
   tabIconFontStyles: {
     bgColor: '#FFFFFF',
     titleColor: '#666666',
-    activeTitleColor: '#f00',
+    activeTitleColor: '#FF9900',
     activeBgColor: '#FFFFFF',
     isActiveTitleBold: true,
     width: 160,
@@ -9993,8 +17337,8 @@ var state = {
     iconFontSize: 45,
     iconFontMarginBottom: 8,
     iconFontColor: '#666666',
-    activeIconFontColor: 'red',
-    iconFontUrl: '//at.alicdn.com/t/font_1293485_qaexcjzc3wr.ttf'
+    activeIconFontColor: '#FF9900',
+    iconFontUrl: 'http://at.alicdn.com/t/font_1293485_w2ieztdbg8.ttf'
   }
 };
 var mutations = {
@@ -10003,6 +17347,9 @@ var mutations = {
   },
   showSelectedTitle: function showSelectedTitle(state, payload) {
     state.tabIconFontTitles[payload.id].title = payload.title;
+  },
+  setOpacity: function setOpacity(state) {
+    state.indexOpacity = 0;
   }
 };
 // console.log(state.tabIconFontTitles[0].title)
@@ -10015,7 +17362,7 @@ var tabConfig = {
 exports.default = tabConfig;
 
 /***/ }),
-/* 6 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10026,173 +17373,290 @@ Object.defineProperty(exports, "__esModule", {
 });
 
 var state = {
+  popupZindex: 200,
+  status: 4,
+  statusArr: [0, 1, 2, 3, 4],
+  statusIcon: ['\uE844', '\uE848', '\uE848', '\uE847', '\uE629'],
+  statusList: [{
+    status: 0,
+    statusName: '已完成',
+    statusIcon: '\uE844',
+    color: '#22FF22'
+  }, {
+    status: 1,
+    statusName: '进行中',
+    statusIcon: '\uE848',
+    color: '#555555'
+  }, {
+    status: 2,
+    statusName: '未开始',
+    statusIcon: '\uE848',
+    color: '#888888'
+  }, {
+    status: 3,
+    statusName: '已取消',
+    statusIcon: '\uE847',
+    color: '#FF2222'
+  }, {
+    status: 4,
+    statusName: '全部',
+    statusIcon: '\uE629',
+    color: '#FF9900'
+  }],
+  classify: 1,
   list: [{
-    dream: '把写梦书app做出来并发布',
+    bgColor: '#CC4422',
+    status: 0,
+    classify: 1,
+    dream: 'sc01把写梦书app做出来并发布',
     describe: '使用weex写的用来帮助人们管理自己的梦想的app',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#44FF22',
+    status: 0,
+    classify: 1,
     dream: '写下vue初始化项目',
     describe: '使用vue写下包括顶部导航或侧边导航的开始项目',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#BB7700',
+    status: 0,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
-    dream: 'hi',
-    describe: '',
-    picture: '',
-    dolist: [{}]
-  }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 1,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#CC4422',
+    status: 0,
+    classify: 0,
+    dream: '把写梦书app做出来并发布',
+    describe: '使用weex写的用来帮助人们管理自己的梦想的app',
+    picture: '',
+    dolist: [{}]
+  }, {
+    bgColor: '#44FF22',
+    status: 0,
+    classify: 0,
+    dream: '写下vue初始化项目',
+    describe: '使用vue写下包括顶部导航或侧边导航的开始项目',
+    picture: '',
+    dolist: [{}]
+  }, {
+    bgColor: '#BB7700',
+    status: 0,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
-    dream: 'hi',
-    describe: '',
-    picture: '',
-    dolist: [{}]
-  }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 0,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
-    dream: 'hi',
-    describe: '',
-    picture: '',
-    dolist: [{}]
-  }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 2,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
-    dream: 'hi',
-    describe: '',
-    picture: '',
-    dolist: [{}]
-  }, {
+    bgColor: '#FF0022',
+    status: 1,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 0,
     dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
   }, {
-    dream: 'hi',
+    bgColor: '#FF0022',
+    status: 3,
+    classify: 0,
+    dream: 'title',
     describe: '',
     picture: '',
     dolist: [{}]
@@ -10201,33 +17665,59 @@ var state = {
 var mutations = {
   increment: function increment(state) {
     state.count++;
+  },
+  setClassify: function setClassify(state, value) {
+    state.classify = value;
+  },
+  setStatus: function setStatus(state, value) {
+    state.status = value;
+  },
+  setPopupZ: function setPopupZ(state) {
+    state.popupZindex = 200;
   }
 };
-// console.log(state.tabIconFontTitles[0].title)
-var tabConfig = {
+var getters = {
+  getListByStatusClassify: function getListByStatusClassify(state) {
+    return state.list.filter(function (value) {
+      if (state.status !== 4) {
+        return value.status === state.status && value.classify === state.classify;
+      } else {
+        return value.classify === state.classify;
+      }
+    });
+  },
+  gettersTest: function gettersTest(state) {
+    return state.list;
+  },
+  getIconByStatus: function getIconByStatus(state) {
+    return function (status) {};
+  }
+  // console.log(state.tabIconFontTitles[0].title)
+};var tabConfig = {
   namespaced: true,
   state: state,
+  getters: getters,
   mutations: mutations
 };
 
 exports.default = tabConfig;
 
 /***/ }),
-/* 7 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
 /* styles */
-__vue_styles__.push(__webpack_require__(8)
+__vue_styles__.push(__webpack_require__(57)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(9)
+__vue_exports__ = __webpack_require__(58)
 
 /* template */
-var __vue_template__ = __webpack_require__(27)
+var __vue_template__ = __webpack_require__(59)
 __vue_options__ = __vue_exports__ = __vue_exports__ || {}
 if (
   typeof __vue_exports__.default === "object" ||
@@ -10239,10 +17729,10 @@ __vue_options__ = __vue_exports__ = __vue_exports__.default
 if (typeof __vue_options__ === "function") {
   __vue_options__ = __vue_options__.options
 }
-__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\index.vue"
+__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\Router.vue"
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-1a4d8e3c"
+__vue_options__._scopeId = "data-v-989b3022"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -10257,36 +17747,13 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 8 */
+/* 57 */
 /***/ (function(module, exports) {
 
-module.exports = {
-  "iconfont": {
-    "fontFamily": "iconfont",
-    "color": "#FF0000"
-  },
-  "item-container": {
-    "width": "750",
-    "backgroundColor": "#f2f3f4"
-  },
-  "tabCon": {
-    "alignItems": "center",
-    "justifyContent": "center"
-  },
-  "@TRANSITION": {
-    "title": {
-      "duration": 300
-    }
-  },
-  "title": {
-    "transitionDuration": 300,
-    "fontSize": "27",
-    "fontWeight": "600"
-  }
-}
+module.exports = {}
 
 /***/ }),
-/* 9 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10295,14 +17762,6 @@ module.exports = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-
-var _utils = __webpack_require__(1);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-var _wxcTabBar = __webpack_require__(13);
-
-var _wxcTabBar2 = _interopRequireDefault(_wxcTabBar);
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
 //
@@ -10312,1869 +17771,30 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
-
-
-var _List = __webpack_require__(18);
-
-var _List2 = _interopRequireDefault(_List);
 
 var _vuex = __webpack_require__(0);
 
-var _configTab = __webpack_require__(26);
-
-var _configTab2 = _interopRequireDefault(_configTab);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var modal = weex.requireModule('modal');
-
 exports.default = {
-  components: { WxcTabBar: _wxcTabBar2.default, List: _List2.default },
-  data: function data() {
-    return {
-      index: 0,
-      tabHeight: 50
-    };
-  },
-  computed: _extends({}, (0, _vuex.mapState)('tab', {
-    count: function count(state) {
-      return state.count;
-    },
-    tabTitles: function tabTitles(state) {
-      return state.tabIconFontTitles;
-    },
-    tabStyles: function tabStyles(state) {
-      return state.tabIconFontStyles;
-    }
-  })),
-  created: function created() {
-    this.initIconFont();
-    var tabPageHeight = _utils2.default.env.getPageHeight();
-    // 如果页面没有导航栏，可以用下面这个计算高度的方法
-    // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
-    var tabStyles = this.tabStyles;
-
-    this.contentStyle = { height: tabPageHeight - tabStyles.height + 'px' };
-    // console.log(`index${this.contentStyle.height}`);
-  },
-
-  methods: {
-    // ...mapMutations('tab', [
-    //   'showSelectedTitle',
-    // ]),
-    consoleState: function consoleState() {
-
-      var count = this;
-      console.log(count);
-      modal.toast({
-        message: 'count',
-        duration: 1
-      });
-      // modal.toast({
-      // message: count,
-      // duration: 0.3
-      // })
-    },
-    initIconFont: function initIconFont() {
-      // eslint-disable-next-line no-undef
-      var domModule = weex.requireModule('dom');
-      domModule.addRule('fontFace', {
-        'fontFamily': 'iconfont',
-        'src': 'url(' + this.tabStyles.iconFontUrl + ')'
-      });
-    },
-    wxcTabBarCurrentTabSelected: function wxcTabBarCurrentTabSelected(e) {
-      var index = e.page;
-      this.index = index;
-      // this.$store.commit('tab/increment')
-      // 选中的标签展示title没选中的不展示
-      // let title = ['首页', '愿望清单', '我的']
-
-
-      // for (let i = 0; i < this.tabTitles.length; i++) {
-      //   if (index === i) {
-      //     this.showSelectedTitle({ id: i, title: title[i]})
-      //   } else {
-      //     this.showSelectedTitle({ id: i, title: ''})
-      //   }
-      // }
-
-
-      // alert(index)
-      // console.log(index);
-    }
-  }
-};
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var required = __webpack_require__(11)
-  , qs = __webpack_require__(12)
-  , slashes = /^[A-Za-z][A-Za-z0-9+-.]*:\/\//
-  , protocolre = /^([a-z][a-z0-9.+-]*:)?(\/\/)?([\S\s]*)/i
-  , whitespace = '[\\x09\\x0A\\x0B\\x0C\\x0D\\x20\\xA0\\u1680\\u180E\\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\\u205F\\u3000\\u2028\\u2029\\uFEFF]'
-  , left = new RegExp('^'+ whitespace +'+');
-
-/**
- * Trim a given string.
- *
- * @param {String} str String to trim.
- * @public
- */
-function trimLeft(str) {
-  return (str ? str : '').toString().replace(left, '');
-}
-
-/**
- * These are the parse rules for the URL parser, it informs the parser
- * about:
- *
- * 0. The char it Needs to parse, if it's a string it should be done using
- *    indexOf, RegExp using exec and NaN means set as current value.
- * 1. The property we should set when parsing this value.
- * 2. Indication if it's backwards or forward parsing, when set as number it's
- *    the value of extra chars that should be split off.
- * 3. Inherit from location if non existing in the parser.
- * 4. `toLowerCase` the resulting value.
- */
-var rules = [
-  ['#', 'hash'],                        // Extract from the back.
-  ['?', 'query'],                       // Extract from the back.
-  function sanitize(address) {          // Sanitize what is left of the address
-    return address.replace('\\', '/');
-  },
-  ['/', 'pathname'],                    // Extract from the back.
-  ['@', 'auth', 1],                     // Extract from the front.
-  [NaN, 'host', undefined, 1, 1],       // Set left over value.
-  [/:(\d+)$/, 'port', undefined, 1],    // RegExp the back.
-  [NaN, 'hostname', undefined, 1, 1]    // Set left over.
-];
-
-/**
- * These properties should not be copied or inherited from. This is only needed
- * for all non blob URL's as a blob URL does not include a hash, only the
- * origin.
- *
- * @type {Object}
- * @private
- */
-var ignore = { hash: 1, query: 1 };
-
-/**
- * The location object differs when your code is loaded through a normal page,
- * Worker or through a worker using a blob. And with the blobble begins the
- * trouble as the location object will contain the URL of the blob, not the
- * location of the page where our code is loaded in. The actual origin is
- * encoded in the `pathname` so we can thankfully generate a good "default"
- * location from it so we can generate proper relative URL's again.
- *
- * @param {Object|String} loc Optional default location object.
- * @returns {Object} lolcation object.
- * @public
- */
-function lolcation(loc) {
-  var globalVar;
-
-  if (typeof window !== 'undefined') globalVar = window;
-  else if (typeof global !== 'undefined') globalVar = global;
-  else if (typeof self !== 'undefined') globalVar = self;
-  else globalVar = {};
-
-  var location = globalVar.location || {};
-  loc = loc || location;
-
-  var finaldestination = {}
-    , type = typeof loc
-    , key;
-
-  if ('blob:' === loc.protocol) {
-    finaldestination = new Url(unescape(loc.pathname), {});
-  } else if ('string' === type) {
-    finaldestination = new Url(loc, {});
-    for (key in ignore) delete finaldestination[key];
-  } else if ('object' === type) {
-    for (key in loc) {
-      if (key in ignore) continue;
-      finaldestination[key] = loc[key];
-    }
-
-    if (finaldestination.slashes === undefined) {
-      finaldestination.slashes = slashes.test(loc.href);
-    }
-  }
-
-  return finaldestination;
-}
-
-/**
- * @typedef ProtocolExtract
- * @type Object
- * @property {String} protocol Protocol matched in the URL, in lowercase.
- * @property {Boolean} slashes `true` if protocol is followed by "//", else `false`.
- * @property {String} rest Rest of the URL that is not part of the protocol.
- */
-
-/**
- * Extract protocol information from a URL with/without double slash ("//").
- *
- * @param {String} address URL we want to extract from.
- * @return {ProtocolExtract} Extracted information.
- * @private
- */
-function extractProtocol(address) {
-  address = trimLeft(address);
-  var match = protocolre.exec(address);
-
-  return {
-    protocol: match[1] ? match[1].toLowerCase() : '',
-    slashes: !!match[2],
-    rest: match[3]
-  };
-}
-
-/**
- * Resolve a relative URL pathname against a base URL pathname.
- *
- * @param {String} relative Pathname of the relative URL.
- * @param {String} base Pathname of the base URL.
- * @return {String} Resolved pathname.
- * @private
- */
-function resolve(relative, base) {
-  if (relative === '') return base;
-
-  var path = (base || '/').split('/').slice(0, -1).concat(relative.split('/'))
-    , i = path.length
-    , last = path[i - 1]
-    , unshift = false
-    , up = 0;
-
-  while (i--) {
-    if (path[i] === '.') {
-      path.splice(i, 1);
-    } else if (path[i] === '..') {
-      path.splice(i, 1);
-      up++;
-    } else if (up) {
-      if (i === 0) unshift = true;
-      path.splice(i, 1);
-      up--;
-    }
-  }
-
-  if (unshift) path.unshift('');
-  if (last === '.' || last === '..') path.push('');
-
-  return path.join('/');
-}
-
-/**
- * The actual URL instance. Instead of returning an object we've opted-in to
- * create an actual constructor as it's much more memory efficient and
- * faster and it pleases my OCD.
- *
- * It is worth noting that we should not use `URL` as class name to prevent
- * clashes with the global URL instance that got introduced in browsers.
- *
- * @constructor
- * @param {String} address URL we want to parse.
- * @param {Object|String} [location] Location defaults for relative paths.
- * @param {Boolean|Function} [parser] Parser for the query string.
- * @private
- */
-function Url(address, location, parser) {
-  address = trimLeft(address);
-
-  if (!(this instanceof Url)) {
-    return new Url(address, location, parser);
-  }
-
-  var relative, extracted, parse, instruction, index, key
-    , instructions = rules.slice()
-    , type = typeof location
-    , url = this
-    , i = 0;
-
-  //
-  // The following if statements allows this module two have compatibility with
-  // 2 different API:
-  //
-  // 1. Node.js's `url.parse` api which accepts a URL, boolean as arguments
-  //    where the boolean indicates that the query string should also be parsed.
-  //
-  // 2. The `URL` interface of the browser which accepts a URL, object as
-  //    arguments. The supplied object will be used as default values / fall-back
-  //    for relative paths.
-  //
-  if ('object' !== type && 'string' !== type) {
-    parser = location;
-    location = null;
-  }
-
-  if (parser && 'function' !== typeof parser) parser = qs.parse;
-
-  location = lolcation(location);
-
-  //
-  // Extract protocol information before running the instructions.
-  //
-  extracted = extractProtocol(address || '');
-  relative = !extracted.protocol && !extracted.slashes;
-  url.slashes = extracted.slashes || relative && location.slashes;
-  url.protocol = extracted.protocol || location.protocol || '';
-  address = extracted.rest;
-
-  //
-  // When the authority component is absent the URL starts with a path
-  // component.
-  //
-  if (!extracted.slashes) instructions[3] = [/(.*)/, 'pathname'];
-
-  for (; i < instructions.length; i++) {
-    instruction = instructions[i];
-
-    if (typeof instruction === 'function') {
-      address = instruction(address);
-      continue;
-    }
-
-    parse = instruction[0];
-    key = instruction[1];
-
-    if (parse !== parse) {
-      url[key] = address;
-    } else if ('string' === typeof parse) {
-      if (~(index = address.indexOf(parse))) {
-        if ('number' === typeof instruction[2]) {
-          url[key] = address.slice(0, index);
-          address = address.slice(index + instruction[2]);
-        } else {
-          url[key] = address.slice(index);
-          address = address.slice(0, index);
-        }
-      }
-    } else if ((index = parse.exec(address))) {
-      url[key] = index[1];
-      address = address.slice(0, index.index);
-    }
-
-    url[key] = url[key] || (
-      relative && instruction[3] ? location[key] || '' : ''
-    );
-
-    //
-    // Hostname, host and protocol should be lowercased so they can be used to
-    // create a proper `origin`.
-    //
-    if (instruction[4]) url[key] = url[key].toLowerCase();
-  }
-
-  //
-  // Also parse the supplied query string in to an object. If we're supplied
-  // with a custom parser as function use that instead of the default build-in
-  // parser.
-  //
-  if (parser) url.query = parser(url.query);
-
-  //
-  // If the URL is relative, resolve the pathname against the base URL.
-  //
-  if (
-      relative
-    && location.slashes
-    && url.pathname.charAt(0) !== '/'
-    && (url.pathname !== '' || location.pathname !== '')
-  ) {
-    url.pathname = resolve(url.pathname, location.pathname);
-  }
-
-  //
-  // We should not add port numbers if they are already the default port number
-  // for a given protocol. As the host also contains the port number we're going
-  // override it with the hostname which contains no port number.
-  //
-  if (!required(url.port, url.protocol)) {
-    url.host = url.hostname;
-    url.port = '';
-  }
-
-  //
-  // Parse down the `auth` for the username and password.
-  //
-  url.username = url.password = '';
-  if (url.auth) {
-    instruction = url.auth.split(':');
-    url.username = instruction[0] || '';
-    url.password = instruction[1] || '';
-  }
-
-  url.origin = url.protocol && url.host && url.protocol !== 'file:'
-    ? url.protocol +'//'+ url.host
-    : 'null';
-
-  //
-  // The href is just the compiled result.
-  //
-  url.href = url.toString();
-}
-
-/**
- * This is convenience method for changing properties in the URL instance to
- * insure that they all propagate correctly.
- *
- * @param {String} part          Property we need to adjust.
- * @param {Mixed} value          The newly assigned value.
- * @param {Boolean|Function} fn  When setting the query, it will be the function
- *                               used to parse the query.
- *                               When setting the protocol, double slash will be
- *                               removed from the final url if it is true.
- * @returns {URL} URL instance for chaining.
- * @public
- */
-function set(part, value, fn) {
-  var url = this;
-
-  switch (part) {
-    case 'query':
-      if ('string' === typeof value && value.length) {
-        value = (fn || qs.parse)(value);
-      }
-
-      url[part] = value;
-      break;
-
-    case 'port':
-      url[part] = value;
-
-      if (!required(value, url.protocol)) {
-        url.host = url.hostname;
-        url[part] = '';
-      } else if (value) {
-        url.host = url.hostname +':'+ value;
-      }
-
-      break;
-
-    case 'hostname':
-      url[part] = value;
-
-      if (url.port) value += ':'+ url.port;
-      url.host = value;
-      break;
-
-    case 'host':
-      url[part] = value;
-
-      if (/:\d+$/.test(value)) {
-        value = value.split(':');
-        url.port = value.pop();
-        url.hostname = value.join(':');
-      } else {
-        url.hostname = value;
-        url.port = '';
-      }
-
-      break;
-
-    case 'protocol':
-      url.protocol = value.toLowerCase();
-      url.slashes = !fn;
-      break;
-
-    case 'pathname':
-    case 'hash':
-      if (value) {
-        var char = part === 'pathname' ? '/' : '#';
-        url[part] = value.charAt(0) !== char ? char + value : value;
-      } else {
-        url[part] = value;
-      }
-      break;
-
-    default:
-      url[part] = value;
-  }
-
-  for (var i = 0; i < rules.length; i++) {
-    var ins = rules[i];
-
-    if (ins[4]) url[ins[1]] = url[ins[1]].toLowerCase();
-  }
-
-  url.origin = url.protocol && url.host && url.protocol !== 'file:'
-    ? url.protocol +'//'+ url.host
-    : 'null';
-
-  url.href = url.toString();
-
-  return url;
-}
-
-/**
- * Transform the properties back in to a valid and full URL string.
- *
- * @param {Function} stringify Optional query stringify function.
- * @returns {String} Compiled version of the URL.
- * @public
- */
-function toString(stringify) {
-  if (!stringify || 'function' !== typeof stringify) stringify = qs.stringify;
-
-  var query
-    , url = this
-    , protocol = url.protocol;
-
-  if (protocol && protocol.charAt(protocol.length - 1) !== ':') protocol += ':';
-
-  var result = protocol + (url.slashes ? '//' : '');
-
-  if (url.username) {
-    result += url.username;
-    if (url.password) result += ':'+ url.password;
-    result += '@';
-  }
-
-  result += url.host + url.pathname;
-
-  query = 'object' === typeof url.query ? stringify(url.query) : url.query;
-  if (query) result += '?' !== query.charAt(0) ? '?'+ query : query;
-
-  if (url.hash) result += url.hash;
-
-  return result;
-}
-
-Url.prototype = { set: set, toString: toString };
-
-//
-// Expose the URL parser and some additional properties that might be useful for
-// others or testing.
-//
-Url.extractProtocol = extractProtocol;
-Url.location = lolcation;
-Url.trimLeft = trimLeft;
-Url.qs = qs;
-
-module.exports = Url;
-
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-/**
- * Check if we're required to add a port number.
- *
- * @see https://url.spec.whatwg.org/#default-port
- * @param {Number|String} port Port number we need to check
- * @param {String} protocol Protocol we need to check against.
- * @returns {Boolean} Is it a default port for the given protocol
- * @api private
- */
-module.exports = function required(port, protocol) {
-  protocol = protocol.split(':')[0];
-  port = +port;
-
-  if (!port) return false;
-
-  switch (protocol) {
-    case 'http':
-    case 'ws':
-    return port !== 80;
-
-    case 'https':
-    case 'wss':
-    return port !== 443;
-
-    case 'ftp':
-    return port !== 21;
-
-    case 'gopher':
-    return port !== 70;
-
-    case 'file':
-    return false;
-  }
-
-  return port !== 0;
-};
-
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var has = Object.prototype.hasOwnProperty
-  , undef;
-
-/**
- * Decode a URI encoded string.
- *
- * @param {String} input The URI encoded string.
- * @returns {String|Null} The decoded string.
- * @api private
- */
-function decode(input) {
-  try {
-    return decodeURIComponent(input.replace(/\+/g, ' '));
-  } catch (e) {
-    return null;
-  }
-}
-
-/**
- * Attempts to encode a given input.
- *
- * @param {String} input The string that needs to be encoded.
- * @returns {String|Null} The encoded string.
- * @api private
- */
-function encode(input) {
-  try {
-    return encodeURIComponent(input);
-  } catch (e) {
-    return null;
-  }
-}
-
-/**
- * Simple query string parser.
- *
- * @param {String} query The query string that needs to be parsed.
- * @returns {Object}
- * @api public
- */
-function querystring(query) {
-  var parser = /([^=?&]+)=?([^&]*)/g
-    , result = {}
-    , part;
-
-  while (part = parser.exec(query)) {
-    var key = decode(part[1])
-      , value = decode(part[2]);
-
-    //
-    // Prevent overriding of existing properties. This ensures that build-in
-    // methods like `toString` or __proto__ are not overriden by malicious
-    // querystrings.
-    //
-    // In the case if failed decoding, we want to omit the key/value pairs
-    // from the result.
-    //
-    if (key === null || value === null || key in result) continue;
-    result[key] = value;
-  }
-
-  return result;
-}
-
-/**
- * Transform a query string to an object.
- *
- * @param {Object} obj Object that should be transformed.
- * @param {String} prefix Optional prefix.
- * @returns {String}
- * @api public
- */
-function querystringify(obj, prefix) {
-  prefix = prefix || '';
-
-  var pairs = []
-    , value
-    , key;
-
-  //
-  // Optionally prefix with a '?' if needed
-  //
-  if ('string' !== typeof prefix) prefix = '?';
-
-  for (key in obj) {
-    if (has.call(obj, key)) {
-      value = obj[key];
-
-      //
-      // Edge cases where we actually want to encode the value to an empty
-      // string instead of the stringified value.
-      //
-      if (!value && (value === null || value === undef || isNaN(value))) {
-        value = '';
-      }
-
-      key = encodeURIComponent(key);
-      value = encodeURIComponent(value);
-
-      //
-      // If we failed to encode the strings, we should bail out as we don't
-      // want to add invalid strings to the query.
-      //
-      if (key === null || value === null) continue;
-      pairs.push(key +'='+ value);
-    }
-  }
-
-  return pairs.length ? prefix + pairs.join('&') : '';
-}
-
-//
-// Expose the module.
-//
-exports.stringify = querystringify;
-exports.parse = querystring;
-
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _index = __webpack_require__(14);
-
-Object.defineProperty(exports, 'default', {
-  enumerable: true,
-  get: function get() {
-    return _interopRequireDefault(_index).default;
-  }
-});
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-/***/ }),
-/* 14 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(15)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(16)
-
-/* template */
-var __vue_template__ = __webpack_require__(17)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\node_modules\\weex-ui\\packages\\wxc-tab-bar\\index.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-dc8303b2"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "wxc-tab-page": {
-    "position": "absolute",
-    "top": 0,
-    "left": 0,
-    "right": 0,
-    "bottom": 0
-  },
-  "tab-title-list": {
-    "flexDirection": "row",
-    "justifyContent": "space-around"
-  },
-  "title-item": {
-    "justifyContent": "center",
-    "alignItems": "center",
-    "borderBottomStyle": "solid"
-  },
-  "tab-page-wrap": {
-    "width": "750",
-    "flex": 1
-  },
-  "tab-container": {
-    "flex": 1,
-    "flexDirection": "row",
-    "position": "absolute"
-  },
-  "tab-text": {
-    "lines": 1,
-    "textOverflow": "ellipsis"
-  },
-  "desc-tag": {
-    "position": "absolute",
-    "top": "10",
-    "right": "20",
-    "borderBottomRightRadius": "14",
-    "borderBottomLeftRadius": 0,
-    "borderTopLeftRadius": "14",
-    "borderTopRightRadius": "14",
-    "backgroundColor": "#FF5E00",
-    "height": "26",
-    "alignItems": "center",
-    "justifyContent": "center",
-    "paddingLeft": "6",
-    "paddingRight": "6"
-  },
-  "dot": {
-    "width": "12",
-    "height": "12",
-    "borderBottomRightRadius": "12",
-    "borderBottomLeftRadius": "12",
-    "borderTopLeftRadius": "12",
-    "borderTopRightRadius": "12",
-    "position": "absolute",
-    "top": "10",
-    "right": "40",
-    "backgroundColor": "#FF5E00"
-  },
-  "desc-text": {
-    "fontSize": "18",
-    "color": "#ffffff"
-  }
-}
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _utils = __webpack_require__(1);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-var dom = weex.requireModule('dom');
-var animation = weex.requireModule('animation');
-exports.default = {
-  props: {
-    tabTitles: {
-      type: Array,
-      default: function _default() {
-        return [];
-      }
-    },
-    tabStyles: {
-      type: Object,
-      default: function _default() {
-        return {
-          bgColor: '#FFFFFF',
-          titleColor: '#666666',
-          activeTitleColor: '#3D3D3D',
-          activeBgColor: '#FFFFFF',
-          isActiveTitleBold: true,
-          iconWidth: 70,
-          iconHeight: 70,
-          width: 160,
-          height: 120,
-          fontSize: 24,
-          activeBottomColor: '#FFC900',
-          activeBottomWidth: 120,
-          activeBottomHeight: 6,
-          textPaddingLeft: 10,
-          textPaddingRight: 10
-        };
-      }
-    },
-    titleType: {
-      type: String,
-      default: 'icon'
-    },
-    titleUseSlot: {
-      type: Boolean,
-      default: false
-    },
-    isTabView: {
-      type: Boolean,
-      default: true
-    },
-    duration: {
-      type: [Number, String],
-      default: 300
-    },
-    timingFunction: {
-      type: String,
-      default: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)'
-    },
-    wrapBgColor: {
-      type: String,
-      default: '#f2f3f4'
-    }
-  },
-  data: function data() {
-    return {
-      currentPage: 0,
-      translateX: 0
-    };
-  },
-  created: function created() {
-    var titleType = this.titleType,
-        tabStyles = this.tabStyles;
-
-    if (titleType === 'iconFont' && tabStyles.iconFontUrl) {
-      dom.addRule('fontFace', {
-        'fontFamily': "wxcIconFont",
-        'src': 'url(\'' + tabStyles.iconFontUrl + '\')'
-      });
-    }
-    this.isIPhoneX = _utils2.default.env.isIPhoneX();
-  },
-
-  methods: {
-    next: function next() {
-      var page = this.currentPage;
-      if (page < this.tabTitles.length - 1) {
-        page++;
-      }
-      this.setPage(page);
-    },
-    prev: function prev() {
-      var page = this.currentPage;
-      if (page > 0) {
-        page--;
-      }
-      this.setPage(page);
-    },
-    setPage: function setPage(page) {
-      var url = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-      var animated = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-
-      if (!this.isTabView) {
-        this.currentPage = page;
-        this._animateTransformX(page, animated);
-        this.$emit('wxcTabBarCurrentTabSelected', { page: page });
-        this.jumpOut(url);
-        return;
-      }
-      var previousPage = this.currentPage;
-      var currentTabEl = this.$refs['wxc-tab-title-' + page][0];
-      var width = this.tabStyles.width;
-
-      var appearNum = parseInt(750 / width);
-      var tabsNum = this.tabTitles.length;
-      var offset = page > appearNum ? -(750 - width) / 2 : -width * 2;
-
-      if (appearNum < tabsNum) {
-        (previousPage > appearNum || page > 1) && dom.scrollToElement(currentTabEl, {
-          offset: offset, animated: animated
-        });
-
-        page <= 1 && previousPage > page && dom.scrollToElement(currentTabEl, {
-          offset: -width * page,
-          animated: animated
-        });
-      }
-
-      this.currentPage = page;
-      this._animateTransformX(page, animated);
-      this.$emit('wxcTabBarCurrentTabSelected', { page: page });
-    },
-    jumpOut: function jumpOut(url) {
-      url && _utils2.default.goToH5Page(url);
-    },
-    _animateTransformX: function _animateTransformX(page, animated) {
-      var duration = this.duration,
-          timingFunction = this.timingFunction;
-
-      var computedDur = animated ? duration : 0.00001;
-      var containerEl = this.$refs['tab-container'];
-      var dist = page * 750;
-      animation.transition(containerEl, {
-        styles: {
-          transform: 'translateX(' + -dist + 'px)'
-        },
-        duration: computedDur,
-        timingFunction: timingFunction,
-        delay: 0
-      }, function () {});
-    }
-  }
-};
-
-/***/ }),
-/* 17 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: ["wxc-tab-page"],
-    style: {
-      backgroundColor: _vm.wrapBgColor
-    }
-  }, [_c('div', {
-    ref: "tab-page-wrap",
-    staticClass: ["tab-page-wrap"]
-  }, [_c('div', {
-    ref: "tab-container",
-    staticClass: ["tab-container"]
-  }, [_vm._t("default")], 2)]), _c('div', {
-    staticClass: ["tab-title-list"],
-    style: {
-      backgroundColor: _vm.tabStyles.bgColor,
-      height: (_vm.tabStyles.height + (_vm.isIPhoneX ? 78 : 0)) + 'px',
-      paddingBottom: _vm.isIPhoneX ? '78px' : '0'
-    }
-  }, _vm._l((_vm.tabTitles), function(v, index) {
-    return _c('div', {
-      key: index,
-      ref: 'wxc-tab-title-' + index,
-      refInFor: true,
-      staticClass: ["title-item"],
-      style: {
-        width: _vm.tabStyles.width + 'px',
-        height: _vm.tabStyles.height + 'px',
-        backgroundColor: _vm.currentPage == index ? _vm.tabStyles.activeBgColor : _vm.tabStyles.bgColor
-      },
-      attrs: {
-        "accessible": true,
-        "ariaLabel": ("" + (v.title?v.title:'标签'+index))
-      },
-      on: {
-        "click": function($event) {
-          _vm.setPage(index, v.url)
-        }
-      }
-    }, [(_vm.titleType === 'icon' && !_vm.titleUseSlot) ? _c('image', {
-      style: {
-        width: _vm.tabStyles.iconWidth + 'px',
-        height: _vm.tabStyles.iconHeight + 'px'
-      },
-      attrs: {
-        "src": _vm.currentPage == index ? v.activeIcon : v.icon
-      }
-    }) : _vm._e(), (_vm.titleType === 'iconFont' && v.codePoint && !_vm.titleUseSlot) ? _c('text', {
-      style: {
-        fontFamily: 'wxcIconFont',
-        fontSize: _vm.tabStyles.iconFontSize + 'px',
-        marginBottom: _vm.tabStyles.iconFontMarginBottom ? (_vm.tabStyles.iconFontMarginBottom + 'px') : '8px',
-        color: _vm.currentPage == index ? _vm.tabStyles.activeIconFontColor : _vm.tabStyles.iconFontColor
-      }
-    }, [_vm._v(_vm._s(v.codePoint))]) : _vm._e(), (!_vm.titleUseSlot) ? _c('text', {
-      staticClass: ["tab-text"],
-      style: {
-        fontSize: _vm.tabStyles.fontSize + 'px',
-        fontWeight: (_vm.currentPage == index && _vm.tabStyles.isActiveTitleBold) ? 'bold' : 'normal',
-        color: _vm.currentPage == index ? _vm.tabStyles.activeTitleColor : _vm.tabStyles.titleColor,
-        paddingLeft: _vm.tabStyles.textPaddingLeft + 'px',
-        paddingRight: _vm.tabStyles.textPaddingRight + 'px'
-      }
-    }, [_vm._v(_vm._s(v.title))]) : _vm._e(), (v.badge && !_vm.titleUseSlot) ? _c('div', {
-      staticClass: ["desc-tag"]
-    }, [_c('text', {
-      staticClass: ["desc-text"]
-    }, [_vm._v(_vm._s(v.badge))])]) : _vm._e(), (v.dot && !v.badge && !_vm.titleUseSlot) ? _c('div', {
-      staticClass: ["dot"]
-    }) : _vm._e(), (_vm.titleUseSlot) ? _vm._t(("tab-title-" + index)) : _vm._e()], 2)
-  }))])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(19)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(20)
-
-/* template */
-var __vue_template__ = __webpack_require__(25)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\List.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-2473e0a4"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 19 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "iconfont": {
-    "fontFamily": "iconfont"
-  },
-  "important": {
-    "backgroundImage": "linear-gradient(to right, #FF9900, #CC0000)"
-  },
-  "input-txt": {
-    "outline": "none",
-    "color": "#333333",
-    "fontSize": "28",
-    "paddingLeft": "8",
-    "paddingRight": "8"
-  },
-  "header": {
-    "backgroundImage": "linear-gradient(to right, #FF9900, #CC0000)",
-    "flexDirection": "row",
-    "justifyContent": "space-between",
-    "alignItems": "center",
-    "paddingTop": "15",
-    "paddingRight": "30",
-    "paddingBottom": "15",
-    "paddingLeft": "30"
-  },
-  "header-title": {
-    "fontSize": "36",
-    "color": "#FFFFFF"
-  },
-  "help": {
-    "color": "#FFFFFF",
-    "fontSize": "30"
-  },
-  "search": {
-    "fontSize": "40",
-    "color": "#333333"
-  },
-  "searchbar": {
-    "width": 90,
-    "background": "white",
-    "fontSize": "30",
-    "borderRadius": "50",
-    "paddingTop": "8",
-    "paddingRight": "20",
-    "paddingBottom": "8",
-    "paddingLeft": "20",
-    "flexDirection": "row",
-    "alignItems": "center"
-  }
-}
-
-/***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _utils = __webpack_require__(1);
-
-var _utils2 = _interopRequireDefault(_utils);
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-// https://github.com/alibaba/weex-ui/blob/master/example/tab-bar/config.js 
-
-
-var _Item = __webpack_require__(21);
-
-var _Item2 = _interopRequireDefault(_Item);
-
-var _vuex = __webpack_require__(0);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-  components: { Item: _Item2.default },
-  data: function data() {
-    return {
-      searchbarStyle: {
-        background: 'red'
-      },
-      contentStyle: {
-        height: ''
-        // paddingBottom: '15px'
-      }
-    };
-  },
-  computed: _extends({}, (0, _vuex.mapState)('tab', {
-    count: function count(state) {
-      return state.count;
-    },
-    tabTitles: function tabTitles(state) {
-      return state.tabIconFontTitles;
-    },
-    tabStyles: function tabStyles(state) {
-      return state.tabIconFontStyles;
-    }
-  }), (0, _vuex.mapState)('list', {
-    list: function list(state) {
-      return state.list;
-    }
-  })),
-  created: function created() {
-    var tabPageHeight = _utils2.default.env.getPageHeight();
-    // 如果页面没有导航栏，可以用下面这个计算高度的方法
-    // const tabPageHeight = env.deviceHeight / env.deviceWidth * 750;
-    // console.log(this.contentStyle)
-    var tabStyles = this.tabStyles;
-
-    this.contentStyle.height = tabPageHeight - tabStyles.height + 'px';
-    // console.log(`index${this.contentStyle.height}`);
-  },
-
-  methods: {
-    wxcSearchbarInputOnFocus: function wxcSearchbarInputOnFocus() {},
-    wxcSearchbarInputOnBlur: function wxcSearchbarInputOnBlur() {},
-    wxcSearchbarInputReturned: function wxcSearchbarInputReturned() {},
-    wxcSearchbarCloseClicked: function wxcSearchbarCloseClicked() {},
-    wxcSearchbarInputOnInput: function wxcSearchbarInputOnInput(e) {
-      this.value = e.value;
-    },
-    wxcSearchbarCancelClicked: function wxcSearchbarCancelClicked() {},
-    wxcSearchbarInputDisabledClicked: function wxcSearchbarInputDisabledClicked() {},
-    wxcSearchbarDepChooseClicked: function wxcSearchbarDepChooseClicked() {}
-  }
-};
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __vue_exports__, __vue_options__
-var __vue_styles__ = []
-
-/* styles */
-__vue_styles__.push(__webpack_require__(22)
-)
-
-/* script */
-__vue_exports__ = __webpack_require__(23)
-
-/* template */
-var __vue_template__ = __webpack_require__(24)
-__vue_options__ = __vue_exports__ = __vue_exports__ || {}
-if (
-  typeof __vue_exports__.default === "object" ||
-  typeof __vue_exports__.default === "function"
-) {
-if (Object.keys(__vue_exports__).some(function (key) { return key !== "default" && key !== "__esModule" })) {console.error("named exports are not supported in *.vue files.")}
-__vue_options__ = __vue_exports__ = __vue_exports__.default
-}
-if (typeof __vue_options__ === "function") {
-  __vue_options__ = __vue_options__.options
-}
-__vue_options__.__file = "D:\\Workspace\\vscode\\dreamwriter\\src\\components\\list\\Item.vue"
-__vue_options__.render = __vue_template__.render
-__vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-fa42351e"
-__vue_options__.style = __vue_options__.style || {}
-__vue_styles__.forEach(function (module) {
-  for (var name in module) {
-    __vue_options__.style[name] = module[name]
-  }
-})
-if (typeof __register_static_styles__ === "function") {
-  __register_static_styles__(__vue_options__._scopeId, __vue_styles__)
-}
-
-module.exports = __vue_exports__
-
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports) {
-
-module.exports = {
-  "card": {
-    "marginBottom": 0
-  },
-  "title": {
-    "paddingTop": "15",
-    "paddingRight": "15",
-    "paddingBottom": "15",
-    "paddingLeft": "15",
-    "color": "#000000"
-  },
-  "describe": {
-    "color": "#333333",
-    "paddingTop": "10",
-    "paddingRight": "10",
-    "paddingBottom": "10",
-    "paddingLeft": "10"
-  }
-}
-
-/***/ }),
-/* 23 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-exports.default = {
-  props: ['item', 'itemStyle'],
   data: function data() {
     return {};
   },
-  computed: {},
-  created: function created() {
-    console.log(this.itemStyle);
-  },
+  computed: _extends({}, (0, _vuex.mapState)('list', {
+    statusIcon: 'statusIcon',
+    statusList: 'statusList'
+  })),
+  created: function created() {},
 
   methods: {}
 };
 
 /***/ }),
-/* 24 */
+/* 59 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: ["card"],
-    style: {
-      'background': _vm.itemStyle
-    }
-  }, [_c('text', {
-    staticClass: ["title"]
-  }, [_vm._v(_vm._s(_vm.item.dream))]), _c('text', {
-    staticClass: ["describe"]
-  }, [_vm._v(_vm._s(_vm.item.describe))])])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('list', {
-    style: _vm.contentStyle
-  }, [_c('cell', {
-    staticClass: ["important"],
-    appendAsTree: true,
-    attrs: {
-      "append": "tree"
-    }
-  }, [_c('Item', {
-    attrs: {
-      "item": _vm.list[0]
-    }
-  })], 1), _vm._m(0), _vm._l((_vm.list), function(item, i) {
-    return _c('cell', {
-      key: i + 'list',
-      appendAsTree: true,
-      attrs: {
-        "append": "tree"
-      }
-    }, [_c('Item', {
-      attrs: {
-        "item": item,
-        "itemStyle": ("rgb(" + ((i+200)*10%256) + ", " + ((i*10+25)*5%256) + ", " + (i*10%256) + ")")
-      }
-    })], 1)
-  })], 2)
-},staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('header', {
-    staticClass: ["header"],
-    appendAsTree: true,
-    attrs: {
-      "append": "tree"
-    }
-  }, [_c('div', {
-    staticClass: ["searchbar"]
-  }, [_c('text', {
-    staticClass: ["iconfont", "search"]
-  }, [_vm._v("")]), _c('input', {
-    staticClass: ["input-txt"],
-    attrs: {
-      "type": "text",
-      "placeholder": "输入关键字"
-    }
-  })]), _c('text', {
-    staticClass: ["help", "iconfont"]
-  }, [_vm._v("")])])
-}]}
-module.exports.render._withStripped = true
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-/**
- * Created by Tw93 on 2016/11/4.
- */
-
-exports.default = {
-
-  // 正常模式的tab title配置
-  tabTitles: [{
-    title: '首页',
-    icon: 'https://gw.alicdn.com/tfs/TB1MWXdSpXXXXcmXXXXXXXXXXXX-72-72.png',
-    activeIcon: 'https://gw.alicdn.com/tfs/TB1kCk2SXXXXXXFXFXXXXXXXXXX-72-72.png'
-  }, {
-    title: '特别推荐',
-    icon: 'https://gw.alicdn.com/tfs/TB1ARoKSXXXXXc9XVXXXXXXXXXX-72-72.png',
-    activeIcon: 'https://gw.alicdn.com/tfs/TB19Z72SXXXXXamXFXXXXXXXXXX-72-72.png'
-  }, {
-    title: '消息中心',
-    icon: 'https://gw.alicdn.com/tfs/TB1VKMISXXXXXbyaXXXXXXXXXXX-72-72.png',
-    activeIcon: 'https://gw.alicdn.com/tfs/TB1aTgZSXXXXXazXFXXXXXXXXXX-72-72.png',
-    badge: 5
-  }, {
-    title: '我的主页',
-    icon: 'https://gw.alicdn.com/tfs/TB1Do3tSXXXXXXMaFXXXXXXXXXX-72-72.png',
-    activeIcon: 'https://gw.alicdn.com/tfs/TB1LiNhSpXXXXaWXXXXXXXXXXXX-72-72.png',
-    dot: true
-  }],
-  tabStyles: {
-    bgColor: '#FFFFFF',
-    titleColor: '#666666',
-    activeTitleColor: '#3D3D3D',
-    activeBgColor: '#FFFFFF',
-    isActiveTitleBold: true,
-    iconWidth: 70,
-    iconHeight: 70,
-    width: 160,
-    height: 120,
-    fontSize: 24,
-    textPaddingLeft: 10,
-    textPaddingRight: 10
-  },
-
-  // 使用 iconFont 模式的tab title配置
-  tabIconFontTitles: [{
-    // title: '首页',
-    codePoint: '\uE7F4'
-  }, {
-    // title: '愿望清单',
-    codePoint: '\uE609'
-  }, {
-    // title: '我的',
-    codePoint: '\uE602',
-    dot: true
-  }],
-  tabIconFontStyles: {
-    bgColor: '#FFFFFF',
-    titleColor: '#666666',
-    activeTitleColor: '#3D3D3D',
-    activeBgColor: '#FFFFFF',
-    isActiveTitleBold: true,
-    width: 160,
-    height: 110,
-    fontSize: 24,
-    textPaddingLeft: 10,
-    textPaddingRight: 10,
-    iconFontSize: 50,
-    iconFontMarginBottom: 8,
-    iconFontColor: '#333333',
-    activeIconFontColor: 'red',
-    iconFontUrl: '//at.alicdn.com/t/font_1290229_7q6a1a4g38f.ttf'
-  }
-};
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('wxc-tab-bar', {
-    attrs: {
-      "tabTitles": _vm.tabTitles,
-      "tabStyles": _vm.tabStyles,
-      "titleType": "iconFont",
-      "titleUseSlot": true,
-      "wrapBgColor": "#f9f9f9"
-    },
-    on: {
-      "wxcTabBarCurrentTabSelected": _vm.wxcTabBarCurrentTabSelected
-    }
-  }, [_vm._l((_vm.tabTitles), function(tabTitle, i) {
-    return _c('div', {
-      key: i + '_tab',
-      ref: 'tab_' + i,
-      refInFor: true,
-      staticClass: ["tabCon"],
-      attrs: {
-        "slot": 'tab-title-' + i
-      },
-      slot: 'tab-title-' + i
-    }, [_c('text', {
-      staticClass: ["iconfont"],
-      style: {
-        'color': _vm.index === i ? tabTitle.color : _vm.tabStyles.titleColor,
-        'font-size': _vm.tabStyles.fontSize,
-        'width': _vm.tabStyles.width,
-        'height': _vm.tabStyles.height,
-        'fontSize': _vm.tabStyles.iconFontSize + 'px',
-      }
-    }, [_vm._v(_vm._s(tabTitle.codePoint))]), _c('text', {
-      staticClass: ["title"],
-      style: {
-        'height': _vm.index === i ? '33px' : '0',
-        'color': _vm.index === i ? tabTitle.color : _vm.tabStyles.titleColor,
-      }
-    }, [_vm._v(_vm._s(tabTitle.title))])])
-  }), _c('div', {
-    staticClass: ["item-container"],
-    style: _vm.contentStyle
-  }, [_c('List', {
-    attrs: {
-      "contentStyle": _vm.contentStyle
-    }
-  })]), _c('div', {
-    staticClass: ["item-container"],
-    style: _vm.contentStyle
-  }, [_c('List')]), _c('div', {
-    staticClass: ["item-container"],
-    style: _vm.contentStyle
-  }, [_c('text', [_vm._v("我的主页kmdfklnsldkflk")])])], 2)
+    staticClass: ["vertical"]
+  }, [_c('router-view')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 

@@ -1,15 +1,15 @@
 
 let state = {
-  count: 0,
+  indexOpacity: 1,
   tabIconFontTitles: [
-    {
-      title: '日程',
-      codePoint: '\ue7f4',
-      color: '#FF9900'
-    },
     {
       title: '愿望清单',
       codePoint: '\ue7df',
+      color: '#FF9900'
+    },
+    {
+      title: '日程',
+      codePoint: '\ue7f4',
       color: '#FF5000'
     },
     {
@@ -22,7 +22,7 @@ let state = {
   tabIconFontStyles: {
     bgColor: '#FFFFFF',
     titleColor: '#666666',
-    activeTitleColor: '#f00',
+    activeTitleColor: '#FF9900',
     activeBgColor: '#FFFFFF',
     isActiveTitleBold: true,
     width: 160,
@@ -33,8 +33,8 @@ let state = {
     iconFontSize: 45,
     iconFontMarginBottom: 8,
     iconFontColor: '#666666',
-    activeIconFontColor: 'red',
-    iconFontUrl: '//at.alicdn.com/t/font_1293485_qaexcjzc3wr.ttf'
+    activeIconFontColor: '#FF9900',
+    iconFontUrl: 'http://at.alicdn.com/t/font_1293485_w2ieztdbg8.ttf',
   }
 }
 let mutations = {
@@ -43,6 +43,9 @@ let mutations = {
   },
   showSelectedTitle (state, payload) {
     state.tabIconFontTitles[payload.id].title = payload.title
+  },
+  setOpacity (state) {
+    state.indexOpacity = 0;
   }
 }
 // console.log(state.tabIconFontTitles[0].title)
