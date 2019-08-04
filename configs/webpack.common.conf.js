@@ -8,6 +8,8 @@ const vueLoaderConfig = require('./vue-loader.conf');
 const vueWebTemp = helper.rootNode(config.templateDir);
 const hasPluginInstalled = fs.existsSync(helper.rootNode(config.pluginFilePath));
 const isWin = /^win/.test(process.platform);
+
+const DowngradePlugin = require('webpack-plugin-downgrade')
 const weexEntry = {
   'index': helper.root('entry.js')
 }
@@ -74,6 +76,18 @@ const plugins = [
   new webpack.DefinePlugin({
     'process.env': {
       'NODE_ENV': config.dev.env
+    }
+  }),
+  // 满足某些条件时降级
+  new DowngradePlugin({
+    condition: {
+      ios: {
+        deviceModel: ['iPhone5,1']
+      },
+      android: {
+        osVersion: '<=8.0',
+        weexVersion: '<0.16.0'
+      }
     }
   }),
   /*

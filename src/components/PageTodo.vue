@@ -1,32 +1,17 @@
 <template>
-  <div class=""
+  <div class="content"
+    :style="conStyle"
     @panstart="touchStart"
     @swipe="swipeLeft"
   >
-    <wxc-minibar
-      @wxcMinibarLeftButtonClicked="minibarLeftButtonClick"
-      @wxcMinibarRightButtonClicked="minibarRightButtonClick"
-      :use-default-return="false"
-      :bar-style="minibarTodo"
-      title=""
-    >
-      <text
-        class="iconfont minibar-left" 
-        slot="left"
-      >&#xe7ec;</text>
-      <text
-        class="iconfont minibar-right"
-        slot="right"
-      >&#xe749;</text>
-    </wxc-minibar>
-    <list :style="listStyle">
-
-    </list>
   </div>
 </template>
 <style scoped>
 .iconfont {
   font-family: iconfont;
+}
+.content {
+  background-color: white;
 }
 </style>
 <script>
@@ -37,9 +22,10 @@
       WxcMinibar
     },
     data: () => ({
-      listStyle: {
+      conStyle: {
         height: 0,
         width: 0,
+        top: 0,
       },
       touchStartX: 200,
     }),
@@ -55,8 +41,9 @@
       ])
     },
     created () {
-      this.listStyle.height = this.contentHeight - 90 + 'px';
-      this.listStyle.width = 750 + 'px';
+      this.conStyle.height = this.contentHeight / 2 + 'px';
+      this.conStyle.width = 750 + 'px';
+      this.conStyle.top = this.contentHeight / 2 + 'px';
     },
     methods: {
       pageHide () {

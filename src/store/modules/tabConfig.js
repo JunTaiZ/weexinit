@@ -1,24 +1,33 @@
 
 let state = {
+  tabCurrentTarget: 0,
   indexOpacity: 1,
   tabIconFontTitles: [
     {
       title: '愿望清单',
       codePoint: '\ue7df',
-      color: '#FF9900'
+      color: '#FF9900',
+      child: [{
+        title: '技能',
+        codePoint: '\ue87a',
+      }, {
+        title: '物质',
+        codePoint: '\ue780',
+      }]
     },
     {
       title: '日程',
-      codePoint: '\ue7f4',
+      codePoint: '\ue798',
       color: '#FF5000'
     },
-    {
-      title: '我的',
-      codePoint: '\ue7ae',
-      dot: true,
-      color: '#FF0000'
-    }
+    
   ],
+  popupIconFontTitles: [{
+    title: '我的',
+    codePoint: '\ue7ae',
+    dot: true,
+    color: '#FF0000'
+  }],
   tabIconFontStyles: {
     bgColor: '#FFFFFF',
     titleColor: '#666666',
@@ -27,14 +36,14 @@ let state = {
     isActiveTitleBold: true,
     width: 160,
     height: 115,
-    fontSize: 22,
+    fontSize: 40,
     textPaddingLeft: 10,
     textPaddingRight: 10,
-    iconFontSize: 45,
+    iconFontSize: 50,
     iconFontMarginBottom: 8,
-    iconFontColor: '#666666',
-    activeIconFontColor: '#FF9900',
-    iconFontUrl: 'http://at.alicdn.com/t/font_1293485_w2ieztdbg8.ttf',
+    iconFontColor: '#AAA',
+    activeIconFontColor: '#FF5500',
+    iconFontUrl: 'http://at.alicdn.com/t/font_1293485_li3gh2d7bi.ttf',
   }
 }
 let mutations = {

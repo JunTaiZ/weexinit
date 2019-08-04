@@ -223,6 +223,7 @@ import android.widget.Toast;
 import com.taobao.weex.IWXRenderListener;
 import com.taobao.weex.WXSDKEngine;
 import com.taobao.weex.WXSDKInstance;
+import com.taobao.weex.common.IWXDebugProxy;
 import com.taobao.weex.common.WXRenderStrategy;
 import com.weex.app.util.CommonUtils;
 
@@ -397,7 +398,7 @@ public abstract class AbsWeexActivity extends AppCompatActivity implements IWXRe
     if (filter == null) {
       filter = new IntentFilter();
     }
-    filter.addAction(WXSDKInstance.ACTION_DEBUG_INSTANCE_REFRESH);
+    filter.addAction(IWXDebugProxy.ACTION_DEBUG_INSTANCE_REFRESH);
     filter.addAction(WXSDKEngine.JS_FRAMEWORK_RELOAD);
     LocalBroadcastManager.getInstance(getApplicationContext())
         .registerReceiver(mBroadcastReceiver, filter);
@@ -492,7 +493,7 @@ public abstract class AbsWeexActivity extends AppCompatActivity implements IWXRe
   public class DefaultBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
-      if (WXSDKInstance.ACTION_DEBUG_INSTANCE_REFRESH.equals(intent.getAction())) {
+      if (IWXDebugProxy.ACTION_DEBUG_INSTANCE_REFRESH.equals(intent.getAction())) {
         if (mRefreshListener != null) {
           mRefreshListener.onRefresh();
         }

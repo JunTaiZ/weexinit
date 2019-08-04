@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+
 const {router}= require('./router.js')
 const store = require('@/store/index.js')
 const App = require('@/Router.vue'); 

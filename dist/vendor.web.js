@@ -1,5 +1,28 @@
 // { "framework": "Vue"} 
 
+
+/* Weex downgrade configs */
+;(function(){
+  /* npm downgrade module */
+  !function(e,r){"object"==typeof exports&&"undefined"!=typeof module?module.exports=r():"function"==typeof define&&define.amd?define(r):e.WeexDowngrade=r()}(this,function(){"use strict";var l={satisfies:function(e,r){if(typeof e+typeof r!="stringstring")return!1;if("*"==r)return!0;for(var n=r.match(/(\W+)?([\d|.]+)/),t=e.split("."),o=n[2].split("."),i=Math.max(t.length,o.length),a=0,f=0;f<i;f++){if(t[f]&&!o[f]&&0<parseInt(t[f])||parseInt(t[f])>parseInt(o[f])){a=1;break}if(o[f]&&!t[f]&&0<parseInt(o[f])||parseInt(t[f])<parseInt(o[f])){a=-1;break}}switch(n[1]){case"<":if(-1===a)return!0;break;case"<=":if(1!==a)return!0;break;case">":if(1===a)return!0;break;case">=":if(-1!==a)return!0;break;default:if(0===a)return!0}return!1}},t="instanceWrap",o=1,i=1003,a="Force downgrade to web";function v(){return"undefined"!=typeof WXEnvironment&&WXEnvironment.platform&&"web"!==WXEnvironment.platform.toLowerCase()}function n(e,r,n){return!!v()&&(e=parseInt(e)||o,r=parseInt(r)||i,n=s(n)?n:a,function(){try{return weex.requireModule(t)}catch(e){}try{return __weex_require__("@weex-module/"+t)}catch(e){}return{error:function(){console&&console.log&&console.log("Can not found module ["+t+"]")}}}().error(e,r,n),!0)}function f(e){var r={isDowngrade:!1};if(!v())return r;var n,t=WXEnvironment||{},o=e[(t.platform||"unknow").toLowerCase()]||{};for(var i in t){var a=i.toLowerCase(),f=t[i],s=0<=a.indexOf("version"),c=0<=a.indexOf("devicemodel"),u=o[i];if(u&&s){var d=m(u),p=m(t[i]);if(0===a.indexOf("app")&&(n=u,"Object"===Object.prototype.toString.call(n).slice(8,-1)))d=m(u[t.appName||""]);if(l.satisfies(p,d)){r=w(i,f,u);break}}else if(c){if(0<=(Array.isArray(u)?u:[u]).indexOf(f)){r=w(i,f,u);break}}}return r}function s(e){return"string"==typeof e}function m(e){if("*"===e)return e;for(var r=(e=s(e)?e:"").split("."),n=0,t=[];n<3;){var o=s(r[n])&&r[n]?r[n]:"0";t.push(o),n++}return t.join(".")}function w(e,r,n){var t={isDowngrade:!0,errorType:1,code:1e3},o=e.toLowerCase();return 0<=o.indexOf("osversion")?t.code=1001:0<=o.indexOf("appversion")?t.code=1002:0<=o.indexOf("weexversion")?t.code=1003:0<=o.indexOf("devicemodel")&&(t.code=1004),t.errorMessage="Downgrade["+e+"]: envInfo "+r+" matched criteria "+n,t}return{force:n,check:f,condition:function(e){var r=f(e);return r.isDowngrade&&n(r.errorType,r.code,r.errorMessage),r.isDowngrade},semverLite:l}});
+  
+
+  /* downgrade condition */
+  WeexDowngrade.condition(
+    {
+      "ios": {
+        "deviceModel": [
+          "iPhone5,1"
+        ]
+      },
+      "android": {
+        "osVersion": "<=8.0",
+        "weexVersion": "<0.16.0"
+      }
+    }
+  );
+})();
+
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -62,20 +85,20 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 76);
+/******/ 	return __webpack_require__(__webpack_require__.s = 118);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ 76:
+/***/ 118:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(77);
+module.exports = __webpack_require__(119);
 
 
 /***/ }),
 
-/***/ 77:
+/***/ 119:
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;var is_touch_device = function () {

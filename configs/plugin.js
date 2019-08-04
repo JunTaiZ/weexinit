@@ -4,7 +4,6 @@ const webpack = require('webpack');
 const config = require('./config');
 const helper = require('./helper');
 const pluginConfigPath = helper.rootNode(config.pluginConfigPath);
-const outputPath = helper.rootNode(config.pluginFilePath);
 
 const toLowerCamelCase = key => {
   return key.replace(/\b\-\w+\b/g, function(word){
